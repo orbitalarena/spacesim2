@@ -1,0 +1,3 @@
+add_library(spacesim2_model STATIC model.cpp)
+target_include_directories(spacesim2_model PUBLIC ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(spacesim2_model spacesim2_physics)

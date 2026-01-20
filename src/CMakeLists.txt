@@ -1,5 +1,7 @@
 add_subdirectory(core)
-add_subdirectory(physics)
 add_subdirectory(entities)
 add_subdirectory(io)
+add_subdirectory(physics)
+add_subdirectory(sim)
+add_subdirectory(model)
 add_subdirectory(cli)
