@@ -1,37 +1,32 @@
-heartbeat wall_s 0.003286 sim_s 60.000000 speed 10.000000
-heartbeat wall_s 12.004184 sim_s 180.000000 speed 10.000000
-heartbeat wall_s 24.004934 sim_s 300.000000 speed 10.000000
-heartbeat wall_s 36.003591 sim_s 420.000000 speed 10.000000
-heartbeat wall_s 48.003413 sim_s 540.000000 speed 10.000000
-heartbeat wall_s 60.004035 sim_s 660.000000 speed 10.000000
-heartbeat wall_s 72.003723 sim_s 780.000000 speed 10.000000
-heartbeat wall_s 84.002856 sim_s 900.000000 speed 10.000000
-heartbeat wall_s 96.003637 sim_s 1020.000000 speed 10.000000
-heartbeat wall_s 108.003336 sim_s 1140.000000 speed 10.000000
-heartbeat wall_s 120.003510 sim_s 1260.000000 speed 10.000000
-heartbeat wall_s 132.002717 sim_s 1380.000000 speed 10.000000
-heartbeat wall_s 144.002255 sim_s 1500.000000 speed 10.000000
-heartbeat wall_s 156.003284 sim_s 1620.000000 speed 10.000000
-heartbeat wall_s 168.003054 sim_s 1740.000000 speed 10.000000
-heartbeat wall_s 180.002056 sim_s 1860.000000 speed 10.000000
-heartbeat wall_s 192.003678 sim_s 1980.000000 speed 10.000000
-heartbeat wall_s 204.003322 sim_s 2100.000000 speed 10.000000
-heartbeat wall_s 216.003582 sim_s 2220.000000 speed 10.000000
-heartbeat wall_s 228.003666 sim_s 2340.000000 speed 10.000000
-heartbeat wall_s 240.004893 sim_s 2460.000000 speed 10.000000
-heartbeat wall_s 252.005400 sim_s 2580.000000 speed 10.000000
-heartbeat wall_s 264.003412 sim_s 2700.000000 speed 10.000000
-heartbeat wall_s 276.004358 sim_s 2820.000000 speed 10.000000
-heartbeat wall_s 288.003271 sim_s 2940.000000 speed 10.000000
-heartbeat wall_s 300.003173 sim_s 3060.000000 speed 10.000000
-heartbeat wall_s 312.002966 sim_s 3180.000000 speed 10.000000
-heartbeat wall_s 324.004132 sim_s 3300.000000 speed 10.000000
-heartbeat wall_s 336.003668 sim_s 3420.000000 speed 10.000000
-heartbeat wall_s 348.005517 sim_s 3540.000000 speed 10.000000
-t 3600.000000 Ace_DC_deg 171.433318 Ace_DC_km 42800.512899 Ace_LA_deg 173.458004 Ace_LA_km 46066.509165
-t 3600.000000 LeoClosest Tokyo dist_km 9201.693177 LST 5.012892
-heartbeat wall_s 360.003800 sim_s 3660.000000 speed 10.000000
-heartbeat wall_s 372.005175 sim_s 3780.000000 speed 10.000000
-heartbeat wall_s 384.004516 sim_s 3900.000000 speed 10.000000
-heartbeat wall_s 396.005287 sim_s 4020.000000 speed 10.000000
-heartbeat wall_s 408.004575 sim_s 4140.000000 speed 10.000000
+heartbeat wall_s 0.004420 sim_s 1.000000 speed 1.000000
+heartbeat wall_s 11.003204 sim_s 12.000000 speed 1.000000
+heartbeat wall_s 21.003221 sim_s 22.000000 speed 1.000000
+heartbeat wall_s 32.003698 sim_s 33.000000 speed 1.000000
+heartbeat wall_s 43.003558 sim_s 44.000000 speed 1.000000
+heartbeat wall_s 53.003598 sim_s 54.000000 speed 1.000000
+heartbeat wall_s 63.003704 sim_s 64.000000 speed 1.000000
+heartbeat wall_s 73.003988 sim_s 74.000000 speed 1.000000
+heartbeat wall_s 84.003280 sim_s 85.000000 speed 1.000000
+heartbeat wall_s 94.012807 sim_s 690.000000 speed 100.000000
+heartbeat wall_s 104.012817 sim_s 1690.000000 speed 100.000000
+heartbeat wall_s 114.022700 sim_s 2691.000000 speed 100.000000
+t 3600.000000 Ace_DC_deg 171.437834 Ace_DC_km 42823.055148 Ace_LA_deg 173.460769 Ace_LA_km 46089.363009
+t 3600.000000 LeoClosest Tokyo dist_km 8697.770449 LST 5.012887
+t 7200.000000 Ace_DC_deg 171.900466 Ace_DC_km 44065.934324 Ace_LA_deg 174.464492 Ace_LA_km 46881.828540
+t 7200.000000 LeoClosest London dist_km 3201.459659 LST 20.694319
+t 10800.000000 Ace_DC_deg 172.617690 Ace_DC_km 45181.446182 Ace_LA_deg 175.305638 Ace_LA_km 47387.763419
+t 10800.000000 LeoClosest SaoPaulo dist_km 6437.343911 LST 18.596705
+heartbeat wall_s 124.023008 sim_s 11586.000000 speed 1000.000000
+t 14400.000000 Ace_DC_deg 173.478590 Ace_DC_km 46104.905490 Ace_LA_deg 175.692044 Ace_LA_km 47581.970004
+t 14400.000000 LeoClosest Tokyo dist_km 4569.247354 LST 8.021084
+t 18000.000000 Ace_DC_deg 174.326753 Ace_DC_km 46785.982559 Ace_LA_deg 175.435026 Ace_LA_km 47454.956575
+t 18000.000000 LeoClosest Paris dist_km 4180.505917 LST 23.867850
+heartbeat wall_s 134.023961 sim_s 21587.000000 speed 1000.000000
+t 21600.000000 Ace_DC_deg 174.951972 Ace_DC_km 47189.253584 Ace_LA_deg 174.664709 Ace_LA_km 47012.912713
+t 21600.000000 LeoClosest Tokyo dist_km 9614.540507 LST 10.026549
+t 25200.000000 Ace_DC_deg 175.135086 Ace_DC_km 47294.376751 Ace_LA_deg 173.673736 Ace_LA_km 46277.728239
+t 25200.000000 LeoClosest London dist_km 4655.964417 LST 1.707982
+t 28800.000000 Ace_DC_deg 174.797009 Ace_DC_km 47096.124992 Ace_LA_deg 172.702614 Ace_LA_km 45287.026639
+t 28800.000000 LeoClosest SaoPaulo dist_km 5804.993685 LST 23.610368
+heartbeat wall_s 144.615364 sim_s 29179.000000 speed 1.000000
+heartbeat wall_s 155.615257 sim_s 29190.000000 speed 1.000000
