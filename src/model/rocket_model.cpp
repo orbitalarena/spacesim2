@@ -133,6 +133,7 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
     double after_best_timer = 0.0;
 
     for(double t=0; t<=t_end; t+=dt){
+        // Propagate Ace (truth) to current t
         std::array<double,3> ace_r, ace_v;
         propagate_2body_universal(ace_r0, ace_v0, t, ace_r, ace_v);
 
@@ -149,22 +150,17 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
 
         double relv_mag = mag3(relv);
 
-        // Lead time: never allow 0; use closing-based tau if closing, else use kinematic time based on rel speed.
-        double tau = 0.0;
-        if(rr_vec < -1e-6){
-            tau = range_km / (-rr_vec);
-        }else{
-            tau = range_km / std::max(1.0, relv_mag);
-        }
-        tau = std::clamp(tau, 60.0, 6.0*3600.0);
+        // Lead time: range / |v_rel| (robust). Clamp to keep it in the "GEO moved 10 deg" regime.
+        double tau = range_km / std::max(0.1, relv_mag);   // seconds
+        tau = std::clamp(tau, 0.0, 4000.0);
 
-        std::array<double,3> ace_rt, ace_vt;
-        propagate_2body_universal(ace_r0, ace_v0, t+tau, ace_rt, ace_vt);
-
+        // Simple linear lead target: rA(t+tau) ~= rA(t) + vA(t)*tau
+        std::array<double,3> ace_rt = add3(ace_r, mul3(ace_v, tau));
         double target_xyz[3] = {ace_rt[0], ace_rt[1], ace_rt[2]};
+
         r.step(dt, MU_E_KM3_S2, target_xyz);
 
-        // write back for output CSV
+        // Write-back for CSV output
         rs = r.state();
         rb.x=rs.x; rb.y=rs.y; rb.z=rs.z;
         rb.vx=rs.vx; rb.vy=rs.vy; rb.vz=rs.vz;
@@ -175,7 +171,7 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
 
         if(ow && ow->enabled()) ow->tick(t, e);
 
-        // recompute for reporting with current-step states
+        // Recompute for reporting
         pR = {rs.x, rs.y, rs.z};
         vR = {rs.vx, rs.vy, rs.vz};
         relp = sub3(ace_r, pR);
@@ -225,8 +221,7 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
             break;
         }
 
-        // Stop once we've clearly passed closest approach (avoid 6h of "flying away")
-        if(after_best_timer >= 600.0 && range_km > best_range + 50.0){
+        if(after_best_timer >= 900.0 && range_km > best_range + 200.0){
             std::cout<<"CLOSEST_APPROACH t "<<best_t<<" range_km "<<best_range<<"\n";
             break;
         }
