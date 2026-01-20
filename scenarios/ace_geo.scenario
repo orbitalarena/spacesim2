@@ -1,0 +1,18 @@
+name AceGEO
+duration_seconds 86400
+timestep_seconds 60
+
+entity Ace
+type satellite
+coe
+a_km 42166.3
+e 0
+i_deg 0
+raan_deg 0
+argp_deg 0
+ta_deg 0
+
+report
+state_vector final
+orbital_elements final
+sun_angle hourly
