@@ -1,0 +1,15 @@
+name TLEHour
+duration_seconds 3600
+timestep_seconds 10
+
+entity Ace
+type satellite
+coe
+a_km 42166.3
+e 0
+i_deg 0
+raan_deg 0
+argp_deg 0
+ta_deg 0
+
+tle_file data/tle/tles.txt

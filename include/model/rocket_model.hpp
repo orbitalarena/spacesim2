@@ -1,4 +1,5 @@
 #pragma once
 #include "physics/engine.hpp"
+#include "physics/rocket.hpp"
 #include "core/output.hpp"
-void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow);
+void run_rocket_model(PhysicsEngine& e,double dt,double t_end, OutputWriter* ow);

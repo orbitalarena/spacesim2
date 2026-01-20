@@ -1,0 +1,5736 @@
+name TLEHour
+duration_seconds 3600
+timestep_seconds 10
+
+entity Ace
+type satellite
+coe
+a_km 42166.3
+e 0
+i_deg 0
+raan_deg 0
+argp_deg 0
+ta_deg 0
+
+
+# --- Expanded TLE entities (572) ---
+
+entity TDRS_3
+type satellite
+coe
+a_km 42163.3
+e 0.0043072
+i_deg 12.7142
+raan_deg 341.979
+argp_deg 348.244
+ta_deg 357.078
+
+entity FLTSATCOM_8_USA_46
+type satellite
+coe
+a_km 42165.3
+e 0.0008793
+i_deg 12.4618
+raan_deg 352.055
+argp_deg 309.359
+ta_deg 238.716
+
+entity SKYNET_4C
+type satellite
+coe
+a_km 42163.2
+e 0.0003146
+i_deg 13.3867
+raan_deg 350.824
+argp_deg 311.263
+ta_deg 61.8526
+
+entity TDRS_5
+type satellite
+coe
+a_km 42166.4
+e 0.0013789
+i_deg 14.0888
+raan_deg 354.873
+argp_deg 262.456
+ta_deg 277.133
+
+entity TDRS_6
+type satellite
+coe
+a_km 42163.2
+e 0.0006876
+i_deg 14.1791
+raan_deg 358.163
+argp_deg 211.405
+ta_deg 355.918
+
+entity UFO_2_USA_95
+type satellite
+coe
+a_km 42165.2
+e 0.0007934
+i_deg 11.8443
+raan_deg 4.3595
+argp_deg 314.973
+ta_deg 39.5738
+
+entity USA_99_MILSTAR_1_1
+type satellite
+coe
+a_km 42165
+e 0.0003813
+i_deg 17.395
+raan_deg 29.3084
+argp_deg 280.555
+ta_deg 256.072
+
+entity UFO_4_USA_108
+type satellite
+coe
+a_km 42164
+e 0.0003251
+i_deg 9.6503
+raan_deg 13.7167
+argp_deg 288.923
+ta_deg 261.58
+
+entity TDRS_7
+type satellite
+coe
+a_km 42164.5
+e 0.0004789
+i_deg 13.4381
+raan_deg 349.21
+argp_deg 41.7325
+ta_deg 135.786
+
+entity USA_115_MILSTAR_1_2
+type satellite
+coe
+a_km 42164.6
+e 0.0003223
+i_deg 14.018
+raan_deg 4.844
+argp_deg 308.082
+ta_deg 246.592
+
+entity INMARSAT_3_F1
+type satellite
+coe
+a_km 42247.2
+e 0.0007886
+i_deg 10.2915
+raan_deg 47.9869
+argp_deg 234.098
+ta_deg 130.77
+
+entity INMARSAT_3_F2
+type satellite
+coe
+a_km 42244.2
+e 0.0006003
+i_deg 9.5194
+raan_deg 55.4394
+argp_deg 244.097
+ta_deg 182.243
+
+entity INMARSAT_3_F3
+type satellite
+coe
+a_km 42242.6
+e 0.0008077
+i_deg 9.9975
+raan_deg 51.066
+argp_deg 237.489
+ta_deg 298.909
+
+entity AMC_3
+type satellite
+coe
+a_km 42165
+e 0.0003144
+i_deg 7.7804
+raan_deg 65.7886
+argp_deg 244.677
+ta_deg 300.501
+
+entity USA_134
+type satellite
+coe
+a_km 42163.6
+e 0.0006667
+i_deg 12.6058
+raan_deg 22.8196
+argp_deg 282.046
+ta_deg 263.024
+
+entity INMARSAT_3_F5
+type satellite
+coe
+a_km 42165.6
+e 0.0005155
+i_deg 9.3598
+raan_deg 54.7211
+argp_deg 251.334
+ta_deg 92.9228
+
+entity SKYNET_4E
+type satellite
+coe
+a_km 42516.2
+e 0.0004787
+i_deg 11.9763
+raan_deg 9.8951
+argp_deg 265.004
+ta_deg 269.771
+
+entity ABS_6
+type satellite
+coe
+a_km 42163
+e 0.0002651
+i_deg 0.0704
+raan_deg 261.259
+argp_deg 26.8359
+ta_deg 313.39
+
+entity UFO_10_USA_146
+type satellite
+coe
+a_km 42163.9
+e 0.0006297
+i_deg 9.8399
+raan_deg 27.9915
+argp_deg 266.507
+ta_deg 112.045
+
+entity ASIASTAR
+type satellite
+coe
+a_km 42164.8
+e 0.000457
+i_deg 8.7825
+raan_deg 59.7347
+argp_deg 242.902
+ta_deg 138.025
+
+entity USA_149_DSP_20
+type satellite
+coe
+a_km 42162.5
+e 2.41e-05
+i_deg 13.0572
+raan_deg 12.8911
+argp_deg 197.946
+ta_deg 351.821
+
+entity TDRS_8
+type satellite
+coe
+a_km 42163.7
+e 0.0005442
+i_deg 12.4483
+raan_deg 32.5653
+argp_deg 276.538
+ta_deg 83.9874
+
+entity NSS_11
+type satellite
+coe
+a_km 42164.8
+e 0.0002945
+i_deg 1.7422
+raan_deg 83.2453
+argp_deg 223.919
+ta_deg 312.539
+
+entity USA_153
+type satellite
+coe
+a_km 42165.2
+e 0.0001916
+i_deg 11.3682
+raan_deg 36.6268
+argp_deg 285.224
+ta_deg 253.345
+
+entity AMC_6
+type satellite
+coe
+a_km 42164.7
+e 0.0003321
+i_deg 0.0633
+raan_deg 280.228
+argp_deg 358.334
+ta_deg 316.342
+
+entity USA_157_MILSTAR_2_2
+type satellite
+coe
+a_km 42165
+e 0.0040314
+i_deg 11.3773
+raan_deg 20.6631
+argp_deg 184.176
+ta_deg 13.8931
+
+entity INTELSAT_10_IS_10
+type satellite
+coe
+a_km 42502.8
+e 0.0008223
+i_deg 8.7191
+raan_deg 60.7668
+argp_deg 244.473
+ta_deg 123.999
+
+entity USA_159_DSP_21
+type satellite
+coe
+a_km 42166
+e 4.37e-05
+i_deg 12.6454
+raan_deg 17.4662
+argp_deg 311.887
+ta_deg 49.048
+
+entity INTELSAT_902_IS_902
+type satellite
+coe
+a_km 42165.2
+e 0.0004642
+i_deg 5.7433
+raan_deg 73.6125
+argp_deg 229.06
+ta_deg 100.487
+
+entity USA_164_MILSTAR_2_3
+type satellite
+coe
+a_km 42163.9
+e 0.0098392
+i_deg 11.0007
+raan_deg 22.7839
+argp_deg 3.6716
+ta_deg 13.4628
+
+entity INTELSAT_904_IS_904
+type satellite
+coe
+a_km 42165.4
+e 0.000354
+i_deg 6.5473
+raan_deg 70.9888
+argp_deg 281.743
+ta_deg 250.134
+
+entity DIRECTV_5_TEMPO_1
+type satellite
+coe
+a_km 42164.7
+e 0.0003204
+i_deg 4.4973
+raan_deg 77.1944
+argp_deg 229.127
+ta_deg 315.298
+
+entity INTELSAT_905_IS_905
+type satellite
+coe
+a_km 42164.3
+e 0.0003283
+i_deg 6.3677
+raan_deg 71.6679
+argp_deg 226.741
+ta_deg 291.921
+
+entity GALAXY_3C_G_3C
+type satellite
+coe
+a_km 42164.8
+e 9.06e-05
+i_deg 3.3562
+raan_deg 80.0702
+argp_deg 71.3315
+ta_deg 178.088
+
+entity INTELSAT_906_IS_906
+type satellite
+coe
+a_km 42164.9
+e 0.0005364
+i_deg 5.4261
+raan_deg 74.7705
+argp_deg 209.807
+ta_deg 163.752
+
+entity NIMIQ_2
+type satellite
+coe
+a_km 42164.4
+e 0.0006089
+i_deg 9.1029
+raan_deg 58.4581
+argp_deg 244.339
+ta_deg 294.048
+
+entity USA_167
+type satellite
+coe
+a_km 42163.8
+e 0.0005297
+i_deg 10.6619
+raan_deg 44.7377
+argp_deg 274.291
+ta_deg 83.6861
+
+entity USA_169_MILSTAR_2_4
+type satellite
+coe
+a_km 42165.1
+e 0.009733
+i_deg 12.1225
+raan_deg 31.0274
+argp_deg 2.1867
+ta_deg 175.14
+
+entity ASIASAT_4
+type satellite
+coe
+a_km 42165
+e 0.0002899
+i_deg 4.3252
+raan_deg 77.6422
+argp_deg 220.595
+ta_deg 187.977
+
+entity HELLAS_SAT_2
+type satellite
+coe
+a_km 42164.8
+e 0.000997
+i_deg 6.9842
+raan_deg 69.6711
+argp_deg 212.824
+ta_deg 163.599
+
+entity THURAYA_2
+type satellite
+coe
+a_km 42164.3
+e 0.0003641
+i_deg 8.6066
+raan_deg 32.5601
+argp_deg 280.165
+ta_deg 88.2834
+
+entity OPTUS_C1
+type satellite
+coe
+a_km 42165.1
+e 0.0005844
+i_deg 6.517
+raan_deg 71.2241
+argp_deg 233.201
+ta_deg 293.577
+
+entity USA_170
+type satellite
+coe
+a_km 42163.5
+e 0.0001992
+i_deg 10.1826
+raan_deg 49.3501
+argp_deg 249.012
+ta_deg 106.699
+
+entity GALAXY_13_HORIZONS_1
+type satellite
+coe
+a_km 42164.9
+e 0.0002231
+i_deg 1.035
+raan_deg 85.9761
+argp_deg 212.7
+ta_deg 305.927
+
+entity YAMAL_202
+type satellite
+coe
+a_km 42164.8
+e 0.0006592
+i_deg 5.9696
+raan_deg 72.762
+argp_deg 207.511
+ta_deg 325.997
+
+entity UFO_11_USA_174
+type satellite
+coe
+a_km 42165.1
+e 0.0004346
+i_deg 8.7837
+raan_deg 34.5369
+argp_deg 252.108
+ta_deg 122.293
+
+entity USA_176_DSP_22
+type satellite
+coe
+a_km 42165.5
+e 0.0003149
+i_deg 11.8582
+raan_deg 27.148
+argp_deg 250.705
+ta_deg 306.692
+
+entity ABS_4_MOBISAT_1
+type satellite
+coe
+a_km 42164.5
+e 0.0005653
+i_deg 5.6664
+raan_deg 73.8338
+argp_deg 229.509
+ta_deg 167.324
+
+entity EUTELSAT_139_WEST_A
+type satellite
+coe
+a_km 42005.8
+e 0.000366
+i_deg 5.4516
+raan_deg 73.8205
+argp_deg 146.277
+ta_deg 23.7366
+
+entity AMC_11
+type satellite
+coe
+a_km 42164.6
+e 0.0002864
+i_deg 0.0125
+raan_deg 358.932
+argp_deg 302.098
+ta_deg 319.549
+
+entity INTELSAT_10_02
+type satellite
+coe
+a_km 42165.4
+e 0.0001275
+i_deg 0.0246
+raan_deg 75.1303
+argp_deg 264.128
+ta_deg 116.591
+
+entity ANIK_F2
+type satellite
+coe
+a_km 42164.7
+e 0.0001381
+i_deg 2.8993
+raan_deg 81.4917
+argp_deg 252.88
+ta_deg 260.451
+
+entity AMC_15
+type satellite
+coe
+a_km 42164.6
+e 0.0002239
+i_deg 0.0304
+raan_deg 316.714
+argp_deg 329.747
+ta_deg 57.8208
+
+entity NSS_10
+type satellite
+coe
+a_km 42164.8
+e 0.0003007
+i_deg 6.0781
+raan_deg 72.2692
+argp_deg 233.63
+ta_deg 110.843
+
+entity XM_3_RHYTHM
+type satellite
+coe
+a_km 42538.8
+e 0.0003499
+i_deg 0.2716
+raan_deg 83.4043
+argp_deg 281.78
+ta_deg 19.8512
+
+entity INMARSAT_4_F1
+type satellite
+coe
+a_km 42164.8
+e 0.0002068
+i_deg 4.9657
+raan_deg 42.6979
+argp_deg 274.433
+ta_deg 227.578
+
+entity DIRECTV_8
+type satellite
+coe
+a_km 42164.6
+e 0.0002913
+i_deg 0.018
+raan_deg 52.3671
+argp_deg 256.02
+ta_deg 20.9056
+
+entity GALAXY_28_G_28
+type satellite
+coe
+a_km 42075.5
+e 0.0002473
+i_deg 2.9174
+raan_deg 80.8258
+argp_deg 195.084
+ta_deg 124.706
+
+entity THAICOM_4
+type satellite
+coe
+a_km 42164.5
+e 0.0001709
+i_deg 0.0177
+raan_deg 75.9013
+argp_deg 221.982
+ta_deg 184.023
+
+entity ANIK_F1R
+type satellite
+coe
+a_km 42164.8
+e 0.0001457
+i_deg 3.9319
+raan_deg 78.4657
+argp_deg 241.638
+ta_deg 304.498
+
+entity SYRACUSE_3A
+type satellite
+coe
+a_km 42165.3
+e 0.0003421
+i_deg 4.2646
+raan_deg 77.7075
+argp_deg 228.401
+ta_deg 174.488
+
+entity INMARSAT_4_F2
+type satellite
+coe
+a_km 42165
+e 0.000207
+i_deg 4.8973
+raan_deg 43.7693
+argp_deg 267.403
+ta_deg 119.21
+
+entity METEOSAT_9_MSG_2
+type satellite
+coe
+a_km 42166
+e 0.0001633
+i_deg 9.0214
+raan_deg 55.6246
+argp_deg 190.55
+ta_deg 181.902
+
+entity EUTELSAT_174A
+type satellite
+coe
+a_km 42165.3
+e 0.0006272
+i_deg 3.8415
+raan_deg 78.3979
+argp_deg 223.142
+ta_deg 316.006
+
+entity ECHOSTAR_10
+type satellite
+coe
+a_km 42164.7
+e 0.0002333
+i_deg 0.0387
+raan_deg 291.601
+argp_deg 332.843
+ta_deg 357.115
+
+entity SPAINSAT
+type satellite
+coe
+a_km 42164.5
+e 0.0004364
+i_deg 0.1785
+raan_deg 91.2268
+argp_deg 198.914
+ta_deg 69.796
+
+entity JCSAT_5A
+type satellite
+coe
+a_km 42165.7
+e 9.34e-05
+i_deg 0.7238
+raan_deg 86.2973
+argp_deg 308.355
+ta_deg 203.682
+
+entity ASTRA_1KR
+type satellite
+coe
+a_km 42164.1
+e 0.000506
+i_deg 0.0905
+raan_deg 75.5562
+argp_deg 191.712
+ta_deg 209.91
+
+entity GALAXY_16_G_16
+type satellite
+coe
+a_km 42164.2
+e 0.0002845
+i_deg 0.043
+raan_deg 226.879
+argp_deg 84.2592
+ta_deg 39.6259
+
+entity EUTELSAT_33F
+type satellite
+coe
+a_km 42163.8
+e 0.0003475
+i_deg 1.2778
+raan_deg 84.0226
+argp_deg 223.108
+ta_deg 185.201
+
+entity JCSAT_3A
+type satellite
+coe
+a_km 42164.5
+e 0.0001953
+i_deg 0.0545
+raan_deg 258.21
+argp_deg 69.5618
+ta_deg 266.242
+
+entity SYRACUSE_3B
+type satellite
+coe
+a_km 42164.5
+e 0.0003945
+i_deg 2.5175
+raan_deg 81.9857
+argp_deg 219.545
+ta_deg 158.862
+
+entity KOREASAT_5_MUGUNGWHA_5
+type satellite
+coe
+a_km 42165
+e 0.000212
+i_deg 1.3998
+raan_deg 85.0032
+argp_deg 248.837
+ta_deg 244.172
+
+entity DIRECTV_9S
+type satellite
+coe
+a_km 42164.9
+e 0.0003248
+i_deg 2.037
+raan_deg 82.7868
+argp_deg 231.698
+ta_deg 33.9202
+
+entity OPTUS_D1
+type satellite
+coe
+a_km 42164.8
+e 0.0003435
+i_deg 2.6517
+raan_deg 81.5549
+argp_deg 225.04
+ta_deg 287.399
+
+entity BADR_4
+type satellite
+coe
+a_km 42165.2
+e 0.0007735
+i_deg 1.6212
+raan_deg 82.824
+argp_deg 231.665
+ta_deg 170.466
+
+entity WILDBLUE_1
+type satellite
+coe
+a_km 42164.7
+e 0.0001382
+i_deg 2.4187
+raan_deg 82.4396
+argp_deg 226.034
+ta_deg 286.255
+
+entity SKYNET_5A
+type satellite
+coe
+a_km 42164.4
+e 0.0003919
+i_deg 4.9236
+raan_deg 75.5668
+argp_deg 232.457
+ta_deg 147.81
+
+entity ANIK_F3
+type satellite
+coe
+a_km 42164.6
+e 0.0002579
+i_deg 0.8134
+raan_deg 85.8267
+argp_deg 221.516
+ta_deg 22.3121
+
+entity ASTRA_1L
+type satellite
+coe
+a_km 42219.1
+e 0.0002044
+i_deg 0.9374
+raan_deg 82.7264
+argp_deg 229.141
+ta_deg 138.743
+
+entity GALAXY_17_G_17
+type satellite
+coe
+a_km 42164.6
+e 0.0004924
+i_deg 2.5947
+raan_deg 81.8338
+argp_deg 196.746
+ta_deg 87.2094
+
+entity ZHONGXING_6B
+type satellite
+coe
+a_km 42508.2
+e 0.0010279
+i_deg 2.0553
+raan_deg 81.0601
+argp_deg 227.509
+ta_deg 10.987
+
+entity DIRECTV_10
+type satellite
+coe
+a_km 42164.5
+e 1.57e-05
+i_deg 0.0294
+raan_deg 119.134
+argp_deg 79.1095
+ta_deg 148.461
+
+entity INTELSAT_11_IS_11
+type satellite
+coe
+a_km 42511.5
+e 0.0007549
+i_deg 3.1779
+raan_deg 80.5339
+argp_deg 184.014
+ta_deg 254.084
+
+entity WGS_F1_USA_195
+type satellite
+coe
+a_km 42166.3
+e 2e-06
+i_deg 0.112
+raan_deg 85.9837
+argp_deg 319.908
+ta_deg 210.933
+
+entity SKYNET_5B
+type satellite
+coe
+a_km 42165.4
+e 0.0004033
+i_deg 4.8745
+raan_deg 75.2998
+argp_deg 228.371
+ta_deg 154.311
+
+entity ASTRA_4A
+type satellite
+coe
+a_km 42164.3
+e 0.0002415
+i_deg 0.0545
+raan_deg 268.572
+argp_deg 28.2307
+ta_deg 165.205
+
+entity HORIZONS_2
+type satellite
+coe
+a_km 42165.1
+e 0.0004262
+i_deg 2.2187
+raan_deg 82.5287
+argp_deg 215.221
+ta_deg 80.0408
+
+entity THURAYA_3
+type satellite
+coe
+a_km 42164.9
+e 0.0002251
+i_deg 5.7363
+raan_deg 35.51
+argp_deg 262.62
+ta_deg 264.291
+
+entity THOR_5
+type satellite
+coe
+a_km 42164.7
+e 0.0002438
+i_deg 0.0209
+raan_deg 260.77
+argp_deg 49.162
+ta_deg 146.161
+
+entity AMC_14
+type satellite
+coe
+a_km 42156
+e 0.0044357
+i_deg 23.8278
+raan_deg 22.3088
+argp_deg 351.092
+ta_deg 16.8504
+
+entity DIRECTV_11
+type satellite
+coe
+a_km 42165
+e 4.98e-05
+i_deg 0.0053
+raan_deg 272.374
+argp_deg 141.775
+ta_deg 296.446
+
+entity ICO_G1
+type satellite
+coe
+a_km 42165.4
+e 0.0002848
+i_deg 5.5151
+raan_deg 36.5362
+argp_deg 246.305
+ta_deg 331.502
+
+entity VINASAT_1
+type satellite
+coe
+a_km 42164.5
+e 0.0001688
+i_deg 0.0534
+raan_deg 261.073
+argp_deg 74.614
+ta_deg 262.561
+
+entity STAR_ONE_C2
+type satellite
+coe
+a_km 42164.3
+e 0.0002813
+i_deg 0.8601
+raan_deg 83.877
+argp_deg 231.278
+ta_deg 72.0493
+
+entity AMOS_3
+type satellite
+coe
+a_km 42164.7
+e 0.0003023
+i_deg 0.0714
+raan_deg 91.0228
+argp_deg 162.056
+ta_deg 199.356
+
+entity GALAXY_18_G_18
+type satellite
+coe
+a_km 42164.6
+e 0.0002877
+i_deg 0.0123
+raan_deg 347.119
+argp_deg 318.529
+ta_deg 19.3862
+
+entity ZHONGXING_9
+type satellite
+coe
+a_km 42164.3
+e 0.0009691
+i_deg 0.3892
+raan_deg 87.8772
+argp_deg 208.037
+ta_deg 259.947
+
+entity SKYNET_5C
+type satellite
+coe
+a_km 42164.9
+e 0.0004318
+i_deg 3.4081
+raan_deg 78.8388
+argp_deg 233.949
+ta_deg 124.981
+
+entity TURKSAT_3A
+type satellite
+coe
+a_km 42164.3
+e 0.000298
+i_deg 0.0409
+raan_deg 78.1566
+argp_deg 237.64
+ta_deg 134.563
+
+entity INTELSAT_25_IS_25
+type satellite
+coe
+a_km 42164.8
+e 0.0004579
+i_deg 2.3243
+raan_deg 82.2079
+argp_deg 209.233
+ta_deg 131.667
+
+entity ECHOSTAR_11
+type satellite
+coe
+a_km 42165
+e 0.0002305
+i_deg 0.6202
+raan_deg 86.105
+argp_deg 210.835
+ta_deg 42.0675
+
+entity SUPERBIRD_C2
+type satellite
+coe
+a_km 42165.1
+e 0.0001599
+i_deg 1.9777
+raan_deg 83.2144
+argp_deg 126.136
+ta_deg 33.2594
+
+entity AMC_21
+type satellite
+coe
+a_km 42501.2
+e 0.0004916
+i_deg 2.5642
+raan_deg 81.9109
+argp_deg 301.092
+ta_deg 106.92
+
+entity INMARSAT_4_F3
+type satellite
+coe
+a_km 42164.9
+e 0.0002925
+i_deg 4.1663
+raan_deg 30.9996
+argp_deg 272.421
+ta_deg 48.4402
+
+entity NIMIQ_4
+type satellite
+coe
+a_km 42165.2
+e 0.0002263
+i_deg 0.0242
+raan_deg 66.2763
+argp_deg 255.505
+ta_deg 47.1898
+
+entity GALAXY_19_G_19
+type satellite
+coe
+a_km 42164.5
+e 0.000307
+i_deg 0.0613
+raan_deg 255.011
+argp_deg 58.5588
+ta_deg 39.361
+
+entity ASTRA_1M
+type satellite
+coe
+a_km 42165.2
+e 0.0001247
+i_deg 0.0147
+raan_deg 20.7551
+argp_deg 194.91
+ta_deg 261.746
+
+entity EUTELSAT_HOTBIRD_13C
+type satellite
+coe
+a_km 42165.4
+e 0.000307
+i_deg 2.5682
+raan_deg 81.0013
+argp_deg 228.244
+ta_deg 93.6751
+
+entity EXPRESS_AM44
+type satellite
+coe
+a_km 42164.7
+e 0.000429
+i_deg 3.0815
+raan_deg 80.2635
+argp_deg 216.548
+ta_deg 148.244
+
+entity NSS_9
+type satellite
+coe
+a_km 42165.1
+e 0.0001943
+i_deg 0.8767
+raan_deg 84.1655
+argp_deg 209.451
+ta_deg 307.907
+
+entity TELSTAR_11N
+type satellite
+coe
+a_km 42165.5
+e 0.0002366
+i_deg 0.0164
+raan_deg 78.9332
+argp_deg 215.026
+ta_deg 122.676
+
+entity WGS_F2_USA_204
+type satellite
+coe
+a_km 42164.8
+e 2.44e-05
+i_deg 0.0169
+raan_deg 62.1549
+argp_deg 340.195
+ta_deg 38.8724
+
+entity SES_7_PROTOSTAR_2
+type satellite
+coe
+a_km 42165.1
+e 0.0001998
+i_deg 0.0236
+raan_deg 65.7205
+argp_deg 232.756
+ta_deg 274.37
+
+entity MEASAT_3A
+type satellite
+coe
+a_km 42164.7
+e 0.0003331
+i_deg 0.0271
+raan_deg 342.929
+argp_deg 329.988
+ta_deg 289.635
+
+entity GOES_14
+type satellite
+coe
+a_km 42211.9
+e 0.0001028
+i_deg 1.3007
+raan_deg 84.9794
+argp_deg 256.089
+ta_deg 255.661
+
+entity FM_5
+type satellite
+coe
+a_km 42164.7
+e 8.62e-05
+i_deg 0.043
+raan_deg 254.888
+argp_deg 278.44
+ta_deg 191.207
+
+entity TERRESTAR_1
+type satellite
+coe
+a_km 42164.9
+e 0.0002733
+i_deg 5.064
+raan_deg 48.8481
+argp_deg 261.548
+ta_deg 310.268
+
+entity ASIASAT_5
+type satellite
+coe
+a_km 42165.6
+e 0.0001581
+i_deg 0.0658
+raan_deg 259.69
+argp_deg 32.0472
+ta_deg 272.787
+
+entity JCSAT_12_JCSAT_RA
+type satellite
+coe
+a_km 42164.2
+e 0.0001598
+i_deg 0.0325
+raan_deg 284.254
+argp_deg 8.2654
+ta_deg 305.823
+
+entity OPTUS_D3
+type satellite
+coe
+a_km 42164.7
+e 0.0003422
+i_deg 0.8822
+raan_deg 269.875
+argp_deg 29.9039
+ta_deg 298.6
+
+entity NIMIQ_5
+type satellite
+coe
+a_km 42165.9
+e 0.0002469
+i_deg 0.0259
+raan_deg 69.005
+argp_deg 237.845
+ta_deg 242.468
+
+entity AMAZONAS_2
+type satellite
+coe
+a_km 42164.7
+e 0.0003521
+i_deg 1.4296
+raan_deg 85.1321
+argp_deg 218.723
+ta_deg 87.852
+
+entity COMSATBW_1
+type satellite
+coe
+a_km 42164.4
+e 0.0003259
+i_deg 0.0398
+raan_deg 83.7379
+argp_deg 232.495
+ta_deg 208.124
+
+entity NSS_12
+type satellite
+coe
+a_km 42164.9
+e 0.0004836
+i_deg 0.0837
+raan_deg 280.551
+argp_deg 8.1485
+ta_deg 229.249
+
+entity THOR_6
+type satellite
+coe
+a_km 42164.7
+e 0.0002247
+i_deg 0.0208
+raan_deg 101.007
+argp_deg 235.165
+ta_deg 119.756
+
+entity INTELSAT_14_IS_14
+type satellite
+coe
+a_km 42165
+e 0.0002592
+i_deg 0.0173
+raan_deg 42.6007
+argp_deg 273.292
+ta_deg 92.7222
+
+entity EUTELSAT_36B
+type satellite
+coe
+a_km 42165.1
+e 0.0005769
+i_deg 0.1162
+raan_deg 69.1588
+argp_deg 233.408
+ta_deg 208.397
+
+entity INTELSAT_15_IS_15
+type satellite
+coe
+a_km 42165.7
+e 0.0002277
+i_deg 0.0199
+raan_deg 312.851
+argp_deg 11.1321
+ta_deg 224.116
+
+entity WGS_F3_USA_211
+type satellite
+coe
+a_km 41970.1
+e 2.2e-05
+i_deg 0.2409
+raan_deg 86.8144
+argp_deg 339.707
+ta_deg 126.337
+
+entity DIRECTV_12
+type satellite
+coe
+a_km 42163.3
+e 8.72e-05
+i_deg 0.0132
+raan_deg 94.3351
+argp_deg 304.242
+ta_deg 205.256
+
+entity BEIDOU_2_G1
+type satellite
+coe
+a_km 42164
+e 0.0004325
+i_deg 3.945
+raan_deg 60.7815
+argp_deg 263.978
+ta_deg 282.59
+
+entity SDO
+type satellite
+coe
+a_km 42163.2
+e 0.0001289
+i_deg 34.3365
+raan_deg 88.6132
+argp_deg 141.444
+ta_deg 221.99
+
+entity INTELSAT_16_IS_16
+type satellite
+coe
+a_km 42165
+e 0.0001851
+i_deg 0.0167
+raan_deg 330.484
+argp_deg 329.484
+ta_deg 75.2303
+
+entity EWS_G2_GOES_15
+type satellite
+coe
+a_km 42164.1
+e 0.0005107
+i_deg 0.9047
+raan_deg 85.9194
+argp_deg 191.151
+ta_deg 219.853
+
+entity ECHOSTAR_14
+type satellite
+coe
+a_km 42165
+e 0.0002051
+i_deg 0.0216
+raan_deg 67.841
+argp_deg 227.493
+ta_deg 34.157
+
+entity SES_1
+type satellite
+coe
+a_km 42164.7
+e 0.0002383
+i_deg 0.0477
+raan_deg 266.642
+argp_deg 38.9318
+ta_deg 43.0434
+
+entity ASTRA_3B
+type satellite
+coe
+a_km 42164.6
+e 0.0002269
+i_deg 1.086
+raan_deg 85.5724
+argp_deg 227.824
+ta_deg 168.62
+
+entity COMSATBW_2
+type satellite
+coe
+a_km 42164.8
+e 0.0002519
+i_deg 0.0706
+raan_deg 148.638
+argp_deg 163.97
+ta_deg 158.337
+
+entity BEIDOU_2_G3
+type satellite
+coe
+a_km 42165.3
+e 0.0006448
+i_deg 4.1624
+raan_deg 62.0883
+argp_deg 312.796
+ta_deg 89.9878
+
+entity BADR_5
+type satellite
+coe
+a_km 42164.5
+e 0.0001312
+i_deg 0.0663
+raan_deg 106.215
+argp_deg 146.41
+ta_deg 232.059
+
+entity COMS_1
+type satellite
+coe
+a_km 42164.8
+e 8.89e-05
+i_deg 4.4296
+raan_deg 77.5258
+argp_deg 238.415
+ta_deg 278.261
+
+entity ARABSAT_5A
+type satellite
+coe
+a_km 42165.2
+e 0.0002028
+i_deg 0.0659
+raan_deg 48.0839
+argp_deg 273.539
+ta_deg 167.879
+
+entity ECHOSTAR_15
+type satellite
+coe
+a_km 42165
+e 0.0002529
+i_deg 0.0195
+raan_deg 46.7838
+argp_deg 222.171
+ta_deg 60.6102
+
+entity BEIDOU_2_IGSO_1
+type satellite
+coe
+a_km 42166.5
+e 0.0052622
+i_deg 54.2925
+raan_deg 164.304
+argp_deg 216.677
+ta_deg 139.648
+
+entity NILESAT_201
+type satellite
+coe
+a_km 42164.5
+e 0.0003834
+i_deg 0.0461
+raan_deg 216.542
+argp_deg 78.0872
+ta_deg 51.7437
+
+entity RASCOM_QAF_1R
+type satellite
+coe
+a_km 42165
+e 0.000711
+i_deg 0.0255
+raan_deg 93.1995
+argp_deg 202.11
+ta_deg 164.631
+
+entity AEHF_1_USA_214
+type satellite
+coe
+a_km 42164.9
+e 0.0004481
+i_deg 7.8541
+raan_deg 69.9767
+argp_deg 225.544
+ta_deg 141.908
+
+entity XM_5
+type satellite
+coe
+a_km 42165
+e 0.0002885
+i_deg 0.0687
+raan_deg 262.955
+argp_deg 255.206
+ta_deg 175.26
+
+entity BSAT_3B
+type satellite
+coe
+a_km 42164.6
+e 0.0003221
+i_deg 0.0734
+raan_deg 243.805
+argp_deg 36.2658
+ta_deg 294.466
+
+entity BEIDOU_2_G4
+type satellite
+coe
+a_km 42165
+e 0.0009999
+i_deg 3.2773
+raan_deg 69.7914
+argp_deg 201.538
+ta_deg 305.474
+
+entity SKYTERRA_1
+type satellite
+coe
+a_km 42164.8
+e 0.0002968
+i_deg 4.8073
+raan_deg 50.9297
+argp_deg 209.4
+ta_deg 10.6761
+
+entity HYLAS_1
+type satellite
+coe
+a_km 42056.5
+e 0.00011
+i_deg 5.2651
+raan_deg 74.8749
+argp_deg 319.623
+ta_deg 202.716
+
+entity INTELSAT_17_IS_17
+type satellite
+coe
+a_km 42165
+e 0.000259
+i_deg 0.0062
+raan_deg 114.441
+argp_deg 198.446
+ta_deg 214.669
+
+entity BEIDOU_2_IGSO_2
+type satellite
+coe
+a_km 42164.1
+e 0.004763
+i_deg 47.8132
+raan_deg 273.679
+argp_deg 215.335
+ta_deg 316.273
+
+entity EUTELSAT_KA_SAT_9A
+type satellite
+coe
+a_km 42164.9
+e 0.0002101
+i_deg 0.0507
+raan_deg 343.816
+argp_deg 185.826
+ta_deg 90.8503
+
+entity HISPASAT_30W_5
+type satellite
+coe
+a_km 42165.2
+e 0.0002445
+i_deg 0.0343
+raan_deg 106.715
+argp_deg 205.737
+ta_deg 112.235
+
+entity KOREASAT_6
+type satellite
+coe
+a_km 42164.7
+e 0.0001817
+i_deg 0.0192
+raan_deg 78.9516
+argp_deg 233.9
+ta_deg 289.573
+
+entity BEIDOU_2_IGSO_3
+type satellite
+coe
+a_km 42167.6
+e 0.0033979
+i_deg 62.196
+raan_deg 41.5506
+argp_deg 189.643
+ta_deg 310.965
+
+entity INTELSAT_28_IS_28
+type satellite
+coe
+a_km 42165.2
+e 0.0003722
+i_deg 1.4202
+raan_deg 84.6239
+argp_deg 213.863
+ta_deg 278.401
+
+entity YAHSAT_1A
+type satellite
+coe
+a_km 42165.3
+e 0.0002546
+i_deg 0.0239
+raan_deg 80.8514
+argp_deg 227.398
+ta_deg 204.863
+
+entity SBIRS_GEO_1_USA_230
+type satellite
+coe
+a_km 42164.7
+e 0.0002316
+i_deg 4.2103
+raan_deg 53.0533
+argp_deg 247.716
+ta_deg 160.086
+
+entity TELSTAR_14R
+type satellite
+coe
+a_km 42165.8
+e 0.0002092
+i_deg 0.0146
+raan_deg 56.6582
+argp_deg 269.596
+ta_deg 63.1037
+
+entity GSAT_8
+type satellite
+coe
+a_km 42164.7
+e 0.0008567
+i_deg 1.7468
+raan_deg 83.7618
+argp_deg 197.209
+ta_deg 234.875
+
+entity ST_2
+type satellite
+coe
+a_km 42166.6
+e 0.0001711
+i_deg 0.0103
+raan_deg 350.499
+argp_deg 334.323
+ta_deg 226.351
+
+entity ZHONGXING_10
+type satellite
+coe
+a_km 42164.5
+e 0.0002653
+i_deg 0.6628
+raan_deg 86.176
+argp_deg 210.784
+ta_deg 251.647
+
+entity SES_3
+type satellite
+coe
+a_km 42165
+e 0.0003092
+i_deg 0.9423
+raan_deg 84.8634
+argp_deg 228.74
+ta_deg 32.874
+
+entity KAZSAT_2
+type satellite
+coe
+a_km 42165.3
+e 0.0001615
+i_deg 0.0344
+raan_deg 188.477
+argp_deg 187.646
+ta_deg 121.931
+
+entity BEIDOU_2_IGSO_4
+type satellite
+coe
+a_km 42163.9
+e 0.0151392
+i_deg 54.5898
+raan_deg 167.016
+argp_deg 230.312
+ta_deg 142.227
+
+entity ASTRA_1N
+type satellite
+coe
+a_km 42164.1
+e 0.0002127
+i_deg 0.0567
+raan_deg 355.747
+argp_deg 359.041
+ta_deg 122.64
+
+entity BSAT_3C_JCSAT_110R
+type satellite
+coe
+a_km 42164.6
+e 1.3e-05
+i_deg 0.0363
+raan_deg 296.776
+argp_deg 161.381
+ta_deg 116.528
+
+entity PAKSAT_1R
+type satellite
+coe
+a_km 42165.1
+e 0.0001152
+i_deg 0.3034
+raan_deg 86.1465
+argp_deg 283.281
+ta_deg 128.084
+
+entity SES_2
+type satellite
+coe
+a_km 42164.8
+e 0.0002697
+i_deg 0.0098
+raan_deg 13.2722
+argp_deg 288.811
+ta_deg 61.5684
+
+entity ARABSAT_5C
+type satellite
+coe
+a_km 42164.4
+e 0.0002705
+i_deg 0.0482
+raan_deg 357.421
+argp_deg 283.749
+ta_deg 197.111
+
+entity EUTELSAT_7_WEST_A
+type satellite
+coe
+a_km 42164.7
+e 0.0003883
+i_deg 0.0626
+raan_deg 12.17
+argp_deg 228.625
+ta_deg 208.238
+
+entity QUETZSAT_1
+type satellite
+coe
+a_km 42164.8
+e 0.0002938
+i_deg 0.0521
+raan_deg 264.796
+argp_deg 58.7862
+ta_deg 50.7518
+
+entity INTELSAT_18_IS_18
+type satellite
+coe
+a_km 42165.4
+e 0.0001797
+i_deg 0.016
+raan_deg 60.7745
+argp_deg 250.449
+ta_deg 287.028
+
+entity EUTELSAT_16A
+type satellite
+coe
+a_km 42165.1
+e 0.0005282
+i_deg 0.0541
+raan_deg 3.4436
+argp_deg 295.792
+ta_deg 174.748
+
+entity VIASAT_1
+type satellite
+coe
+a_km 42165.5
+e 0.0002105
+i_deg 0.0199
+raan_deg 68.3638
+argp_deg 235.706
+ta_deg 29.4458
+
+entity ASIASAT_7
+type satellite
+coe
+a_km 42165.8
+e 0.0001051
+i_deg 0.0183
+raan_deg 260.408
+argp_deg 19.1023
+ta_deg 290.363
+
+entity BEIDOU_2_IGSO_5
+type satellite
+coe
+a_km 42161.6
+e 0.0108843
+i_deg 47.9476
+raan_deg 273.389
+argp_deg 221.847
+ta_deg 320.026
+
+entity LUCH_5A
+type satellite
+coe
+a_km 42164.8
+e 0.0004815
+i_deg 8.3738
+raan_deg 76.023
+argp_deg 210.813
+ta_deg 168.59
+
+entity NIGCOMSAT_1R
+type satellite
+coe
+a_km 42164.7
+e 0.0002103
+i_deg 0.0132
+raan_deg 205.51
+argp_deg 95.7214
+ta_deg 201.139
+
+entity WGS_F4_USA_233
+type satellite
+coe
+a_km 42165.3
+e 8.6e-05
+i_deg 0.0157
+raan_deg 77.8605
+argp_deg 245.301
+ta_deg 176.905
+
+entity SES_4
+type satellite
+coe
+a_km 42165.2
+e 0.0002364
+i_deg 0.0228
+raan_deg 38.0775
+argp_deg 259.503
+ta_deg 135.687
+
+entity BEIDOU_2_G5
+type satellite
+coe
+a_km 42165.4
+e 0.0013894
+i_deg 3.2027
+raan_deg 70.5612
+argp_deg 240.193
+ta_deg 209.054
+
+entity MUOS_1
+type satellite
+coe
+a_km 42164.5
+e 0.00535
+i_deg 5.1721
+raan_deg 47.2056
+argp_deg 356.704
+ta_deg 202.776
+
+entity INTELSAT_22_IS_22
+type satellite
+coe
+a_km 42164.8
+e 0.0001653
+i_deg 0.0013
+raan_deg 318.867
+argp_deg 339.687
+ta_deg 235.538
+
+entity APSTAR_7
+type satellite
+coe
+a_km 42164.7
+e 0.0002447
+i_deg 0.0345
+raan_deg 95.4166
+argp_deg 215.416
+ta_deg 22.0224
+
+entity YAHSAT_1B
+type satellite
+coe
+a_km 42165.1
+e 0.0003105
+i_deg 0.06
+raan_deg 90.7253
+argp_deg 222.123
+ta_deg 195.013
+
+entity AEHF_2_USA_235
+type satellite
+coe
+a_km 42164.6
+e 0.0003668
+i_deg 6.3071
+raan_deg 58.5745
+argp_deg 235.815
+ta_deg 144.838
+
+entity JCSAT_13
+type satellite
+coe
+a_km 42164.6
+e 0.0001761
+i_deg 0.0192
+raan_deg 43.8223
+argp_deg 251.298
+ta_deg 294.626
+
+entity VINASAT_2
+type satellite
+coe
+a_km 42165
+e 0.0002551
+i_deg 0.011
+raan_deg 10.6789
+argp_deg 305.908
+ta_deg 281.547
+
+entity NIMIQ_6
+type satellite
+coe
+a_km 42164.7
+e 0.0002587
+i_deg 0.0123
+raan_deg 56.1368
+argp_deg 244.492
+ta_deg 58.6142
+
+entity ZHONGXING_2A
+type satellite
+coe
+a_km 42165.4
+e 0.0002153
+i_deg 1.0701
+raan_deg 86.0427
+argp_deg 209.321
+ta_deg 266.75
+
+entity INTELSAT_19_IS_19
+type satellite
+coe
+a_km 42165.3
+e 0.0003016
+i_deg 0.0203
+raan_deg 68.7181
+argp_deg 239.918
+ta_deg 300.37
+
+entity ECHOSTAR_17
+type satellite
+coe
+a_km 42164.8
+e 0.0001987
+i_deg 0.0181
+raan_deg 52.1874
+argp_deg 240.558
+ta_deg 49.3631
+
+entity METEOSAT_10_MSG_3
+type satellite
+coe
+a_km 42164.8
+e 0.0001852
+i_deg 4.3168
+raan_deg 61.6144
+argp_deg 281.737
+ta_deg 113.533
+
+entity SES_5
+type satellite
+coe
+a_km 42164.5
+e 0.000188
+i_deg 0.0624
+raan_deg 297.018
+argp_deg 2.3124
+ta_deg 291.127
+
+entity INTELSAT_20_IS_20
+type satellite
+coe
+a_km 42164.7
+e 0.0001602
+i_deg 0.0224
+raan_deg 85.4454
+argp_deg 79.5885
+ta_deg 184.956
+
+entity HYLAS_2
+type satellite
+coe
+a_km 42164.9
+e 0.000263
+i_deg 2.0435
+raan_deg 82.9676
+argp_deg 231.674
+ta_deg 64.4736
+
+entity INTELSAT_21_IS_21
+type satellite
+coe
+a_km 42165.8
+e 0.0001602
+i_deg 0.0198
+raan_deg 65.3705
+argp_deg 243.769
+ta_deg 85.5992
+
+entity ASTRA_2F
+type satellite
+coe
+a_km 42164.5
+e 0.0002991
+i_deg 0.0726
+raan_deg 252.95
+argp_deg 9.933
+ta_deg 198.425
+
+entity GSAT_10
+type satellite
+coe
+a_km 42165
+e 0.0002241
+i_deg 0.0841
+raan_deg 265.556
+argp_deg 197.674
+ta_deg 82.5512
+
+entity INTELSAT_23_IS_23
+type satellite
+coe
+a_km 42162.9
+e 0.0001202
+i_deg 0.0066
+raan_deg 290.529
+argp_deg 16.8667
+ta_deg 92.6601
+
+entity BEIDOU_2_G6
+type satellite
+coe
+a_km 42165
+e 0.0009339
+i_deg 4.0442
+raan_deg 75.1312
+argp_deg 295.987
+ta_deg 98.5253
+
+entity LUCH_5B
+type satellite
+coe
+a_km 42164.6
+e 0.0005697
+i_deg 10.162
+raan_deg 51.3377
+argp_deg 207.96
+ta_deg 154.361
+
+entity YAMAL_300K
+type satellite
+coe
+a_km 42164.6
+e 3.2e-05
+i_deg 0.0256
+raan_deg 57.8433
+argp_deg 314.444
+ta_deg 229.129
+
+entity STAR_ONE_C3
+type satellite
+coe
+a_km 42165.5
+e 0.0002039
+i_deg 0.0143
+raan_deg 350.629
+argp_deg 325.248
+ta_deg 60.6043
+
+entity EUTELSAT_21B
+type satellite
+coe
+a_km 42165.2
+e 0.0002984
+i_deg 0.0653
+raan_deg 4.1534
+argp_deg 294.512
+ta_deg 181.322
+
+entity ECHOSTAR_16
+type satellite
+coe
+a_km 42165.2
+e 0.0002054
+i_deg 0.0173
+raan_deg 59.5323
+argp_deg 233.001
+ta_deg 329.678
+
+entity ZHONGXING_12
+type satellite
+coe
+a_km 42165
+e 0.0003289
+i_deg 0.044
+raan_deg 94.1203
+argp_deg 208.429
+ta_deg 248.043
+
+entity EUTELSAT_70B
+type satellite
+coe
+a_km 42164.8
+e 0.0003542
+i_deg 0.0628
+raan_deg 350.619
+argp_deg 282.05
+ta_deg 259.697
+
+entity YAMAL_402
+type satellite
+coe
+a_km 42164.8
+e 0.0003986
+i_deg 0.8834
+raan_deg 86.2924
+argp_deg 215.673
+ta_deg 213.715
+
+entity SKYNET_5D
+type satellite
+coe
+a_km 42164.2
+e 0.0003758
+i_deg 0.0723
+raan_deg 14.0944
+argp_deg 287.079
+ta_deg 212.191
+
+entity MEXSAT_3
+type satellite
+coe
+a_km 42163.8
+e 0.0001496
+i_deg 0.0185
+raan_deg 100.297
+argp_deg 144.822
+ta_deg 88.7455
+
+entity TDRS_11
+type satellite
+coe
+a_km 42163.7
+e 0.0002771
+i_deg 3.3066
+raan_deg 28.5059
+argp_deg 336.64
+ta_deg 264.851
+
+entity AMAZONAS_3
+type satellite
+coe
+a_km 42165.4
+e 0.0004013
+i_deg 0.0496
+raan_deg 230.274
+argp_deg 43.6499
+ta_deg 91.8015
+
+entity AZERSPACE_1
+type satellite
+coe
+a_km 42164.4
+e 0.0001976
+i_deg 0.0205
+raan_deg 308.831
+argp_deg 24.7259
+ta_deg 121.086
+
+entity SBIRS_GEO_2_USA_241
+type satellite
+coe
+a_km 42164.9
+e 0.0002374
+i_deg 4.1684
+raan_deg 52.3186
+argp_deg 247.184
+ta_deg 103.998
+
+entity EUTELSAT_117_WEST_A
+type satellite
+coe
+a_km 42164.6
+e 0.0002835
+i_deg 0.0108
+raan_deg 357.194
+argp_deg 311.416
+ta_deg 23.0763
+
+entity ANIK_G1
+type satellite
+coe
+a_km 42164.9
+e 0.000321
+i_deg 0.0181
+raan_deg 51.0832
+argp_deg 238.235
+ta_deg 52.5566
+
+entity ZHONGXING_11
+type satellite
+coe
+a_km 42164.4
+e 0.0002604
+i_deg 0.0196
+raan_deg 47.7829
+argp_deg 245.649
+ta_deg 268.334
+
+entity EUTELSAT_7B
+type satellite
+coe
+a_km 42164.9
+e 0.0005433
+i_deg 0.0665
+raan_deg 351.897
+argp_deg 341.482
+ta_deg 130.955
+
+entity WGS_F5_USA_243
+type satellite
+coe
+a_km 42165.1
+e 3.88e-05
+i_deg 0.017
+raan_deg 75.2402
+argp_deg 356.137
+ta_deg 251.984
+
+entity SES_6
+type satellite
+coe
+a_km 42164.7
+e 0.0002329
+i_deg 0.0588
+raan_deg 277.387
+argp_deg 22.3347
+ta_deg 113.744
+
+entity IRNSS_1A
+type satellite
+coe
+a_km 42162.2
+e 0.0021026
+i_deg 35.3835
+raan_deg 66.0531
+argp_deg 207.177
+ta_deg 329.433
+
+entity MUOS_2
+type satellite
+coe
+a_km 42165.3
+e 0.0052834
+i_deg 4.6998
+raan_deg 45.2273
+argp_deg 182.162
+ta_deg 28.0222
+
+entity ALPHASAT
+type satellite
+coe
+a_km 42164.6
+e 0.0001916
+i_deg 2.9718
+raan_deg 2.5176
+argp_deg 304.364
+ta_deg 176.623
+
+entity INSAT_3D
+type satellite
+coe
+a_km 42166
+e 0.0001721
+i_deg 1.5421
+raan_deg 84.5433
+argp_deg 168.467
+ta_deg 342.558
+
+entity WGS_F6_USA_244
+type satellite
+coe
+a_km 42165.1
+e 1.73e-05
+i_deg 0.017
+raan_deg 58.8065
+argp_deg 11.4975
+ta_deg 164.469
+
+entity ESHAIL_1
+type satellite
+coe
+a_km 42164.8
+e 0.0002159
+i_deg 0.0476
+raan_deg 7.7648
+argp_deg 295.008
+ta_deg 181.41
+
+entity GSAT_7
+type satellite
+coe
+a_km 42164.7
+e 0.0007314
+i_deg 0.0765
+raan_deg 90.2089
+argp_deg 188.973
+ta_deg 256.947
+
+entity AMOS_4
+type satellite
+coe
+a_km 42164.9
+e 0.0002869
+i_deg 0.0306
+raan_deg 242.341
+argp_deg 73.9481
+ta_deg 210.191
+
+entity AEHF_3_USA_246
+type satellite
+coe
+a_km 42165.1
+e 0.0094123
+i_deg 4.9264
+raan_deg 68.5585
+argp_deg 186.254
+ta_deg 351.631
+
+entity ASTRA_2E
+type satellite
+coe
+a_km 42165.3
+e 0.0002674
+i_deg 0.0659
+raan_deg 34.056
+argp_deg 271.881
+ta_deg 181.415
+
+entity FM_6
+type satellite
+coe
+a_km 42165.9
+e 0.0002751
+i_deg 0.0271
+raan_deg 88.719
+argp_deg 92.2738
+ta_deg 74.1071
+
+entity RADUGA_1M_3
+type satellite
+coe
+a_km 42164.6
+e 0.0001047
+i_deg 5.5859
+raan_deg 74.2295
+argp_deg 4.3328
+ta_deg 30.0169
+
+entity SES_8
+type satellite
+coe
+a_km 42164.7
+e 7.93e-05
+i_deg 0.052
+raan_deg 259.109
+argp_deg 66.645
+ta_deg 129.918
+
+entity INMARSAT_5_F1
+type satellite
+coe
+a_km 42164.1
+e 1.46e-05
+i_deg 0.0185
+raan_deg 48.5237
+argp_deg 282.255
+ta_deg 193.18
+
+entity TKSAT_1_TUPAC_KATARI
+type satellite
+coe
+a_km 42164.9
+e 0.0002623
+i_deg 0.0135
+raan_deg 134.457
+argp_deg 165.491
+ta_deg 63.4818
+
+entity EXPRESS_AM5
+type satellite
+coe
+a_km 42164.4
+e 0.0002047
+i_deg 0.0186
+raan_deg 46.0536
+argp_deg 274.285
+ta_deg 286.547
+
+entity GSAT_14
+type satellite
+coe
+a_km 42165.1
+e 0.0004954
+i_deg 0.0758
+raan_deg 257.497
+argp_deg 32.1158
+ta_deg 246.502
+
+entity THAICOM_6
+type satellite
+coe
+a_km 42164.9
+e 0.0001726
+i_deg 0.0639
+raan_deg 106.835
+argp_deg 244.78
+ta_deg 112.116
+
+entity TDRS_12
+type satellite
+coe
+a_km 42165.7
+e 0.0005992
+i_deg 3.8368
+raan_deg 16.4498
+argp_deg 259.903
+ta_deg 136.67
+
+entity ABS_2
+type satellite
+coe
+a_km 42164.8
+e 0.0003211
+i_deg 0.0195
+raan_deg 46.5699
+argp_deg 245.162
+ta_deg 245.424
+
+entity ATHENA_FIDUS
+type satellite
+coe
+a_km 42164.9
+e 9.4e-05
+i_deg 0.0305
+raan_deg 99.3337
+argp_deg 228.718
+ta_deg 169.306
+
+entity TURKSAT_4A
+type satellite
+coe
+a_km 42165.4
+e 0.0004452
+i_deg 0.0768
+raan_deg 279.371
+argp_deg 12.7048
+ta_deg 209.784
+
+entity EXPRESS_AT1
+type satellite
+coe
+a_km 42164.4
+e 6.06e-05
+i_deg 0.0159
+raan_deg 303.655
+argp_deg 241.42
+ta_deg 306.056
+
+entity EXPRESS_AT2
+type satellite
+coe
+a_km 42164.3
+e 0.0001854
+i_deg 0.0136
+raan_deg 351.449
+argp_deg 287.799
+ta_deg 327.451
+
+entity AMAZONAS_4A
+type satellite
+coe
+a_km 42164.7
+e 0.0004134
+i_deg 0.0646
+raan_deg 202.921
+argp_deg 66.9991
+ta_deg 107.655
+
+entity ASTRA_5B
+type satellite
+coe
+a_km 42165.2
+e 0.0004016
+i_deg 0.059
+raan_deg 318.392
+argp_deg 333.829
+ta_deg 189.808
+
+entity IRNSS_1B
+type satellite
+coe
+a_km 42164.2
+e 0.0018952
+i_deg 29.1903
+raan_deg 242.972
+argp_deg 178.356
+ta_deg 70.4262
+
+entity LUCH_5V
+type satellite
+coe
+a_km 42164.3
+e 0.0003466
+i_deg 4.7636
+raan_deg 71.205
+argp_deg 237.733
+ta_deg 146.425
+
+entity KAZSAT_3
+type satellite
+coe
+a_km 42165.2
+e 1.55e-05
+i_deg 0.0181
+raan_deg 4.9161
+argp_deg 134.278
+ta_deg 20.3214
+
+entity EUTELSAT_3B
+type satellite
+coe
+a_km 42164.6
+e 0.0003116
+i_deg 0.0611
+raan_deg 12.5283
+argp_deg 234.056
+ta_deg 213.571
+
+entity ASIASAT_8_AMOS_7
+type satellite
+coe
+a_km 42164.7
+e 9.12e-05
+i_deg 0.0143
+raan_deg 66.5102
+argp_deg 242.821
+ta_deg 260.356
+
+entity ASIASAT_6
+type satellite
+coe
+a_km 42165.4
+e 8.55e-05
+i_deg 0.0208
+raan_deg 286.742
+argp_deg 342.394
+ta_deg 316.199
+
+entity OPTUS_10
+type satellite
+coe
+a_km 42165
+e 0.0002397
+i_deg 0.0648
+raan_deg 58.7919
+argp_deg 241.132
+ta_deg 298.339
+
+entity MEASAT_3B
+type satellite
+coe
+a_km 42164.8
+e 0.0002205
+i_deg 0.0273
+raan_deg 27.647
+argp_deg 327.725
+ta_deg 199.545
+
+entity HIMAWARI_8
+type satellite
+coe
+a_km 42165.5
+e 8.97e-05
+i_deg 0.0177
+raan_deg 245.621
+argp_deg 72.8326
+ta_deg 289.114
+
+entity IRNSS_1C
+type satellite
+coe
+a_km 42165.5
+e 0.0018344
+i_deg 6.1385
+raan_deg 91.8598
+argp_deg 359.074
+ta_deg 17.617
+
+entity INTELSAT_30_IS_30
+type satellite
+coe
+a_km 42165.1
+e 0.0001588
+i_deg 0.0114
+raan_deg 47.5098
+argp_deg 60.0437
+ta_deg 221.688
+
+entity ARSAT_1
+type satellite
+coe
+a_km 42165
+e 0.0001448
+i_deg 0.0361
+raan_deg 298.48
+argp_deg 352.663
+ta_deg 88.7659
+
+entity EUTELSAT_53A
+type satellite
+coe
+a_km 42164.3
+e 9.63e-05
+i_deg 0.0189
+raan_deg 309.722
+argp_deg 64.1873
+ta_deg 139.756
+
+entity GSAT_16
+type satellite
+coe
+a_km 42164.7
+e 0.0002969
+i_deg 0.0352
+raan_deg 95.8729
+argp_deg 350.41
+ta_deg 69.5911
+
+entity DIRECTV_14
+type satellite
+coe
+a_km 42164.6
+e 3.47e-05
+i_deg 0.0201
+raan_deg 47.8978
+argp_deg 118.618
+ta_deg 183.997
+
+entity YAMAL_401
+type satellite
+coe
+a_km 42165
+e 0.0001257
+i_deg 0.0245
+raan_deg 113.067
+argp_deg 330.675
+ta_deg 109.504
+
+entity ASTRA_2G
+type satellite
+coe
+a_km 42165
+e 0.0002981
+i_deg 0.0487
+raan_deg 346.437
+argp_deg 32.4917
+ta_deg 108.133
+
+entity FENGYUN_2G
+type satellite
+coe
+a_km 42164.8
+e 0.0001413
+i_deg 5.2619
+raan_deg 74.6399
+argp_deg 187.473
+ta_deg 198.545
+
+entity MUOS_3
+type satellite
+coe
+a_km 42164.5
+e 0.0056265
+i_deg 4.2367
+raan_deg 42.7363
+argp_deg 183.954
+ta_deg 213.561
+
+entity INMARSAT_5_F2
+type satellite
+coe
+a_km 42164.9
+e 4.86e-05
+i_deg 0.0185
+raan_deg 48.6043
+argp_deg 326.762
+ta_deg 22.5605
+
+entity ABS_3A
+type satellite
+coe
+a_km 42165.4
+e 0.0001696
+i_deg 0.0144
+raan_deg 43.2332
+argp_deg 202.274
+ta_deg 2.1194
+
+entity EUTELSAT_115_WEST_B
+type satellite
+coe
+a_km 42165.1
+e 2.26e-05
+i_deg 0.0018
+raan_deg 161.647
+argp_deg 140.46
+ta_deg 258.702
+
+entity EXPRESS_AM7
+type satellite
+coe
+a_km 42164.2
+e 0.0003178
+i_deg 0.0181
+raan_deg 78.7256
+argp_deg 224.468
+ta_deg 170.77
+
+entity BEIDOU_3S_IGSO_1S
+type satellite
+coe
+a_km 42161.1
+e 0.0035796
+i_deg 49.477
+raan_deg 297.258
+argp_deg 192.865
+ta_deg 300.942
+
+entity THOR_7
+type satellite
+coe
+a_km 42164.9
+e 0.0002481
+i_deg 0.0017
+raan_deg 143.319
+argp_deg 157.95
+ta_deg 154.892
+
+entity TURKMENALEM52EMONACOSAT
+type satellite
+coe
+a_km 42164.3
+e 0.0002494
+i_deg 0.0414
+raan_deg 89.9705
+argp_deg 211.716
+ta_deg 159.424
+
+entity DIRECTV_15
+type satellite
+coe
+a_km 42164.8
+e 4.39e-05
+i_deg 0.0163
+raan_deg 60.7324
+argp_deg 82.6252
+ta_deg 203.257
+
+entity SKY_MEXICO_1
+type satellite
+coe
+a_km 42165
+e 0.0002416
+i_deg 0.0142
+raan_deg 64.7689
+argp_deg 255.315
+ta_deg 52.3635
+
+entity METEOSAT_11_MSG_4
+type satellite
+coe
+a_km 42162.6
+e 2.99e-05
+i_deg 2.8318
+raan_deg 71.875
+argp_deg 162.854
+ta_deg 232.347
+
+entity STAR_ONE_C4
+type satellite
+coe
+a_km 42164.8
+e 0.0002273
+i_deg 0.0354
+raan_deg 321.842
+argp_deg 1.6012
+ta_deg 263.941
+
+entity WGS_F7_USA_263
+type satellite
+coe
+a_km 42164.9
+e 2.92e-05
+i_deg 0.0227
+raan_deg 53.588
+argp_deg 313.288
+ta_deg 226.042
+
+entity INTELSAT_34_IS_34
+type satellite
+coe
+a_km 42164.6
+e 8.29e-05
+i_deg 0.027
+raan_deg 301.538
+argp_deg 239.845
+ta_deg 61.5209
+
+entity EUTELSAT_8_WEST_B
+type satellite
+coe
+a_km 42165.1
+e 0.0004081
+i_deg 0.064
+raan_deg 5.499
+argp_deg 293.51
+ta_deg 149.284
+
+entity GSAT_6
+type satellite
+coe
+a_km 42165.6
+e 0.0002774
+i_deg 1.5364
+raan_deg 84.5939
+argp_deg 215.869
+ta_deg 244.772
+
+entity INMARSAT_5_F3
+type satellite
+coe
+a_km 42164.3
+e 6.85e-05
+i_deg 0.0176
+raan_deg 52.7478
+argp_deg 70.3241
+ta_deg 63.2488
+
+entity MUOS_4
+type satellite
+coe
+a_km 42164.8
+e 0.0055013
+i_deg 4.0517
+raan_deg 41.1787
+argp_deg 357.077
+ta_deg 139.04
+
+entity TJS_1
+type satellite
+coe
+a_km 42165.1
+e 0.0002681
+i_deg 0.0663
+raan_deg 264.793
+argp_deg 83.0887
+ta_deg 249.362
+
+entity EXPRESS_AM8
+type satellite
+coe
+a_km 42165
+e 2.59e-05
+i_deg 0.007
+raan_deg 15.7334
+argp_deg 193.422
+ta_deg 232.684
+
+entity BEIDOU_3S_IGSO_2S
+type satellite
+coe
+a_km 42167.4
+e 0.0060566
+i_deg 49.4536
+raan_deg 260.588
+argp_deg 187.994
+ta_deg 30.9211
+
+entity SKY_MUSTER_1_NBN1A
+type satellite
+coe
+a_km 42165.1
+e 0.0001671
+i_deg 0.0148
+raan_deg 1.7446
+argp_deg 301.387
+ta_deg 303.992
+
+entity ARSAT_2
+type satellite
+coe
+a_km 42165
+e 0.0001784
+i_deg 0.0365
+raan_deg 293.95
+argp_deg 0.0713
+ta_deg 76.0307
+
+entity MORELOS_3
+type satellite
+coe
+a_km 42164.4
+e 0.0001543
+i_deg 3.08
+raan_deg 10.8297
+argp_deg 346.453
+ta_deg 338.391
+
+entity APSTAR_9
+type satellite
+coe
+a_km 42165.2
+e 0.0002806
+i_deg 0.0265
+raan_deg 57.9291
+argp_deg 192.829
+ta_deg 358.275
+
+entity TURKSAT_4B
+type satellite
+coe
+a_km 42165.7
+e 0.0001838
+i_deg 0.0234
+raan_deg 67.2503
+argp_deg 234.306
+ta_deg 208.891
+
+entity ZHONGXING_2C
+type satellite
+coe
+a_km 42165.3
+e 0.000794
+i_deg 0.1155
+raan_deg 257.06
+argp_deg 333.119
+ta_deg 337.512
+
+entity GSAT_15
+type satellite
+coe
+a_km 42164.9
+e 0.0001632
+i_deg 0.0866
+raan_deg 265.492
+argp_deg 344.275
+ta_deg 307.263
+
+entity BADR_7_ARABSAT_6B
+type satellite
+coe
+a_km 42165.2
+e 0.000424
+i_deg 0.0364
+raan_deg 233.675
+argp_deg 14.5542
+ta_deg 236.482
+
+entity LAOSAT_1
+type satellite
+coe
+a_km 42165.5
+e 0.0001308
+i_deg 0.018
+raan_deg 143.308
+argp_deg 113.391
+ta_deg 337.802
+
+entity TELSTAR_12V
+type satellite
+coe
+a_km 42164.7
+e 0.0002239
+i_deg 0.0178
+raan_deg 54.5061
+argp_deg 254.875
+ta_deg 131.397
+
+entity ELEKTRO_L_2
+type satellite
+coe
+a_km 42165
+e 0.0003573
+i_deg 6.3204
+raan_deg 72.3672
+argp_deg 220.794
+ta_deg 148.132
+
+entity COSMOS_2513
+type satellite
+coe
+a_km 42164.7
+e 0.0002846
+i_deg 0.0549
+raan_deg 106.187
+argp_deg 182.8
+ta_deg 253.857
+
+entity EXPRESS_AMU1
+type satellite
+coe
+a_km 42165.5
+e 0.0002539
+i_deg 0.0251
+raan_deg 70.9954
+argp_deg 208.952
+ta_deg 215.606
+
+entity GAOFEN_4
+type satellite
+coe
+a_km 42164.8
+e 0.0003101
+i_deg 0.2666
+raan_deg 83.1547
+argp_deg 83.4721
+ta_deg 43.5018
+
+entity BELINTERSAT_1
+type satellite
+coe
+a_km 42164.9
+e 0.0001319
+i_deg 0.0612
+raan_deg 265.846
+argp_deg 9.5357
+ta_deg 236.628
+
+entity IRNSS_1E
+type satellite
+coe
+a_km 42165.9
+e 0.0020128
+i_deg 32.908
+raan_deg 61.8986
+argp_deg 191.311
+ta_deg 184.429
+
+entity EUTELSAT_9B
+type satellite
+coe
+a_km 42164.5
+e 0.0004361
+i_deg 0.0421
+raan_deg 67.6612
+argp_deg 226.225
+ta_deg 172.602
+
+entity SES_9
+type satellite
+coe
+a_km 42164.4
+e 7.04e-05
+i_deg 0.0412
+raan_deg 277.847
+argp_deg 106.359
+ta_deg 137.187
+
+entity EUTELSAT_65_WEST_A
+type satellite
+coe
+a_km 42164.4
+e 0.0002084
+i_deg 0.0841
+raan_deg 300.94
+argp_deg 357.053
+ta_deg 88.9947
+
+entity IRNSS_1F
+type satellite
+coe
+a_km 42163.1
+e 0.0021637
+i_deg 4.9769
+raan_deg 100.352
+argp_deg 185.86
+ta_deg 205.439
+
+entity BEIDOU_2_IGSO_6
+type satellite
+coe
+a_km 42160.6
+e 0.006078
+i_deg 60.0199
+raan_deg 39.5122
+argp_deg 231.807
+ta_deg 312.683
+
+entity IRNSS_1G
+type satellite
+coe
+a_km 42163.9
+e 0.0004006
+i_deg 4.8279
+raan_deg 101.131
+argp_deg 326.3
+ta_deg 65.2235
+
+entity JCSAT_2B
+type satellite
+coe
+a_km 42164.9
+e 7.31e-05
+i_deg 0.0178
+raan_deg 50.2343
+argp_deg 227.985
+ta_deg 317.817
+
+entity THAICOM_8
+type satellite
+coe
+a_km 42164.9
+e 0.0004409
+i_deg 0.0526
+raan_deg 43.7906
+argp_deg 276.243
+ta_deg 220.988
+
+entity INTELSAT_31_IS_31
+type satellite
+coe
+a_km 42165.3
+e 0.0002006
+i_deg 0.0467
+raan_deg 241.85
+argp_deg 327.959
+ta_deg 145.179
+
+entity BEIDOU_2_G7
+type satellite
+coe
+a_km 42166.4
+e 0.0006024
+i_deg 1.8489
+raan_deg 68.1656
+argp_deg 358.287
+ta_deg 148.756
+
+entity ABS_2A_MONGOLSAT_1
+type satellite
+coe
+a_km 42166
+e 0.0001425
+i_deg 0.0253
+raan_deg 58.517
+argp_deg 189.119
+ta_deg 289.31
+
+entity EUTELSAT_117_WEST_B
+type satellite
+coe
+a_km 42165.2
+e 1.02e-05
+i_deg 0.0032
+raan_deg 120.266
+argp_deg 217.067
+ta_deg 276.884
+
+entity BRISAT
+type satellite
+coe
+a_km 42165.6
+e 0.0001953
+i_deg 0.0173
+raan_deg 43.6956
+argp_deg 257.716
+ta_deg 265.229
+
+entity ECHOSTAR_18
+type satellite
+coe
+a_km 42164.6
+e 0.0001351
+i_deg 0.0174
+raan_deg 54.3096
+argp_deg 248.812
+ta_deg 87.9659
+
+entity MUOS_5
+type satellite
+coe
+a_km 42164.5
+e 0.0197631
+i_deg 2.528
+raan_deg 299.197
+argp_deg 262.991
+ta_deg 142.244
+
+entity TIANTONG_1_1
+type satellite
+coe
+a_km 42164.2
+e 0.0003835
+i_deg 3.5676
+raan_deg 41.9578
+argp_deg 333.706
+ta_deg 189.857
+
+entity JCSAT_16
+type satellite
+coe
+a_km 42165.1
+e 9.33e-05
+i_deg 0.0179
+raan_deg 51.6916
+argp_deg 262.708
+ta_deg 270.935
+
+entity USA_270
+type satellite
+coe
+a_km 42149.3
+e 0.0002533
+i_deg 3.8109
+raan_deg 79.1464
+argp_deg 268.808
+ta_deg 73.1086
+
+entity USA_271
+type satellite
+coe
+a_km 42203.6
+e 4.29e-05
+i_deg 3.7831
+raan_deg 79.2088
+argp_deg 336.393
+ta_deg 350.997
+
+entity INTELSAT_36_IS_36
+type satellite
+coe
+a_km 42164.9
+e 0.0001059
+i_deg 0.0099
+raan_deg 33.0516
+argp_deg 287.139
+ta_deg 210.073
+
+entity INSAT_3DR
+type satellite
+coe
+a_km 42164.8
+e 0.0013953
+i_deg 0.1015
+raan_deg 88.1118
+argp_deg 187.255
+ta_deg 260.773
+
+entity GSAT_18
+type satellite
+coe
+a_km 42164.8
+e 0.0002261
+i_deg 0.0499
+raan_deg 93.6579
+argp_deg 276.287
+ta_deg 345.975
+
+entity SKY_MUSTER_2_NBN1B
+type satellite
+coe
+a_km 42164.5
+e 0.0001457
+i_deg 0.0142
+raan_deg 1.3489
+argp_deg 296.103
+ta_deg 211.574
+
+entity HIMAWARI_9
+type satellite
+coe
+a_km 42164.7
+e 7.56e-05
+i_deg 0.006
+raan_deg 291.317
+argp_deg 65.8872
+ta_deg 147.509
+
+entity SHIJIAN_17_SJ_17
+type satellite
+coe
+a_km 42281.6
+e 4.36e-05
+i_deg 5.3644
+raan_deg 74.4616
+argp_deg 201.934
+ta_deg 202.683
+
+entity GOES_16
+type satellite
+coe
+a_km 42164.8
+e 0.0002881
+i_deg 0.116
+raan_deg 96.673
+argp_deg 185.392
+ta_deg 62.6052
+
+entity TIANLIAN_1_04
+type satellite
+coe
+a_km 42165.6
+e 0.0042881
+i_deg 0.4853
+raan_deg 83.475
+argp_deg 96.8079
+ta_deg 80.3312
+
+entity WGS_F8_USA_272
+type satellite
+coe
+a_km 42165.1
+e 4.07e-05
+i_deg 0.0156
+raan_deg 37.1994
+argp_deg 276.064
+ta_deg 200.688
+
+entity FENGYUN_4A
+type satellite
+coe
+a_km 42165.9
+e 0.0005026
+i_deg 1.9448
+raan_deg 82.0091
+argp_deg 133.151
+ta_deg 14.3007
+
+entity ECHOSTAR_19
+type satellite
+coe
+a_km 42164.9
+e 0.0001221
+i_deg 0.0179
+raan_deg 52.1428
+argp_deg 244.071
+ta_deg 30.8679
+
+entity JCSAT_110A_JCSAT_15
+type satellite
+coe
+a_km 42165.1
+e 4.88e-05
+i_deg 0.018
+raan_deg 51.7432
+argp_deg 264.992
+ta_deg 258.061
+
+entity STAR_ONE_D1
+type satellite
+coe
+a_km 42164.3
+e 0.0002649
+i_deg 0.0131
+raan_deg 28.5972
+argp_deg 294.115
+ta_deg 44.1129
+
+entity TJS_2
+type satellite
+coe
+a_km 42164.7
+e 0.0002045
+i_deg 0.4491
+raan_deg 87.7179
+argp_deg 222.531
+ta_deg 217.934
+
+entity SBIRS_GEO_4_USA_273
+type satellite
+coe
+a_km 42164.6
+e 0.0002132
+i_deg 1.9701
+raan_deg 38.4688
+argp_deg 262.501
+ta_deg 178.279
+
+entity HISPASAT_36W_1
+type satellite
+coe
+a_km 42164.8
+e 9.74e-05
+i_deg 0.0144
+raan_deg 304.746
+argp_deg 359.868
+ta_deg 36.4085
+
+entity TELKOM_3S
+type satellite
+coe
+a_km 42164.9
+e 0.0002137
+i_deg 0.0173
+raan_deg 59.006
+argp_deg 246.019
+ta_deg 278.271
+
+entity INTELSAT_32E_IS_32E
+type satellite
+coe
+a_km 42165
+e 4.11e-05
+i_deg 0.0162
+raan_deg 77.8753
+argp_deg 336.322
+ta_deg 201.91
+
+entity ECHOSTAR_23
+type satellite
+coe
+a_km 42164.5
+e 0.0001929
+i_deg 0.0179
+raan_deg 54.4566
+argp_deg 240.902
+ta_deg 43.7354
+
+entity WGS_F9_USA_275
+type satellite
+coe
+a_km 42165.4
+e 4.36e-05
+i_deg 0.0227
+raan_deg 54.323
+argp_deg 332.838
+ta_deg 288.098
+
+entity SES_10
+type satellite
+coe
+a_km 42164.7
+e 0.0002609
+i_deg 0.0125
+raan_deg 39.9802
+argp_deg 271.509
+ta_deg 47.954
+
+entity CHINASAT_16_SJ_13
+type satellite
+coe
+a_km 42164.1
+e 0.0006877
+i_deg 0.043
+raan_deg 86.5969
+argp_deg 172.202
+ta_deg 316.505
+
+entity KOREASAT_7
+type satellite
+coe
+a_km 42165
+e 0.0001395
+i_deg 0.0222
+raan_deg 7.7877
+argp_deg 278.653
+ta_deg 294.575
+
+entity SGDC
+type satellite
+coe
+a_km 42164.7
+e 0.0002911
+i_deg 0.0171
+raan_deg 51.6443
+argp_deg 259.17
+ta_deg 49.1436
+
+entity GSAT_9
+type satellite
+coe
+a_km 42164.6
+e 0.0001703
+i_deg 0.0202
+raan_deg 239.59
+argp_deg 86.5914
+ta_deg 234.972
+
+entity INMARSAT_5_F4
+type satellite
+coe
+a_km 42165
+e 2.99e-05
+i_deg 0.0181
+raan_deg 45.78
+argp_deg 336.344
+ta_deg 212.078
+
+entity SES_15
+type satellite
+coe
+a_km 42165.5
+e 4.94e-05
+i_deg 0.0247
+raan_deg 334.696
+argp_deg 353.836
+ta_deg 272.659
+
+entity QZS_2_MICHIBIKI_2
+type satellite
+coe
+a_km 42164.3
+e 0.0751468
+i_deg 39.6546
+raan_deg 245.326
+argp_deg 269.9
+ta_deg 273.561
+
+entity VIASAT_2
+type satellite
+coe
+a_km 42164
+e 4.97e-05
+i_deg 0.0135
+raan_deg 348.055
+argp_deg 135.481
+ta_deg 258.384
+
+entity EUTELSAT_172B
+type satellite
+coe
+a_km 42164.7
+e 1.73e-05
+i_deg 0.0269
+raan_deg 122.86
+argp_deg 4.3797
+ta_deg 128.18
+
+entity GSAT_19
+type satellite
+coe
+a_km 42164.5
+e 0.0001708
+i_deg 0.033
+raan_deg 90.7491
+argp_deg 253.855
+ta_deg 163.53
+
+entity ECHOSTAR_21
+type satellite
+coe
+a_km 42164.8
+e 0.000232
+i_deg 1.8122
+raan_deg 346.029
+argp_deg 315.864
+ta_deg 165.955
+
+entity BULGARIASAT_1
+type satellite
+coe
+a_km 42164.8
+e 0.0002677
+i_deg 0.0209
+raan_deg 54.9115
+argp_deg 262.726
+ta_deg 12.5312
+
+entity HELLAS_SAT_3
+type satellite
+coe
+a_km 42163.7
+e 0.0004074
+i_deg 0.0394
+raan_deg 26.8923
+argp_deg 316.195
+ta_deg 155.584
+
+entity GSAT_17
+type satellite
+coe
+a_km 42166.1
+e 0.0006221
+i_deg 0.017
+raan_deg 67.3121
+argp_deg 205.504
+ta_deg 284.242
+
+entity INTELSAT_35E_IS_35E
+type satellite
+coe
+a_km 42166
+e 0.0002059
+i_deg 0.0187
+raan_deg 73.6229
+argp_deg 237.382
+ta_deg 108.925
+
+entity COSMOS_2520
+type satellite
+coe
+a_km 42164
+e 6.42e-05
+i_deg 0.0304
+raan_deg 105.153
+argp_deg 28.8631
+ta_deg 11.0385
+
+entity TDRS_13
+type satellite
+coe
+a_km 42164.7
+e 0.000904
+i_deg 3.4241
+raan_deg 358.932
+argp_deg 111.887
+ta_deg 333.748
+
+entity QZS_3_MICHIBIKI_3
+type satellite
+coe
+a_km 42163.4
+e 0.0002106
+i_deg 0.085
+raan_deg 229.146
+argp_deg 69.1317
+ta_deg 294.65
+
+entity AMAZONAS_5
+type satellite
+coe
+a_km 42165
+e 0.0005262
+i_deg 0.0403
+raan_deg 320.332
+argp_deg 346.276
+ta_deg 316.15
+
+entity ASIASAT_9
+type satellite
+coe
+a_km 40340.1
+e 0.0362426
+i_deg 0.0111
+raan_deg 29.9928
+argp_deg 100.766
+ta_deg 222.077
+
+entity INTELSAT_37E_IS_37E
+type satellite
+coe
+a_km 42165.7
+e 0.0002693
+i_deg 0.0179
+raan_deg 70.8739
+argp_deg 213.978
+ta_deg 152.73
+
+entity BSAT_4A
+type satellite
+coe
+a_km 42164.4
+e 0.0003634
+i_deg 0.0312
+raan_deg 354.016
+argp_deg 9.7749
+ta_deg 210.742
+
+entity QZS_4_MICHIBIKI_4
+type satellite
+coe
+a_km 42158.1
+e 0.0750872
+i_deg 40.2046
+raan_deg 345.445
+argp_deg 268.829
+ta_deg 289.555
+
+entity SES_11_ECHOSTAR_105
+type satellite
+coe
+a_km 42164.9
+e 0.0002437
+i_deg 0.0156
+raan_deg 41.9693
+argp_deg 242.975
+ta_deg 59.4483
+
+entity KOREASAT_5A
+type satellite
+coe
+a_km 42164.7
+e 6.75e-05
+i_deg 0.0178
+raan_deg 25.2669
+argp_deg 272.483
+ta_deg 280.343
+
+entity ALCOMSAT_1
+type satellite
+coe
+a_km 42165
+e 0.0002667
+i_deg 0.0621
+raan_deg 222.099
+argp_deg 69.2129
+ta_deg 138.967
+
+entity SBIRS_GEO_3_USA_282
+type satellite
+coe
+a_km 42164.6
+e 0.0002099
+i_deg 2.1033
+raan_deg 4.624
+argp_deg 295.521
+ta_deg 320.161
+
+entity AL_YAH_3
+type satellite
+coe
+a_km 42164.9
+e 0.0003891
+i_deg 1.1678
+raan_deg 85.0685
+argp_deg 228.71
+ta_deg 121.636
+
+entity SES_14
+type satellite
+coe
+a_km 42165.3
+e 7.75e-05
+i_deg 0.0106
+raan_deg 22.3946
+argp_deg 279.367
+ta_deg 104.214
+
+entity GOES_17
+type satellite
+coe
+a_km 42164.5
+e 0.000277
+i_deg 0.5546
+raan_deg 88.5312
+argp_deg 202.119
+ta_deg 70.3064
+
+entity HISPASAT_30W_6
+type satellite
+coe
+a_km 42165.2
+e 0.0004129
+i_deg 0.0412
+raan_deg 45.5779
+argp_deg 279.444
+ta_deg 99.6952
+
+entity SUPERBIRD_B3
+type satellite
+coe
+a_km 42165.1
+e 0.0001168
+i_deg 0.0489
+raan_deg 252.215
+argp_deg 67.5226
+ta_deg 284.947
+
+entity HYLAS_4
+type satellite
+coe
+a_km 42165.3
+e 0.000119
+i_deg 0.0141
+raan_deg 56.9113
+argp_deg 289.166
+ta_deg 331.832
+
+entity IRNSS_1I
+type satellite
+coe
+a_km 42164.4
+e 0.0021358
+i_deg 29.2389
+raan_deg 76.5045
+argp_deg 188.637
+ta_deg 173.446
+
+entity USA_283
+type satellite
+coe
+a_km 42165.3
+e 1.2e-05
+i_deg 0.0152
+raan_deg 86.9953
+argp_deg 232.115
+ta_deg 151.764
+
+entity COSMOS_2526
+type satellite
+coe
+a_km 42164
+e 0.0001017
+i_deg 0.0375
+raan_deg 128.734
+argp_deg 338.887
+ta_deg 254.742
+
+entity APSTAR_6C
+type satellite
+coe
+a_km 42164.8
+e 0.0003248
+i_deg 0.0465
+raan_deg 308.119
+argp_deg 6.898
+ta_deg 284.96
+
+entity BANGABANDHUSAT_1
+type satellite
+coe
+a_km 42165.9
+e 0.000174
+i_deg 0.0188
+raan_deg 92.4301
+argp_deg 208.249
+ta_deg 283.819
+
+entity SES_12
+type satellite
+coe
+a_km 42165
+e 0.0002372
+i_deg 0.0117
+raan_deg 9.2463
+argp_deg 270.171
+ta_deg 279.238
+
+entity FENGYUN_2H
+type satellite
+coe
+a_km 42165.7
+e 0.000216
+i_deg 2.6477
+raan_deg 80.9107
+argp_deg 177.128
+ta_deg 283.572
+
+entity BEIDOU_2_IGSO_7
+type satellite
+coe
+a_km 42170.9
+e 0.0093553
+i_deg 55.1801
+raan_deg 164.466
+argp_deg 235.195
+ta_deg 230.672
+
+entity TELSTAR_19V
+type satellite
+coe
+a_km 42165.2
+e 5.7e-05
+i_deg 0.0287
+raan_deg 156.105
+argp_deg 39.6144
+ta_deg 193.607
+
+entity TELKOM_4_MERAH_PUTIH
+type satellite
+coe
+a_km 42165
+e 0.0001161
+i_deg 0.0169
+raan_deg 58.5334
+argp_deg 280.208
+ta_deg 233.837
+
+entity TELSTAR_18V
+type satellite
+coe
+a_km 42164.6
+e 0.000221
+i_deg 0.0445
+raan_deg 251.853
+argp_deg 52.7925
+ta_deg 197.092
+
+entity AZERSPACE_2_IS_38
+type satellite
+coe
+a_km 42165.4
+e 0.0001239
+i_deg 0.0218
+raan_deg 65.2761
+argp_deg 232.976
+ta_deg 206.943
+
+entity HORIZONS_3E
+type satellite
+coe
+a_km 42165.8
+e 3.26e-05
+i_deg 0.0125
+raan_deg 187.733
+argp_deg 181.717
+ta_deg 242.777
+
+entity AEHF_4_USA_288
+type satellite
+coe
+a_km 42163.5
+e 0.0062731
+i_deg 1.4319
+raan_deg 350.99
+argp_deg 359.856
+ta_deg 33.6296
+
+entity BEIDOU_3_G1
+type satellite
+coe
+a_km 42165.8
+e 0.0001384
+i_deg 2.7018
+raan_deg 101.779
+argp_deg 32.2241
+ta_deg 112.904
+
+entity GSAT_29
+type satellite
+coe
+a_km 42163.9
+e 0.0002772
+i_deg 0.017
+raan_deg 62.7962
+argp_deg 218.976
+ta_deg 234.103
+
+entity ESHAIL_2
+type satellite
+coe
+a_km 42163.7
+e 0.0001954
+i_deg 0.0215
+raan_deg 81.1072
+argp_deg 274.579
+ta_deg 334.372
+
+entity GEO_KOMPSAT_2A
+type satellite
+coe
+a_km 42165.2
+e 8.1e-05
+i_deg 0.0258
+raan_deg 125.324
+argp_deg 285.293
+ta_deg 311.938
+
+entity GSAT_11
+type satellite
+coe
+a_km 42164.8
+e 0.0003215
+i_deg 0.1022
+raan_deg 261.903
+argp_deg 161.003
+ta_deg 113.259
+
+entity GSAT_7A
+type satellite
+coe
+a_km 42164.7
+e 0.0002096
+i_deg 0.0167
+raan_deg 91.4292
+argp_deg 192.672
+ta_deg 240.078
+
+entity COSMOS_2533
+type satellite
+coe
+a_km 42164.7
+e 8.31e-05
+i_deg 0.0346
+raan_deg 110.412
+argp_deg 177.878
+ta_deg 36.2142
+
+entity TJS_3
+type satellite
+coe
+a_km 42165.2
+e 0.0001697
+i_deg 2.161
+raan_deg 82.367
+argp_deg 216.771
+ta_deg 117.949
+
+entity ZHONGXING_2D
+type satellite
+coe
+a_km 42165.6
+e 0.0001072
+i_deg 0.0329
+raan_deg 124.362
+argp_deg 167.416
+ta_deg 304.343
+
+entity HELLAS_SAT_4_SGS_1
+type satellite
+coe
+a_km 42164.7
+e 0.0003473
+i_deg 0.0664
+raan_deg 123.139
+argp_deg 48.4934
+ta_deg 327.044
+
+entity GSAT_31
+type satellite
+coe
+a_km 42164.1
+e 0.0005939
+i_deg 0.0601
+raan_deg 257.975
+argp_deg 15.4043
+ta_deg 234.749
+
+entity NUSANTARA_SATU
+type satellite
+coe
+a_km 42165.4
+e 0.0001121
+i_deg 0.0257
+raan_deg 125.65
+argp_deg 29.7614
+ta_deg 97.8894
+
+entity ZHONGXING_6C
+type satellite
+coe
+a_km 42164.8
+e 0.0005851
+i_deg 0.0559
+raan_deg 66.0094
+argp_deg 324.774
+ta_deg 230.618
+
+entity WGS_10_USA_291
+type satellite
+coe
+a_km 42164.8
+e 0.0001046
+i_deg 0.0194
+raan_deg 37.4936
+argp_deg 51.7379
+ta_deg 251.609
+
+entity TIANLIAN_2_01
+type satellite
+coe
+a_km 42164.7
+e 0.0003885
+i_deg 0.1567
+raan_deg 79.0863
+argp_deg 198.862
+ta_deg 261.423
+
+entity ARABSAT_6A
+type satellite
+coe
+a_km 42164.1
+e 0.0005942
+i_deg 0.0426
+raan_deg 345.228
+argp_deg 306.092
+ta_deg 198.201
+
+entity BEIDOU_2_G8
+type satellite
+coe
+a_km 42163.8
+e 0.0008739
+i_deg 1.757
+raan_deg 74.7898
+argp_deg 262.413
+ta_deg 274.461
+
+entity YAMAL_601
+type satellite
+coe
+a_km 42164.8
+e 0.0002327
+i_deg 0.0152
+raan_deg 77.5548
+argp_deg 220.981
+ta_deg 210.801
+
+entity ATT_T_16
+type satellite
+coe
+a_km 42165.7
+e 8.98e-05
+i_deg 0.0209
+raan_deg 79.8588
+argp_deg 66.3046
+ta_deg 202.612
+
+entity EUTELSAT_7C
+type satellite
+coe
+a_km 42165
+e 0.0003083
+i_deg 0.0779
+raan_deg 184.304
+argp_deg 100.293
+ta_deg 51.0224
+
+entity BEIDOU_3_IGSO_2
+type satellite
+coe
+a_km 42167.8
+e 0.0037807
+i_deg 55.2327
+raan_deg 160.211
+argp_deg 203.478
+ta_deg 157.972
+
+entity COSMOS_2539
+type satellite
+coe
+a_km 42165
+e 7.71e-05
+i_deg 0.0329
+raan_deg 109.417
+argp_deg 169.068
+ta_deg 216.488
+
+entity EDRS_C
+type satellite
+coe
+a_km 42164.5
+e 0.0001002
+i_deg 0.0322
+raan_deg 106.933
+argp_deg 209.757
+ta_deg 267.127
+
+entity INTELSAT_39_IS_39
+type satellite
+coe
+a_km 42165.5
+e 0.0001027
+i_deg 0.0249
+raan_deg 68.2782
+argp_deg 71.3558
+ta_deg 177.587
+
+entity AMOS_17
+type satellite
+coe
+a_km 42165.4
+e 0.0001429
+i_deg 0.023
+raan_deg 62.1418
+argp_deg 243.684
+ta_deg 169.249
+
+entity AEHF_5_USA_292
+type satellite
+coe
+a_km 42165.9
+e 0.0070989
+i_deg 1.6207
+raan_deg 326.05
+argp_deg 2.7198
+ta_deg 227.727
+
+entity EUTELSAT_5_WEST_B
+type satellite
+coe
+a_km 42164.8
+e 0.0002977
+i_deg 0.0817
+raan_deg 317.764
+argp_deg 345.739
+ta_deg 147.993
+
+entity TJS_4
+type satellite
+coe
+a_km 42165
+e 0.0002586
+i_deg 0.0272
+raan_deg 123.553
+argp_deg 196.763
+ta_deg 226.048
+
+entity TIBA_1
+type satellite
+coe
+a_km 42163.9
+e 0.0001936
+i_deg 0.053
+raan_deg 348.854
+argp_deg 309.551
+ta_deg 196.522
+
+entity INMARSAT_GX5
+type satellite
+coe
+a_km 42164.9
+e 0.0002089
+i_deg 0.0367
+raan_deg 25.2966
+argp_deg 289.088
+ta_deg 154.227
+
+entity JCSAT_18_KACIFIC_1
+type satellite
+coe
+a_km 42160.6
+e 0.0001473
+i_deg 0.0108
+raan_deg 269.437
+argp_deg 1.5565
+ta_deg 243.163
+
+entity ELEKTRO_L_3
+type satellite
+coe
+a_km 42164.6
+e 0.0002158
+i_deg 0.0272
+raan_deg 109.681
+argp_deg 193.148
+ta_deg 235.48
+
+entity SHIJIAN_20_SJ_20
+type satellite
+coe
+a_km 42164.5
+e 0.0008026
+i_deg 4.5275
+raan_deg 76.97
+argp_deg 246.978
+ta_deg 149.018
+
+entity TJS_5
+type satellite
+coe
+a_km 42165.2
+e 0.0005256
+i_deg 0.4361
+raan_deg 88.2788
+argp_deg 123.514
+ta_deg 306.93
+
+entity GSAT_30
+type satellite
+coe
+a_km 42164.6
+e 9.14e-05
+i_deg 0.0442
+raan_deg 251.301
+argp_deg 329.841
+ta_deg 324.676
+
+entity EUTELSAT_KONNECT
+type satellite
+coe
+a_km 42164.8
+e 0.000122
+i_deg 0.0676
+raan_deg 94.2981
+argp_deg 181.823
+ta_deg 59.7038
+
+entity JCSAT_17
+type satellite
+coe
+a_km 42165.2
+e 0.0003766
+i_deg 5.3975
+raan_deg 355.397
+argp_deg 321.85
+ta_deg 259.578
+
+entity GEO_KOMPSAT_2B
+type satellite
+coe
+a_km 42165.2
+e 0.0002025
+i_deg 0.0074
+raan_deg 241.095
+argp_deg 50.7854
+ta_deg 225.166
+
+entity BEIDOU_3_G2
+type satellite
+coe
+a_km 42164.7
+e 0.0002179
+i_deg 2.5681
+raan_deg 44.7146
+argp_deg 264.497
+ta_deg 233.401
+
+entity AEHF_6_USA_298
+type satellite
+coe
+a_km 42163.8
+e 0.0049429
+i_deg 2.8727
+raan_deg 299.479
+argp_deg 11.7675
+ta_deg 293.144
+
+entity BEIDOU_3_G3
+type satellite
+coe
+a_km 42163.4
+e 0.000447
+i_deg 2.0825
+raan_deg 66.9036
+argp_deg 311.008
+ta_deg 197.373
+
+entity APSTAR_6D
+type satellite
+coe
+a_km 42165
+e 0.0002492
+i_deg 0.0531
+raan_deg 94.2719
+argp_deg 349.748
+ta_deg 155.984
+
+entity KOREASAT_116
+type satellite
+coe
+a_km 42164.2
+e 8.22e-05
+i_deg 0.0173
+raan_deg 15.2793
+argp_deg 275.52
+ta_deg 290.566
+
+entity EXPRESS_103
+type satellite
+coe
+a_km 42165.4
+e 7.22e-05
+i_deg 0.0189
+raan_deg 39.3318
+argp_deg 85.5693
+ta_deg 203.66
+
+entity EXPRESS_80
+type satellite
+coe
+a_km 42164.9
+e 0.00024
+i_deg 0.0166
+raan_deg 52.3666
+argp_deg 345.779
+ta_deg 321.855
+
+entity BSAT_4B
+type satellite
+coe
+a_km 42165.6
+e 3.17e-05
+i_deg 0.0378
+raan_deg 215.179
+argp_deg 290.156
+ta_deg 326.217
+
+entity MEV_2
+type satellite
+coe
+a_km 42165.4
+e 0.0001275
+i_deg 0.0246
+raan_deg 75.1303
+argp_deg 264.128
+ta_deg 116.591
+
+entity GALAXY_30_G_30
+type satellite
+coe
+a_km 42165
+e 0.0002009
+i_deg 0.0186
+raan_deg 45.4126
+argp_deg 261.086
+ta_deg 299.175
+
+entity GAOFEN_13_01
+type satellite
+coe
+a_km 42165.2
+e 0.0043006
+i_deg 0.1363
+raan_deg 85.1524
+argp_deg 118.01
+ta_deg 20.3876
+
+entity TIANTONG_1_2
+type satellite
+coe
+a_km 42164.8
+e 0.0003826
+i_deg 1.0299
+raan_deg 310.91
+argp_deg 9.5146
+ta_deg 270.329
+
+entity LUCAS_JDRS_1
+type satellite
+coe
+a_km 42165.1
+e 0.0002767
+i_deg 0.0211
+raan_deg 288.714
+argp_deg 7.0431
+ta_deg 258.396
+
+entity SXM_7
+type satellite
+coe
+a_km 42164.7
+e 0.0004103
+i_deg 0.0228
+raan_deg 100.969
+argp_deg 29.0694
+ta_deg 235.519
+
+entity CMS_01
+type satellite
+coe
+a_km 42165.6
+e 0.0007412
+i_deg 0.0236
+raan_deg 87.8525
+argp_deg 188.754
+ta_deg 269.198
+
+entity TURKSAT_5A
+type satellite
+coe
+a_km 42165
+e 2.03e-05
+i_deg 0.0252
+raan_deg 80.2058
+argp_deg 359.266
+ta_deg 50.5047
+
+entity TIANTONG_1_3
+type satellite
+coe
+a_km 42164.6
+e 0.0007168
+i_deg 1.9017
+raan_deg 330.751
+argp_deg 323.678
+ta_deg 249.831
+
+entity TJS_6
+type satellite
+coe
+a_km 42165.1
+e 0.0003064
+i_deg 0.217
+raan_deg 93.4962
+argp_deg 268.142
+ta_deg 234.956
+
+entity SBIRS_GEO_5_USA_315
+type satellite
+coe
+a_km 42164.8
+e 0.0002352
+i_deg 5.2942
+raan_deg 328.037
+argp_deg 287.446
+ta_deg 276.142
+
+entity FENGYUN_4B
+type satellite
+coe
+a_km 42165
+e 0.0009748
+i_deg 0.0823
+raan_deg 65.1164
+argp_deg 306.87
+ta_deg 197.023
+
+entity SXM_8
+type satellite
+coe
+a_km 42165
+e 0.0003968
+i_deg 0.0138
+raan_deg 23.5933
+argp_deg 29.6983
+ta_deg 209.311
+
+entity TIANLIAN_1_05
+type satellite
+coe
+a_km 42164.9
+e 0.000534
+i_deg 1.2086
+raan_deg 81.9471
+argp_deg 201.94
+ta_deg 293.448
+
+entity STAR_ONE_D2
+type satellite
+coe
+a_km 42165.6
+e 0.0001289
+i_deg 0.0176
+raan_deg 61.6847
+argp_deg 208.498
+ta_deg 111.673
+
+entity EUTELSAT_QUANTUM
+type satellite
+coe
+a_km 42164.8
+e 0.0003181
+i_deg 0.0124
+raan_deg 354.083
+argp_deg 308.764
+ta_deg 205.104
+
+entity ZHONGXING_2E
+type satellite
+coe
+a_km 42165
+e 5.33e-05
+i_deg 0.0215
+raan_deg 109.174
+argp_deg 186.267
+ta_deg 266.514
+
+entity TJS_7
+type satellite
+coe
+a_km 42164.1
+e 0.0001199
+i_deg 0.1251
+raan_deg 89.5503
+argp_deg 239.504
+ta_deg 21.153
+
+entity CHINASAT_9B
+type satellite
+coe
+a_km 42164.2
+e 0.0003042
+i_deg 0.0201
+raan_deg 85.2167
+argp_deg 194.404
+ta_deg 285.887
+
+entity SHIJIAN_21_SJ_21
+type satellite
+coe
+a_km 42168.7
+e 0.005083
+i_deg 4.7601
+raan_deg 62.0129
+argp_deg 171.84
+ta_deg 326.921
+
+entity SES_17
+type satellite
+coe
+a_km 42165.4
+e 8.05e-05
+i_deg 0.0183
+raan_deg 48.1267
+argp_deg 251.546
+ta_deg 85.2775
+
+entity SYRACUSE_4A
+type satellite
+coe
+a_km 42165.5
+e 0.0001648
+i_deg 0.0262
+raan_deg 74.9049
+argp_deg 217.923
+ta_deg 212.781
+
+entity QZS_1R_MICHIBIKI_1R
+type satellite
+coe
+a_km 42172.1
+e 0.0760686
+i_deg 37.1487
+raan_deg 81.8239
+argp_deg 272.063
+ta_deg 100.413
+
+entity ZHONGXING_1D
+type satellite
+coe
+a_km 42164.9
+e 0.0005885
+i_deg 0.0583
+raan_deg 63.6765
+argp_deg 327.312
+ta_deg 230.899
+
+entity STPSAT_6
+type satellite
+coe
+a_km 42164.5
+e 0.0002765
+i_deg 0.0496
+raan_deg 247.95
+argp_deg 59.4858
+ta_deg 312.439
+
+entity LDPE_1
+type satellite
+coe
+a_km 41764.2
+e 0.0006915
+i_deg 3.5216
+raan_deg 80.6296
+argp_deg 239.929
+ta_deg 354.82
+
+entity EXPRESS_AMU_7
+type satellite
+coe
+a_km 42165.7
+e 4.98e-05
+i_deg 0.02
+raan_deg 65.2179
+argp_deg 81.776
+ta_deg 182.048
+
+entity EXPRESS_AMU_3
+type satellite
+coe
+a_km 42165.5
+e 1.16e-05
+i_deg 0.0148
+raan_deg 43.9554
+argp_deg 251.972
+ta_deg 64.0717
+
+entity TIANLIAN_2_02
+type satellite
+coe
+a_km 42164.5
+e 0.0005223
+i_deg 0.4173
+raan_deg 89.394
+argp_deg 190.396
+ta_deg 334.516
+
+entity TURKSAT_5B
+type satellite
+coe
+a_km 42164.6
+e 0.0005028
+i_deg 0.0705
+raan_deg 339.387
+argp_deg 334.197
+ta_deg 7.9723
+
+entity INMARSAT_6_F1
+type satellite
+coe
+a_km 42164.8
+e 2.24e-05
+i_deg 0.0182
+raan_deg 312.298
+argp_deg 104.644
+ta_deg 78.1678
+
+entity SHIYAN_12_01_SY_12_01
+type satellite
+coe
+a_km 42212
+e 0.0003663
+i_deg 3.2902
+raan_deg 82.0022
+argp_deg 229.151
+ta_deg 251.561
+
+entity SHIYAN_12_02_SY_12_02
+type satellite
+coe
+a_km 42220.4
+e 0.0003783
+i_deg 3.2902
+raan_deg 82.0157
+argp_deg 204.998
+ta_deg 124.594
+
+entity TJS_9
+type satellite
+coe
+a_km 42165.1
+e 0.0004685
+i_deg 0.0828
+raan_deg 255.994
+argp_deg 277.004
+ta_deg 70.9116
+
+entity USA_324
+type satellite
+coe
+a_km 42145
+e 6.21e-05
+i_deg 0.3822
+raan_deg 83.6482
+argp_deg 237.815
+ta_deg 157.231
+
+entity USA_325
+type satellite
+coe
+a_km 42166.3
+e 0.0022746
+i_deg 0.1656
+raan_deg 83.9928
+argp_deg 181.12
+ta_deg 218.261
+
+entity GOES_18
+type satellite
+coe
+a_km 42165.1
+e 6.68e-05
+i_deg 0.0199
+raan_deg 98.9378
+argp_deg 255.12
+ta_deg 238.751
+
+entity ZHONGXING_6D
+type satellite
+coe
+a_km 42165.2
+e 0.0002657
+i_deg 0.0063
+raan_deg 72.1628
+argp_deg 209.7
+ta_deg 78.092
+
+entity NILESAT_301
+type satellite
+coe
+a_km 42164.8
+e 0.0005507
+i_deg 0.0435
+raan_deg 4.2124
+argp_deg 318.57
+ta_deg 23.5882
+
+entity CMS_02_GSAT_24
+type satellite
+coe
+a_km 42164.9
+e 0.0004262
+i_deg 0.0594
+raan_deg 258.97
+argp_deg 17.2354
+ta_deg 269.601
+
+entity MEASAT_3D
+type satellite
+coe
+a_km 42165.2
+e 0.0003474
+i_deg 0.0399
+raan_deg 319.824
+argp_deg 355.083
+ta_deg 162.745
+
+entity SES_22
+type satellite
+coe
+a_km 42164.1
+e 9.23e-05
+i_deg 0.0163
+raan_deg 4.08
+argp_deg 309.104
+ta_deg 277.502
+
+entity WFOV_USA_332
+type satellite
+coe
+a_km 42165.5
+e 0.0001933
+i_deg 3.3286
+raan_deg 80.4817
+argp_deg 162.448
+ta_deg 290.182
+
+entity TIANLIAN_2_03
+type satellite
+coe
+a_km 42164.5
+e 0.0003698
+i_deg 0.2973
+raan_deg 68.7284
+argp_deg 229.575
+ta_deg 169.853
+
+entity SBIRS_GEO_6_USA_336
+type satellite
+coe
+a_km 42164.8
+e 0.0002032
+i_deg 3.5143
+raan_deg 315.232
+argp_deg 339.654
+ta_deg 310.914
+
+entity EUTELSAT_KONNECT_VHTS
+type satellite
+coe
+a_km 42165.7
+e 0.0002971
+i_deg 0.0564
+raan_deg 98.2284
+argp_deg 173.329
+ta_deg 188.231
+
+entity ZHONGXING_1E
+type satellite
+coe
+a_km 42165
+e 0.0004488
+i_deg 0.0363
+raan_deg 177.572
+argp_deg 107.736
+ta_deg 258.779
+
+entity SES_20
+type satellite
+coe
+a_km 42165.2
+e 0.0001256
+i_deg 0.0156
+raan_deg 61.661
+argp_deg 20.2642
+ta_deg 264.465
+
+entity SES_21
+type satellite
+coe
+a_km 42166.1
+e 9.16e-05
+i_deg 0.0344
+raan_deg 40.9067
+argp_deg 247.983
+ta_deg 284.694
+
+entity GALAXY_33_G_33
+type satellite
+coe
+a_km 42164.7
+e 0.0001708
+i_deg 0.0186
+raan_deg 322.067
+argp_deg 338.505
+ta_deg 8.4922
+
+entity GALAXY_34_G_34
+type satellite
+coe
+a_km 42165
+e 0.0001258
+i_deg 0.0155
+raan_deg 43.7504
+argp_deg 251.144
+ta_deg 306.57
+
+entity ANGOSAT_2
+type satellite
+coe
+a_km 42164.7
+e 5.87e-05
+i_deg 0.0212
+raan_deg 133.827
+argp_deg 309.456
+ta_deg 140.267
+
+entity EUTELSAT_HOTBIRD_13F
+type satellite
+coe
+a_km 42164.8
+e 0.0002205
+i_deg 0.0598
+raan_deg 278.348
+argp_deg 86.0466
+ta_deg 106.385
+
+entity LDPE_2
+type satellite
+coe
+a_km 41672.8
+e 0.0002648
+i_deg 5.2816
+raan_deg 64.6739
+argp_deg 270.534
+ta_deg 116.969
+
+entity EUTELSAT_HOTBIRD_13G
+type satellite
+coe
+a_km 42163.4
+e 0.0001617
+i_deg 0.02
+raan_deg 221.155
+argp_deg 308.086
+ta_deg 95.5738
+
+entity ZHONGXING_19
+type satellite
+coe
+a_km 42164.8
+e 0.000857
+i_deg 0.049
+raan_deg 248.586
+argp_deg 1.5658
+ta_deg 356.027
+
+entity GALAXY_31_G_31
+type satellite
+coe
+a_km 42164.7
+e 0.000145
+i_deg 0.004
+raan_deg 111.058
+argp_deg 202.926
+ta_deg 13.2266
+
+entity GALAXY_32_G_32
+type satellite
+coe
+a_km 42165
+e 0.0002554
+i_deg 0.0144
+raan_deg 37.4675
+argp_deg 296.566
+ta_deg 25.2981
+
+entity EUTELSAT_10B
+type satellite
+coe
+a_km 42165.4
+e 9.05e-05
+i_deg 0.0578
+raan_deg 95.8203
+argp_deg 27.5787
+ta_deg 344.17
+
+entity GALAXY_35_G_35
+type satellite
+coe
+a_km 42164.8
+e 0.0002013
+i_deg 0.0216
+raan_deg 103.241
+argp_deg 199.101
+ta_deg 54.7705
+
+entity GALAXY_36_G_36
+type satellite
+coe
+a_km 42165.1
+e 0.000114
+i_deg 0.0126
+raan_deg 113.281
+argp_deg 264.681
+ta_deg 343.528
+
+entity METEOSAT_12_MTG_I1
+type satellite
+coe
+a_km 42163.7
+e 0.0001498
+i_deg 0.7326
+raan_deg 29.9497
+argp_deg 260.255
+ta_deg 166.466
+
+entity SHIJIAN_23_SJ_23
+type satellite
+coe
+a_km 42098
+e 0.000551
+i_deg 3.3352
+raan_deg 80.2495
+argp_deg 253.377
+ta_deg 148.857
+
+entity APSTAR_6E
+type satellite
+coe
+a_km 42164.7
+e 0.0003059
+i_deg 0.0133
+raan_deg 245.353
+argp_deg 36.0275
+ta_deg 61.6152
+
+entity USA_342
+type satellite
+coe
+a_km 42165.1
+e 2.66e-05
+i_deg 0.0101
+raan_deg 72.7993
+argp_deg 204.095
+ta_deg 75.8056
+
+entity LDPE_3A
+type satellite
+coe
+a_km 41891
+e 6.14e-05
+i_deg 1.8966
+raan_deg 83.1136
+argp_deg 304.308
+ta_deg 206.424
+
+entity ELEKTRO_L_4
+type satellite
+coe
+a_km 42165.1
+e 0.0002638
+i_deg 0.0054
+raan_deg 54.85
+argp_deg 214.94
+ta_deg 90.1795
+
+entity AMAZONAS_NEXUS
+type satellite
+coe
+a_km 42165.2
+e 0.0003428
+i_deg 0.034
+raan_deg 43.2493
+argp_deg 292.816
+ta_deg 55.4328
+
+entity ZHONGXING_26
+type satellite
+coe
+a_km 42165.4
+e 0.0002289
+i_deg 0.0591
+raan_deg 71.4997
+argp_deg 303.46
+ta_deg 318.481
+
+entity LUCH_5X_OLYMP_K_2
+type satellite
+coe
+a_km 42164.9
+e 0.0001609
+i_deg 0.034
+raan_deg 102.306
+argp_deg 39.9462
+ta_deg 277.99
+
+entity GAOFEN_13_02
+type satellite
+coe
+a_km 42165.7
+e 0.0004671
+i_deg 1.056
+raan_deg 342.434
+argp_deg 332.654
+ta_deg 249.037
+
+entity SES_18
+type satellite
+coe
+a_km 42164.6
+e 0.0002604
+i_deg 0.0632
+raan_deg 260.744
+argp_deg 16.2821
+ta_deg 69.3686
+
+entity SES_19
+type satellite
+coe
+a_km 42165.3
+e 0.0001492
+i_deg 0.0452
+raan_deg 264.964
+argp_deg 49.9201
+ta_deg 280.172
+
+entity INTELSAT_40E_IS_40E
+type satellite
+coe
+a_km 42165.7
+e 0.000103
+i_deg 0.0229
+raan_deg 86.9604
+argp_deg 178.954
+ta_deg 93.4333
+
+entity VIASAT_3_F1
+type satellite
+coe
+a_km 42165.2
+e 2.83e-05
+i_deg 0.014
+raan_deg 43.7885
+argp_deg 329.889
+ta_deg 347.859
+
+entity ARCTURUS
+type satellite
+coe
+a_km 41991.5
+e 0.0003711
+i_deg 2.393
+raan_deg 81.8564
+argp_deg 353.901
+ta_deg 87.8985
+
+entity GS_1
+type satellite
+coe
+a_km 42155.5
+e 0.0004525
+i_deg 2.341
+raan_deg 81.6497
+argp_deg 251.422
+ta_deg 104.226
+
+entity BEIDOU_3_G4
+type satellite
+coe
+a_km 42165.2
+e 0.0001758
+i_deg 0.7344
+raan_deg 305.441
+argp_deg 212.295
+ta_deg 84.7643
+
+entity ARABSAT_7B_BADR_8
+type satellite
+coe
+a_km 42164.4
+e 0.0004624
+i_deg 0.075
+raan_deg 32.7449
+argp_deg 307.326
+ta_deg 272.893
+
+entity NVS_01_IRNSS_1J
+type satellite
+coe
+a_km 42165.7
+e 0.0008408
+i_deg 2.5256
+raan_deg 250.215
+argp_deg 28.7873
+ta_deg 316.63
+
+entity NUSANTARA_TIGA_SATRIA
+type satellite
+coe
+a_km 42165.4
+e 0.0006005
+i_deg 0.0379
+raan_deg 326.207
+argp_deg 343.028
+ta_deg 304.051
+
+entity H2SAT_HEINRICH_HERTZ
+type satellite
+coe
+a_km 42164.8
+e 3.1e-05
+i_deg 0.0215
+raan_deg 91.899
+argp_deg 329.31
+ta_deg 190.411
+
+entity SYRACUSE_4B
+type satellite
+coe
+a_km 42164.7
+e 2.56e-05
+i_deg 0.0061
+raan_deg 150.313
+argp_deg 228.587
+ta_deg 70.9433
+
+entity JUPITER_3_ECHOSTAR_24
+type satellite
+coe
+a_km 42164.7
+e 0.000112
+i_deg 0.0111
+raan_deg 50.5379
+argp_deg 240.399
+ta_deg 69.0347
+
+entity GALAXY_37_G_37
+type satellite
+coe
+a_km 42164.9
+e 0.0001925
+i_deg 0.0206
+raan_deg 44.7652
+argp_deg 260.601
+ta_deg 15.3273
+
+entity LUDI_TANCE_4_01A
+type satellite
+coe
+a_km 42166.6
+e 0.000667
+i_deg 15.2078
+raan_deg 197.634
+argp_deg 97.0303
+ta_deg 258.046
+
+entity TJS_10
+type satellite
+coe
+a_km 42163.8
+e 0.0005664
+i_deg 2.1603
+raan_deg 82.3467
+argp_deg 180.845
+ta_deg 307.783
+
+entity ZHONGXING_6E
+type satellite
+coe
+a_km 42165.5
+e 0.0003182
+i_deg 0.0064
+raan_deg 19.6874
+argp_deg 295.321
+ta_deg 265.617
+
+entity YAOGAN_41
+type satellite
+coe
+a_km 42165
+e 0.0009012
+i_deg 3.4056
+raan_deg 311.029
+argp_deg 190.354
+ta_deg 87.4408
+
+entity OVZON_3
+type satellite
+coe
+a_km 42165.8
+e 4e-05
+i_deg 0.0135
+raan_deg 135.964
+argp_deg 21.3698
+ta_deg 337.735
+
+entity INSAT_3DS
+type satellite
+coe
+a_km 42164.9
+e 0.0001605
+i_deg 0.0716
+raan_deg 262.631
+argp_deg 67.8454
+ta_deg 59.8773
+
+entity MERAH_PUTIH_2
+type satellite
+coe
+a_km 42164.9
+e 0.0001009
+i_deg 0.0179
+raan_deg 58.7203
+argp_deg 250.341
+ta_deg 268.844
+
+entity TJS_11
+type satellite
+coe
+a_km 42164.9
+e 0.0005921
+i_deg 4.4021
+raan_deg 325.295
+argp_deg 5.0864
+ta_deg 167.035
+
+entity HULIANWAN_GAOGUI_01_H
+type satellite
+coe
+a_km 42164.5
+e 0.0003757
+i_deg 0.0565
+raan_deg 302.921
+argp_deg 34.4799
+ta_deg 155.54
+
+entity EUTELSAT_36D
+type satellite
+coe
+a_km 42164.9
+e 9.9e-06
+i_deg 0.0273
+raan_deg 77.3638
+argp_deg 273.245
+ta_deg 144.661
+
+entity PAKSAT_MM1
+type satellite
+coe
+a_km 42164.1
+e 0.0002954
+i_deg 0.0141
+raan_deg 93.82
+argp_deg 213.394
+ta_deg 36.1315
+
+entity ASTRA_1P_SES_24
+type satellite
+coe
+a_km 42165.1
+e 0.0005329
+i_deg 0.0825
+raan_deg 310.124
+argp_deg 349.919
+ta_deg 177.374
+
+entity GOES_19
+type satellite
+coe
+a_km 42164.5
+e 9.83e-05
+i_deg 0.0114
+raan_deg 295.192
+argp_deg 55.0044
+ta_deg 26.0788
+
+entity ZHONGXING_3A
+type satellite
+coe
+a_km 42165.9
+e 5.93e-05
+i_deg 0.0259
+raan_deg 125.747
+argp_deg 228.214
+ta_deg 262.773
+
+entity TURKSAT_6A
+type satellite
+coe
+a_km 42164.6
+e 0.0003589
+i_deg 0.0636
+raan_deg 226.135
+argp_deg 49.5287
+ta_deg 226.156
+
+entity HULIANWAN_GAOGUI_02_H
+type satellite
+coe
+a_km 42164.9
+e 0.0005817
+i_deg 0.0231
+raan_deg 49.2095
+argp_deg 272.998
+ta_deg 272.946
+
+entity ZHONGXING_4A
+type satellite
+coe
+a_km 42164.9
+e 0.0001474
+i_deg 1.6979
+raan_deg 272.362
+argp_deg 72.8198
+ta_deg 238.344
+
+entity HULIANWAN_GAOGUI_03_H
+type satellite
+coe
+a_km 42166.3
+e 5.5e-05
+i_deg 0.0206
+raan_deg 48.6442
+argp_deg 110.811
+ta_deg 214.711
+
+entity DSN_3_KIRAMEKI_3
+type satellite
+coe
+a_km 42165.1
+e 0.0001869
+i_deg 0.0458
+raan_deg 243.657
+argp_deg 83.7621
+ta_deg 283.809
+
+entity KOREASAT_6A
+type satellite
+coe
+a_km 42165
+e 5.27e-05
+i_deg 0.0211
+raan_deg 103.459
+argp_deg 187.396
+ta_deg 161.572
+
+entity OPTUS_X_ADS_01
+type satellite
+coe
+a_km 42165.1
+e 0.0001382
+i_deg 0.0462
+raan_deg 253.475
+argp_deg 34.6181
+ta_deg 318.36
+
+entity GSAT_N2_GSAT_20
+type satellite
+coe
+a_km 42164.4
+e 0.0002267
+i_deg 0.0451
+raan_deg 246.345
+argp_deg 34.9491
+ta_deg 248.414
+
+entity SXM_9
+type satellite
+coe
+a_km 42164.8
+e 0.0003689
+i_deg 0.0237
+raan_deg 324.425
+argp_deg 327.209
+ta_deg 73.9819
+
+entity TJS_12
+type satellite
+coe
+a_km 42164.5
+e 0.0001645
+i_deg 1.0147
+raan_deg 289.714
+argp_deg 346.789
+ta_deg 311.626
+
+entity NUVIEW_ALPHA
+type satellite
+coe
+a_km 42165
+e 0.0002416
+i_deg 0.0446
+raan_deg 29.8033
+argp_deg 297.837
+ta_deg 219.939
+
+entity AGILA
+type satellite
+coe
+a_km 42164.5
+e 0.0001497
+i_deg 0.0377
+raan_deg 146.138
+argp_deg 148.478
+ta_deg 299.522
+
+entity NUVIEW_BRAVO
+type satellite
+coe
+a_km 42164.9
+e 0.0001329
+i_deg 0.0739
+raan_deg 184.529
+argp_deg 69.9272
+ta_deg 267.381
+
+entity THURAYA_4
+type satellite
+coe
+a_km 42164.3
+e 1.75e-05
+i_deg 0.0145
+raan_deg 74.5907
+argp_deg 60.4497
+ta_deg 9.301
+
+entity SHIJIAN_25_SJ_25
+type satellite
+coe
+a_km 42162.8
+e 0.0049773
+i_deg 4.7598
+raan_deg 62.0126
+argp_deg 171.118
+ta_deg 295.447
+
+entity TJS_14
+type satellite
+coe
+a_km 42165.3
+e 0.0003111
+i_deg 1.133
+raan_deg 288.519
+argp_deg 32.8283
+ta_deg 155.184
+
+entity SPAINSAT_NG_I
+type satellite
+coe
+a_km 42166.3
+e 8.41e-05
+i_deg 0.1998
+raan_deg 85.6778
+argp_deg 279.627
+ta_deg 44.9253
+
+entity QZS_6_MICHIBIKI_6
+type satellite
+coe
+a_km 42165.2
+e 0.0001782
+i_deg 0.0307
+raan_deg 304.59
+argp_deg 16.1955
+ta_deg 233.055
+
+entity ZHONGXING_10R
+type satellite
+coe
+a_km 42165.3
+e 0.0002698
+i_deg 0.0553
+raan_deg 245.787
+argp_deg 323.124
+ta_deg 6.3757
+
+entity TJS_15
+type satellite
+coe
+a_km 42165.8
+e 0.0006697
+i_deg 0.1462
+raan_deg 89.6125
+argp_deg 238.571
+ta_deg 171.103
+
+entity TIANLIAN_2_04
+type satellite
+coe
+a_km 42165.1
+e 0.0035889
+i_deg 4.7578
+raan_deg 276.468
+argp_deg 5.7855
+ta_deg 311.374
+
+entity TJS_16
+type satellite
+coe
+a_km 42164.5
+e 0.0005017
+i_deg 0.7142
+raan_deg 82.0438
+argp_deg 239.62
+ta_deg 239.699
+
+entity TJS_17
+type satellite
+coe
+a_km 42164.9
+e 0.0004325
+i_deg 0.6794
+raan_deg 83.8672
+argp_deg 225.953
+ta_deg 251.156
+
+entity TIANLIAN_2_05
+type satellite
+coe
+a_km 42164.3
+e 0.0002743
+i_deg 4.8272
+raan_deg 281.448
+argp_deg 56.8352
+ta_deg 140.399
+
+entity TJS_19
+type satellite
+coe
+a_km 42165
+e 0.0003013
+i_deg 3.5427
+raan_deg 315.202
+argp_deg 322.06
+ta_deg 257.063
+
+entity CHINASAT_3B
+type satellite
+coe
+a_km 42164.7
+e 0.000427
+i_deg 0.0246
+raan_deg 157.661
+argp_deg 117.966
+ta_deg 309.023
+
+entity SXM_10
+type satellite
+coe
+a_km 42165.1
+e 0.0002444
+i_deg 0.0158
+raan_deg 39.6194
+argp_deg 322.628
+ta_deg 252.885
+
+entity CHINASAT_9C
+type satellite
+coe
+a_km 42164.4
+e 0.0003189
+i_deg 0.0108
+raan_deg 302.977
+argp_deg 335.008
+ta_deg 277.661
+
+entity MTG_S1
+type satellite
+coe
+a_km 42164.5
+e 0.000279
+i_deg 0.7199
+raan_deg 319.225
+argp_deg 321.514
+ta_deg 172.487
+
+entity DROR_1
+type satellite
+coe
+a_km 42164.9
+e 0.000345
+i_deg 0.0402
+raan_deg 270.792
+argp_deg 59.9444
+ta_deg 121.819
+
+entity SHIYAN_29
+type satellite
+coe
+a_km 42164.7
+e 0.0010145
+i_deg 28.6607
+raan_deg 20.4001
+argp_deg 188.709
+ta_deg 348.541
+
+entity TJS_20
+type satellite
+coe
+a_km 42165
+e 0.0005572
+i_deg 5.8002
+raan_deg 300.124
+argp_deg 75.2942
+ta_deg 122.611
+
+entity CMS_03_GSAT_7R
+type satellite
+coe
+a_km 42164.5
+e 0.0003835
+i_deg 0.0439
+raan_deg 262.748
+argp_deg 167.485
+ta_deg 126.828

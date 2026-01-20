@@ -2,26 +2,22 @@
 #include <cmath>
 #include <algorithm>
 
-static constexpr double G0      = 9.80665; // m/s^2
-static constexpr double R_E_KM  = 6371.0;
+static constexpr double G0 = 9.80665; // m/s^2
+static constexpr double R_E_KM = 6371.0;
 
 Rocket::Rocket(const std::vector<Stage>& stages): st(stages){
-    cur=0;
-    sep=false;
-    powered = !st.empty();
     if(!st.empty()){
+        cur=0;
         fuel = st[0].fuel_kg;
         dry  = st[0].dry_kg;
-        mass = std::max(1.0, fuel + dry);
-    }else{
-        mass = 1.0;
+        mass = dry + fuel;
     }
 }
 
 void Rocket::set_state(const RocketState& s){
     x=s.x; y=s.y; z=s.z;
     vx=s.vx; vy=s.vy; vz=s.vz;
-    mass=std::max(1.0, s.mass);
+    mass=s.mass;
 }
 
 RocketState Rocket::state() const{
@@ -34,130 +30,99 @@ double Rocket::mdot() const{
     return st[cur].thrust_n/(st[cur].isp_s*G0); // kg/s
 }
 
-void Rocket::step(double dt_s, double mu_km3_s2, const double* target_xyz_km){
+void Rocket::step(double dt_s, double mu_km3_s2,
+                  const double* target_xyz_km,
+                  const double* target_vxyz_km_s,
+                  double lead_tau_s){
     sep=false;
+    powered=false;
+    if(is_dead) return;
 
-    // radius + unit vectors
-    double r = std::sqrt(x*x+y*y+z*z);
-    if(!(r>0.0)) r = R_E_KM;
+    // gravity (km/s^2)
+    const double r2 = x*x + y*y + z*z;
+    const double r  = std::sqrt(std::max(1e-12, r2));
+    double ax = -mu_km3_s2 * x / (r*r*r);
+    double ay = -mu_km3_s2 * y / (r*r*r);
+    double az = -mu_km3_s2 * z / (r*r*r);
 
-    // hard clamp to surface + remove inward radial component (prevents "digging")
-    if(r < R_E_KM){
-        double ux=x/r, uy=y/r, uz=z/r;
-        x = R_E_KM*ux; y = R_E_KM*uy; z = R_E_KM*uz;
-        double vr = vx*ux + vy*uy + vz*uz;
+    if(cur < st.size() && fuel > 0.0 && mass > 1e-9){
+        powered=true;
+
+        // thrust dir
+        double tx= x/r, ty= y/r, tz= z/r; // radial default
+        if(target_xyz_km){
+            double px = target_xyz_km[0];
+            double py = target_xyz_km[1];
+            double pz = target_xyz_km[2];
+            if(target_vxyz_km_s && lead_tau_s > 0.0){
+                px += target_vxyz_km_s[0] * lead_tau_s;
+                py += target_vxyz_km_s[1] * lead_tau_s;
+                pz += target_vxyz_km_s[2] * lead_tau_s;
+            }
+            double dx = px - x;
+            double dy = py - y;
+            double dz = pz - z;
+            double d  = std::sqrt(std::max(1e-12, dx*dx + dy*dy + dz*dz));
+            tx = dx/d; ty = dy/d; tz = dz/d;
+        }
+
+        // if below surface, force radial-out thrust
+        const double alt_km = r - R_E_KM;
+        if(alt_km < 0.0){ tx=x/r; ty=y/r; tz=z/r; }
+
+        const double a_thrust_km_s2 = (st[cur].thrust_n / mass) / 1000.0;
+        ax += a_thrust_km_s2 * tx;
+        ay += a_thrust_km_s2 * ty;
+        az += a_thrust_km_s2 * tz;
+
+        // burn
+        const double dm = mdot() * dt_s;
+        const double burn = std::min(fuel, std::max(0.0, dm));
+        fuel -= burn;
+        mass = dry + fuel;
+
+        if(fuel <= 0.0){
+            sep=true;
+            cur++;
+            if(cur < st.size()){
+                dry  = st[cur].dry_kg;
+                fuel = st[cur].fuel_kg;
+                mass = dry + fuel;
+            }else{
+                powered=false; // coast
+            }
+        }
+    }
+
+    // semi-implicit Euler
+    vx += ax * dt_s;
+    vy += ay * dt_s;
+    vz += az * dt_s;
+
+    x += vx * dt_s;
+    y += vy * dt_s;
+    z += vz * dt_s;
+
+    // clamp to surface (simple ground collision)
+    const double r2n = x*x + y*y + z*z;
+    const double rn  = std::sqrt(std::max(1e-12, r2n));
+    if(rn < R_E_KM){
+        const double ux=x/rn, uy=y/rn, uz=z/rn;
+        x = ux*R_E_KM; y=uy*R_E_KM; z=uz*R_E_KM;
+
+        const double vr = vx*ux + vy*uy + vz*uz;
         if(vr < 0.0){
             vx -= vr*ux; vy -= vr*uy; vz -= vr*uz;
         }
-        r = R_E_KM;
     }
 
-    double ux=x/r, uy=y/r, uz=z/r;
+    if(!std::isfinite(x) || !std::isfinite(vx) || !std::isfinite(mass)) is_dead=true;
+}
 
-    // gravity accel (km/s^2)
-    double aG = -mu_km3_s2/(r*r);
-    double ax = aG*ux;
-    double ay = aG*uy;
-    double az = aG*uz;
-
-    // thrust accel (km/s^2), with simple guidance:
-    // - early: mostly radial-up
-    // - later: blend toward target direction (if provided)
-    double aTx=0.0,aTy=0.0,aTz=0.0;
-
-    if(powered && cur < st.size() && fuel > 0.0 && st[cur].thrust_n > 0.0){
-        double m = std::max(1.0, dry + fuel);
-
-        // thrust magnitude: convert (m/s^2) -> (km/s^2)
-        double aT = (st[cur].thrust_n / m) * 1e-3;
-
-        // desired direction
-        double dx=ux, dy=uy, dz=uz; // default: radial-up
-        if(target_xyz_km){
-            double tx = target_xyz_km[0] - x;
-            double ty = target_xyz_km[1] - y;
-            double tz = target_xyz_km[2] - z;
-            double tn = std::sqrt(tx*tx+ty*ty+tz*tz);
-            if(tn > 1e-9){
-                tx/=tn; ty/=tn; tz/=tn;
-
-                // ensure not pointing into Earth: if dot(dir,up) < 0, blend back to up
-                double dotUp = tx*ux + ty*uy + tz*uz;
-                if(dotUp < 0.0){
-                    double k = std::min(1.0, -dotUp);
-                    tx = (1.0-k)*tx + k*ux;
-                    ty = (1.0-k)*ty + k*uy;
-                    tz = (1.0-k)*tz + k*uz;
-                    double tn2 = std::sqrt(tx*tx+ty*ty+tz*tz);
-                    if(tn2>1e-9){ tx/=tn2; ty/=tn2; tz/=tn2; }
-                }
-
-                // time-based blend: first ~90s mostly up, then transition toward target
-                // (dt-based since we may not have absolute t here; approximate by velocity magnitude)
-                double vmag = std::sqrt(vx*vx+vy*vy+vz*vz);
-                double blend = std::clamp((vmag - 0.5) / 6.0, 0.0, 1.0); // heuristic
-                dx = (1.0-blend)*ux + blend*tx;
-                dy = (1.0-blend)*uy + blend*ty;
-                dz = (1.0-blend)*uz + blend*tz;
-                double dn = std::sqrt(dx*dx+dy*dy+dz*dz);
-                if(dn>1e-9){ dx/=dn; dy/=dn; dz/=dn; }
-            }
-        }
-
-        aTx = aT*dx;
-        aTy = aT*dy;
-        aTz = aT*dz;
-
-        // burn prop
-        double dm = mdot()*dt_s;
-        if(dm > fuel) dm = fuel;
-        fuel -= dm;
-
-        if(fuel <= 1e-9){
-            sep=true;
-            // stage sep: drop dry mass of spent stage, advance
-            if(cur < st.size()){
-                // drop current stage dry mass at sep
-                // (keep mass from remaining stages by resetting dry/fuel below)
-            }
-            cur++;
-
-            if(cur < st.size()){
-                fuel = st[cur].fuel_kg;
-                dry  = st[cur].dry_kg;
-                powered=true;
-            }else{
-                powered=false; // coast, do NOT "die"
-                fuel=0.0;
-                dry=std::max(1.0, dry);
-            }
-        }
-
-        mass = std::max(1.0, dry + fuel);
-    }else{
-        powered=false;
-        mass = std::max(1.0, dry + fuel);
-    }
-
-    // integrate (semi-implicit Euler)
-    ax += aTx; ay += aTy; az += aTz;
-
-    vx += ax*dt_s;
-    vy += ay*dt_s;
-    vz += az*dt_s;
-
-    x  += vx*dt_s;
-    y  += vy*dt_s;
-    z  += vz*dt_s;
-
-    // clamp again after step
-    r = std::sqrt(x*x+y*y+z*z);
-    if(r < R_E_KM){
-        double u2x=x/r, u2y=y/r, u2z=z/r;
-        x = R_E_KM*u2x; y = R_E_KM*u2y; z = R_E_KM*u2z;
-        double vr = vx*u2x + vy*u2y + vz*u2z;
-        if(vr < 0.0){
-            vx -= vr*u2x; vy -= vr*u2y; vz -= vr*u2z;
-        }
-    }
+void Rocket::force_cutoff(){
+    powered=false;
+    // Mark as "no more stages" so mdot() -> 0 and stage_sep stays false going forward
+    cur = st.size();
+    fuel=0.0;
+    dry=mass; // whatever is left
 }

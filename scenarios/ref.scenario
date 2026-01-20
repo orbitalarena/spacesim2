@@ -1,0 +1,5 @@
+name TLEHour
+duration_seconds 3600
+timestep_seconds 10
+
+tle_file data/tle/tles.txt

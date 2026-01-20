@@ -6,3 +6,17 @@ build/
 .cache/
 .vscode/
 .idea/
+
+# Generated outputs
+*.output
+models/*.png
+
+# Scratch / notes
+instructions.txt
+datarun.py
+
+# Build artifacts
+build/
+
+# OS / editor noise
+*~

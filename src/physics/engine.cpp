@@ -3,8 +3,10 @@
 #include <atomic>
 #include <thread>
 #include <algorithm>
+#include <vector>
 
-static constexpr double MU_E=398600.4418e9;
+// Units: km, km/s, s. Earth mu in km^3/s^2.
+static constexpr double MU_E = 398600.4418;
 
 void PhysicsEngine::add(const Body& b,const std::string& name){
     bodies.push_back(b);
@@ -22,21 +24,18 @@ void PhysicsEngine::step(double dt){
         for(;;){
             size_t i=idx.fetch_add(1);
             if(i>=n) break;
-            double axi=0,ayi=0,azi=0;
-            for(size_t j=0;j<n;++j){
-                if(i==j) continue;
-                const double dx=bodies[j].x-bodies[i].x;
-                const double dy=bodies[j].y-bodies[i].y;
-                const double dz=bodies[j].z-bodies[i].z;
-                const double r2=dx*dx+dy*dy+dz*dz+1e-9;
-                const double r=std::sqrt(r2);
-                const double mu = (j==0) ? MU_E : 0.0;
-                const double s = mu/(r2*r);
-                axi += dx*s;
-                ayi += dy*s;
-                azi += dz*s;
-            }
-            ax[i]=axi; ay[i]=ayi; az[i]=azi;
+
+            const double x=bodies[i].x;
+            const double y=bodies[i].y;
+            const double z=bodies[i].z;
+
+            const double r2 = x*x + y*y + z*z + 1e-12; // avoid 0-div
+            const double r  = std::sqrt(r2);
+            const double s  = -MU_E/(r2*r);           // -mu / r^3
+
+            ax[i] = x*s;
+            ay[i] = y*s;
+            az[i] = z*s;
         }
     };
 
