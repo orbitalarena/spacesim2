@@ -21,3 +21,8 @@ double local_solar_time_hours(double lon_deg,double jd){
     if(lst<0) lst+=24;
     return lst;
 }
+
+double ecef_lon_deg(double x,double y,double){
+    double lon=atan2(y,x)*180.0/M_PI;
+    return lon;
+}
