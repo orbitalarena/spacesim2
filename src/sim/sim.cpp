@@ -6,12 +6,24 @@
 #include <chrono>
 #include <thread>
 #include <cmath>
+#include <string>
 
 static std::array<double,3> pos(const Body& b){ return {b.x,b.y,b.z}; }
 static std::array<double,3> norm(const std::array<double,3>& v){
     double m=vec_mag(v);
     if(m==0) return {0,0,0};
     return {v[0]/m,v[1]/m,v[2]/m};
+}
+
+static double read_speed_file(const std::string& path, double cur){
+    std::ifstream f(path);
+    double s=cur;
+    if(f.good() && (f>>s)){
+        if(s<0.01) s=0.01;
+        if(s>1e6) s=1e6;
+        return s;
+    }
+    return cur;
 }
 
 static void report_hourly(std::ofstream& out, double t, double jd, PhysicsEngine& e){
@@ -60,40 +72,57 @@ static void report_hourly(std::ofstream& out, double t, double jd, PhysicsEngine
 
 void run_sim(PhysicsEngine& e, const ScenarioCfg& cfg, double speed, const std::string& out_path){
     using clock = std::chrono::steady_clock;
+
+    const std::string speed_path="models/sim_speed.txt";
+    {
+        std::ifstream chk(speed_path);
+        if(!chk.good()){
+            std::ofstream init(speed_path);
+            init<<"1\n";
+        }
+    }
+
     std::ofstream out(out_path);
     out.setf(std::ios::fixed);
     out.precision(6);
 
-    double dt=cfg.dt;
-    double t_end=cfg.t_end;
-    if(speed<=0) speed=1.0;
-
+    double sim_dt=1.0;                 // 1 sim-second per tick at 1x
     double jd=2451545.0;
     double sim_t=0.0;
 
-    auto t0 = clock::now();
-    auto next_hb = t0;
-    auto next_step = t0;
+    auto start = clock::now();
+    auto next_hb = start;
+    auto next_tick = start;
 
-    while(sim_t<=t_end){
-        e.step(dt);
-        sim_t += dt;
-        jd += dt/86400.0;
+    double last_hour_mark=0.0;
 
-        if(std::fmod(sim_t,3600.0)==0.0){
-            report_hourly(out, sim_t, jd, e);
+    for(;;){
+        if(sim_t>=cfg.t_end) break;
+
+        speed = read_speed_file(speed_path, speed);
+        if(speed<=0) speed=1.0;
+
+        e.step(sim_dt);
+        sim_t += sim_dt;
+        jd += sim_dt/86400.0;
+
+        if(sim_t - last_hour_mark >= 3600.0){
+            last_hour_mark = std::floor(sim_t/3600.0)*3600.0;
+            report_hourly(out, last_hour_mark, jd, e);
             out.flush();
         }
 
         auto now = clock::now();
         if(now>=next_hb){
-            double wall_s = std::chrono::duration<double>(now - t0).count();
+            double wall_s = std::chrono::duration<double>(now - start).count();
             out<<"heartbeat wall_s "<<wall_s<<" sim_s "<<sim_t<<" speed "<<speed<<"\n";
             out.flush();
             next_hb = now + std::chrono::seconds(10);
         }
 
-        next_step += std::chrono::duration_cast<clock::duration>(std::chrono::duration<double>(dt/speed));
-        std::this_thread::sleep_until(next_step);
+        // sleep based on current speed
+        double sleep_s = sim_dt / speed;
+        next_tick = next_tick + std::chrono::duration_cast<clock::duration>(std::chrono::duration<double>(sleep_s));
+        std::this_thread::sleep_until(next_tick);
     }
 }

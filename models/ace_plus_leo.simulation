@@ -1,0 +1,37 @@
+heartbeat wall_s 0.003286 sim_s 60.000000 speed 10.000000
+heartbeat wall_s 12.004184 sim_s 180.000000 speed 10.000000
+heartbeat wall_s 24.004934 sim_s 300.000000 speed 10.000000
+heartbeat wall_s 36.003591 sim_s 420.000000 speed 10.000000
+heartbeat wall_s 48.003413 sim_s 540.000000 speed 10.000000
+heartbeat wall_s 60.004035 sim_s 660.000000 speed 10.000000
+heartbeat wall_s 72.003723 sim_s 780.000000 speed 10.000000
+heartbeat wall_s 84.002856 sim_s 900.000000 speed 10.000000
+heartbeat wall_s 96.003637 sim_s 1020.000000 speed 10.000000
+heartbeat wall_s 108.003336 sim_s 1140.000000 speed 10.000000
+heartbeat wall_s 120.003510 sim_s 1260.000000 speed 10.000000
+heartbeat wall_s 132.002717 sim_s 1380.000000 speed 10.000000
+heartbeat wall_s 144.002255 sim_s 1500.000000 speed 10.000000
+heartbeat wall_s 156.003284 sim_s 1620.000000 speed 10.000000
+heartbeat wall_s 168.003054 sim_s 1740.000000 speed 10.000000
+heartbeat wall_s 180.002056 sim_s 1860.000000 speed 10.000000
+heartbeat wall_s 192.003678 sim_s 1980.000000 speed 10.000000
+heartbeat wall_s 204.003322 sim_s 2100.000000 speed 10.000000
+heartbeat wall_s 216.003582 sim_s 2220.000000 speed 10.000000
+heartbeat wall_s 228.003666 sim_s 2340.000000 speed 10.000000
+heartbeat wall_s 240.004893 sim_s 2460.000000 speed 10.000000
+heartbeat wall_s 252.005400 sim_s 2580.000000 speed 10.000000
+heartbeat wall_s 264.003412 sim_s 2700.000000 speed 10.000000
+heartbeat wall_s 276.004358 sim_s 2820.000000 speed 10.000000
+heartbeat wall_s 288.003271 sim_s 2940.000000 speed 10.000000
+heartbeat wall_s 300.003173 sim_s 3060.000000 speed 10.000000
+heartbeat wall_s 312.002966 sim_s 3180.000000 speed 10.000000
+heartbeat wall_s 324.004132 sim_s 3300.000000 speed 10.000000
+heartbeat wall_s 336.003668 sim_s 3420.000000 speed 10.000000
+heartbeat wall_s 348.005517 sim_s 3540.000000 speed 10.000000
+t 3600.000000 Ace_DC_deg 171.433318 Ace_DC_km 42800.512899 Ace_LA_deg 173.458004 Ace_LA_km 46066.509165
+t 3600.000000 LeoClosest Tokyo dist_km 9201.693177 LST 5.012892
+heartbeat wall_s 360.003800 sim_s 3660.000000 speed 10.000000
+heartbeat wall_s 372.005175 sim_s 3780.000000 speed 10.000000
+heartbeat wall_s 384.004516 sim_s 3900.000000 speed 10.000000
+heartbeat wall_s 396.005287 sim_s 4020.000000 speed 10.000000
+heartbeat wall_s 408.004575 sim_s 4140.000000 speed 10.000000
