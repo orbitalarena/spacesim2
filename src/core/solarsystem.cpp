@@ -12,9 +12,11 @@ static EnvEntity make(const char* n,double x,double y,double z,double m){
 
 void load_solar_system(){
     auto& env=Environment::instance();
-    env.add(make("Sun",0,0,0,1.9885e30));
-    env.add(make("Earth",149597870,0,0,5.972e24));
-    env.add(make("Moon",149597870+384400,0,0,7.342e22));
+
+    env.add(make("Earth",0,0,0,5.972e24));
+    env.add(make("Sun",-149597870,0,0,1.9885e30));
+    env.add(make("Moon",384400,0,0,7.342e22));
+
     env.add(make("Mars",227939200,0,0,6.39e23));
     env.add(make("Jupiter",778340821,0,0,1.898e27));
     env.add(make("Io",778340821+421700,0,0,8.93e22));
