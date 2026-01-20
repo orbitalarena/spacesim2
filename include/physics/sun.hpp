@@ -1,4 +1,4 @@
 #pragma once
 #include <array>
-std::array<double,3> sun_eci(double jd);
-double sun_angle_deg(const std::array<double,3>& sat,const std::array<double,3>& sun);
+std::array<double,3> sun_eci_km(double jd);
+double angle_deg_between(const std::array<double,3>& a,const std::array<double,3>& b);

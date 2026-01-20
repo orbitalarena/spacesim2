@@ -4,13 +4,11 @@
 #include <string>
 
 int main(int argc,char**argv){
-    if(argc<5) return 1;
+    if(argc<3) return 1;
     std::string mode=argv[1];
     PhysicsEngine e;
-    load_scenario(argv[2],e);
-    double dt=std::stod(argv[3]);
-    double t_end=std::stod(argv[4]);
-    if(mode=="--model") run_model(e,dt,t_end);
-    if(mode=="--sim") for(double t=0;t<t_end;t+=dt) e.step(dt);
+    auto cfg=load_scenario(argv[2],e);
+    if(mode=="--model") run_model(e,cfg.dt,cfg.t_end);
+    if(mode=="--sim") for(double t=0;t<cfg.t_end;t+=cfg.dt) e.step(cfg.dt);
     return 0;
 }
