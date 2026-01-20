@@ -1,50 +1,51 @@
-t 0 Ace_DC_deg 132.277 Ace_DC_km 8407.62 Ace_LA_deg 147.254 Ace_LA_km 11048.1
-t 0 LeoClosest Mumbai dist_km 6378.14 LST 18.7141
-t 3600 Ace_DC_deg 157.238 Ace_DC_km 12421.8 Ace_LA_deg 144.405 Ace_LA_km 10681.2
-t 3600 LeoClosest Mumbai dist_km 6378.14 LST 19.7168
-t 7200 Ace_DC_deg 116.429 Ace_DC_km 4747.48 Ace_LA_deg 120.603 Ace_LA_km 5891.82
-t 7200 LeoClosest Mumbai dist_km 6378.14 LST 20.7196
-t 10800 Ace_DC_deg 153.701 Ace_DC_km 12029.8 Ace_LA_deg 161.379 Ace_LA_km 12839.4
-t 10800 LeoClosest Mumbai dist_km 6378.14 LST 21.7223
-t 14400 Ace_DC_deg 136.596 Ace_DC_km 9272.32 Ace_LA_deg 123.009 Ace_LA_km 6263.91
-t 14400 LeoClosest Mumbai dist_km 6378.14 LST 22.725
-t 18000 Ace_DC_deg 128.77 Ace_DC_km 7670.78 Ace_LA_deg 143.535 Ace_LA_km 10469.8
-t 18000 LeoClosest Mumbai dist_km 6378.14 LST 23.7278
-t 21600 Ace_DC_deg 159.156 Ace_DC_km 12637.3 Ace_LA_deg 147.726 Ace_LA_km 11214.8
-t 21600 LeoClosest Mumbai dist_km 6378.14 LST 0.730514
-t 25200 Ace_DC_deg 117.368 Ace_DC_km 5020.27 Ace_LA_deg 118.275 Ace_LA_km 5275.24
-t 25200 LeoClosest Mumbai dist_km 6378.14 LST 1.73325
-t 28800 Ace_DC_deg 150.772 Ace_DC_km 11634.7 Ace_LA_deg 161.005 Ace_LA_km 12784.1
-t 28800 LeoClosest Mumbai dist_km 6378.14 LST 2.73599
-t 32400 Ace_DC_deg 140.303 Ace_DC_km 9944.74 Ace_LA_deg 126.056 Ace_LA_km 6986.99
-t 32400 LeoClosest Mumbai dist_km 6378.14 LST 3.73873
-t 36000 Ace_DC_deg 125.422 Ace_DC_km 6932.74 Ace_LA_deg 139.682 Ace_LA_km 9825.55
-t 36000 LeoClosest Mumbai dist_km 6378.14 LST 4.74147
-t 39600 Ace_DC_deg 160.379 Ace_DC_km 12768.4 Ace_LA_deg 150.891 Ace_LA_km 11678.8
-t 39600 LeoClosest Mumbai dist_km 6378.14 LST 5.7442
-t 43200 Ace_DC_deg 119.178 Ace_DC_km 5499.22 Ace_LA_deg 116.775 Ace_LA_km 4819.14
-t 43200 LeoClosest Mumbai dist_km 6378.14 LST 6.74694
-t 46800 Ace_DC_deg 147.583 Ace_DC_km 11164.7 Ace_LA_deg 159.742 Ace_LA_km 12641.6
-t 46800 LeoClosest Mumbai dist_km 6378.14 LST 7.74968
-t 50400 Ace_DC_deg 143.929 Ace_DC_km 10561.7 Ace_LA_deg 129.333 Ace_LA_km 7730.76
-t 50400 LeoClosest Mumbai dist_km 6378.14 LST 8.75242
-t 54000 Ace_DC_deg 122.358 Ace_DC_km 6224.73 Ace_LA_deg 135.77 Ace_LA_km 9125.47
-t 54000 LeoClosest Mumbai dist_km 6378.14 LST 9.75515
-t 57600 Ace_DC_deg 160.792 Ace_DC_km 12814.7 Ace_LA_deg 153.838 Ace_LA_km 12068.4
-t 57600 LeoClosest Mumbai dist_km 6378.14 LST 10.7579
-t 61200 Ace_DC_deg 121.699 Ace_DC_km 6120.46 Ace_LA_deg 116.217 Ace_LA_km 4588.5
-t 61200 LeoClosest Mumbai dist_km 6378.14 LST 11.7606
-t 64800 Ace_DC_deg 144.203 Ace_DC_km 10624.6 Ace_LA_deg 157.708 Ace_LA_km 12412.3
-t 64800 LeoClosest Mumbai dist_km 6378.14 LST 12.7634
-t 68400 Ace_DC_deg 147.411 Ace_DC_km 11114.2 Ace_LA_deg 132.738 Ace_LA_km 8467.18
-t 68400 LeoClosest Mumbai dist_km 6378.14 LST 13.7661
-t 72000 Ace_DC_deg 119.739 Ace_DC_km 5589.93 Ace_LA_deg 131.883 Ace_LA_km 8383.07
-t 72000 LeoClosest Mumbai dist_km 6378.14 LST 14.7688
-t 75600 Ace_DC_deg 160.355 Ace_DC_km 12776 Ace_LA_deg 156.483 Ace_LA_km 12380.2
-t 75600 LeoClosest Mumbai dist_km 6378.14 LST 15.7716
-t 79200 Ace_DC_deg 124.739 Ace_DC_km 6825.02 Ace_LA_deg 116.592 Ace_LA_km 4622.98
-t 79200 LeoClosest Mumbai dist_km 6378.14 LST 16.7743
-t 82800 Ace_DC_deg 140.686 Ace_DC_km 10020.4 Ace_LA_deg 155.063 Ace_LA_km 12097.2
-t 82800 LeoClosest Mumbai dist_km 6378.14 LST 17.7771
-t 86400 Ace_DC_deg 150.689 Ace_DC_km 11595.7 Ace_LA_deg 136.197 Ace_LA_km 9176.33
-t 86400 LeoClosest Mumbai dist_km 6378.14 LST 18.7798
+t 0 Ace_DC_deg 171.302 Ace_DC_km 41551.6 Ace_LA_deg 172.531 Ace_LA_km 45069.9
+t 0 LeoClosest Paris dist_km 5215.63 LST 18.8709
+t 3600 Ace_DC_deg 171.438 Ace_DC_km 42821.5 Ace_LA_deg 173.475 Ace_LA_km 46081.5
+t 3600 LeoClosest Tokyo dist_km 9447.49 LST 5.0296
+t 7200 Ace_DC_deg 171.904 Ace_DC_km 44043.1 Ace_LA_deg 174.477 Ace_LA_km 46848.6
+t 7200 LeoClosest London dist_km 3729.72 LST 20.711
+t 10800 Ace_DC_deg 172.625 Ace_DC_km 45139.6 Ace_LA_deg 175.313 Ace_LA_km 47331
+t 10800 LeoClosest SaoPaulo dist_km 6373.84 LST 18.6134
+t 14400 Ace_DC_deg 173.49 Ace_DC_km 46046.8 Ace_LA_deg 175.686 Ace_LA_km 47504.2
+t 14400 LeoClosest Tokyo dist_km 4881.33 LST 8.03782
+t 18000 Ace_DC_deg 174.339 Ace_DC_km 46714.6 Ace_LA_deg 175.41 Ace_LA_km 47359.3
+t 18000 LeoClosest Paris dist_km 4081.44 LST 23.8846
+t 21600 Ace_DC_deg 174.957 Ace_DC_km 47107.7 Ace_LA_deg 174.623 Ace_LA_km 46903.1
+t 21600 LeoClosest SaoPaulo dist_km 10084.3 LST 21.6216
+t 25200 Ace_DC_deg 175.123 Ace_DC_km 47205.9 Ace_LA_deg 173.624 Ace_LA_km 46158.7
+t 25200 LeoClosest NewYork dist_km 4868.1 LST 20.7995
+t 28800 Ace_DC_deg 174.765 Ace_DC_km 47004.5 Ace_LA_deg 172.653 Ace_LA_km 45164.5
+t 28800 LeoClosest SaoPaulo dist_km 5908.87 LST 23.6271
+t 32400 Ace_DC_deg 174.033 Ace_DC_km 46513.7 Ace_LA_deg 171.874 Ace_LA_km 43975.1
+t 32400 LeoClosest Tokyo dist_km 5481.41 LST 13.0515
+t 36000 Ace_DC_deg 173.158 Ace_DC_km 45759.1 Ace_LA_deg 171.402 Ace_LA_km 42659.9
+t 36000 LeoClosest Paris dist_km 2931.74 LST 4.89828
+t 39600 Ace_DC_deg 172.335 Ace_DC_km 44781.2 Ace_LA_deg 171.309 Ace_LA_km 41301.8
+t 39600 LeoClosest SaoPaulo dist_km 9540.1 LST 2.63534
+t 43200 Ace_DC_deg 171.702 Ace_DC_km 43634.9 Ace_LA_deg 171.627 Ace_LA_km 39994.4
+t 43200 LeoClosest LosAngeles dist_km 4819.14 LST 22.8636
+t 46800 Ace_DC_deg 171.355 Ace_DC_km 42388.9 Ace_LA_deg 172.317 Ace_LA_km 38836.6
+t 46800 LeoClosest SaoPaulo dist_km 5556.01 LST 4.64081
+t 50400 Ace_DC_deg 171.35 Ace_DC_km 41123.2 Ace_LA_deg 173.238 Ace_LA_km 37924
+t 50400 LeoClosest Tokyo dist_km 6184.29 LST 18.0652
+t 54000 Ace_DC_deg 171.696 Ace_DC_km 39926.5 Ace_LA_deg 174.098 Ace_LA_km 37338.4
+t 54000 LeoClosest Paris dist_km 1828.29 LST 9.91197
+t 57600 Ace_DC_deg 172.329 Ace_DC_km 38890.3 Ace_LA_deg 174.481 Ace_LA_km 37135.4
+t 57600 LeoClosest SaoPaulo dist_km 8961.68 LST 7.64903
+t 61200 Ace_DC_deg 173.087 Ace_DC_km 38100.3 Ace_LA_deg 174.146 Ace_LA_km 37334.4
+t 61200 LeoClosest LosAngeles dist_km 4588.5 LST 3.8773
+t 64800 Ace_DC_deg 173.696 Ace_DC_km 37627.2 Ace_LA_deg 173.31 Ace_LA_km 37915.8
+t 64800 LeoClosest SaoPaulo dist_km 5351.99 LST 9.6545
+t 68400 Ace_DC_deg 173.855 Ace_DC_km 37515.3 Ace_LA_deg 172.389 Ace_LA_km 38823.9
+t 68400 LeoClosest Tokyo dist_km 6936.69 LST 23.0789
+t 72000 Ace_DC_deg 173.471 Ace_DC_km 37775.6 Ace_LA_deg 171.682 Ace_LA_km 39977.2
+t 72000 LeoClosest London dist_km 1065.04 LST 14.7603
+t 75600 Ace_DC_deg 172.755 Ace_DC_km 38383.3 Ace_LA_deg 171.337 Ace_LA_km 41280.6
+t 75600 LeoClosest SaoPaulo dist_km 8360.47 LST 12.6627
+t 79200 Ace_DC_deg 172.021 Ace_DC_km 39282.5 Ace_LA_deg 171.397 Ace_LA_km 42635.8
+t 79200 LeoClosest Tokyo dist_km 4496.56 LST 2.0871
+t 82800 Ace_DC_deg 171.497 Ace_DC_km 40395.2 Ace_LA_deg 171.836 Ace_LA_km 43949.9
+t 82800 LeoClosest SaoPaulo dist_km 5324.05 LST 14.6682
+t 86400 Ace_DC_deg 171.3 Ace_DC_km 41631.9 Ace_LA_deg 172.586 Ace_LA_km 45140.3
+t 86400 LeoClosest Tokyo dist_km 7701.59 LST 4.09258
+final_coe a_km 42166.3 e 4.60397e-05 i_rad 0 raan_rad 0 argp_rad 0 ta_rad 0.0170848
