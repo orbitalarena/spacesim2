@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cmath>
 #include <array>
+#include <algorithm>
 
 static constexpr double MU_E_KM3_S2 = 398600.4418;
 static constexpr double R_E_KM      = 6371.0;
@@ -10,6 +11,12 @@ static constexpr double R_E_KM      = 6371.0;
 static double mag3(const std::array<double,3>& v){
     return std::sqrt(v[0]*v[0]+v[1]*v[1]+v[2]*v[2]);
 }
+
+static std::array<double,3> sub3(const std::array<double,3>& a,const std::array<double,3>& b){
+    return {a[0]-b[0],a[1]-b[1],a[2]-b[2]};
+}
+
+int main_dummy_to_keep_compiler_happy();
 
 void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
     if(e.bodies.size() < 2) return;
@@ -34,15 +41,37 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
     double prev_range = -1.0;
 
     for(double t=0;t<=t_end;t+=dt){
-        // propagate Ace (current simple model style)
         ace.x += ace.vx*dt;
         ace.y += ace.vy*dt;
         ace.z += ace.vz*dt;
 
-        double target_xyz[3] = { ace.x, ace.y, ace.z };
+        auto rs = r.state();
+        std::array<double,3> pR{rs.x,rs.y,rs.z};
+        std::array<double,3> vR{rs.vx,rs.vy,rs.vz};
+        std::array<double,3> pA{ace.x,ace.y,ace.z};
+        std::array<double,3> vA{ace.vx,ace.vy,ace.vz};
+
+        auto relp = sub3(pA,pR);
+        auto relv = sub3(vA,vR);
+        double range_km = mag3(relp);
+
+        double rr_vec = 0.0;
+        if(range_km > 1e-9){
+            rr_vec = (relp[0]*relv[0] + relp[1]*relv[1] + relp[2]*relv[2]) / range_km;
+        }
+
+        double closing = std::max(0.2, std::fabs(rr_vec));
+        double tau = std::clamp(range_km / closing, 0.0, 7200.0);
+
+        double target_xyz[3] = {
+            ace.x + ace.vx*tau,
+            ace.y + ace.vy*tau,
+            ace.z + ace.vz*tau
+        };
+
         r.step(dt, MU_E_KM3_S2, target_xyz);
 
-        auto rs = r.state();
+        rs = r.state();
         rb.x=rs.x; rb.y=rs.y; rb.z=rs.z;
         rb.vx=rs.vx; rb.vy=rs.vy; rb.vz=rs.vz;
         rb.mass=rs.mass;
@@ -52,11 +81,16 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
         double rr = std::sqrt(rs.x*rs.x+rs.y*rs.y+rs.z*rs.z);
         double alt_km = rr - R_E_KM;
 
-        std::array<double,3> relp{ ace.x-rs.x, ace.y-rs.y, ace.z-rs.z };
-        std::array<double,3> relv{ ace.vx-rs.vx, ace.vy-rs.vy, ace.vz-rs.vz };
-        double range_km = mag3(relp);
+        pR = {rs.x,rs.y,rs.z};
+        vR = {rs.vx,rs.vy,rs.vz};
+        pA = {ace.x,ace.y,ace.z};
+        vA = {ace.vx,ace.vy,ace.vz};
 
-        double rr_vec = 0.0;
+        relp = sub3(pA,pR);
+        relv = sub3(vA,vR);
+        range_km = mag3(relp);
+
+        rr_vec = 0.0;
         if(range_km > 1e-9){
             rr_vec = (relp[0]*relv[0] + relp[1]*relv[1] + relp[2]*relv[2]) / range_km;
         }
