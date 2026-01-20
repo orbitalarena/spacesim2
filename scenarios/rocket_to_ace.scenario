@@ -1,0 +1,23 @@
+name RocketToAce
+duration_seconds 7200
+timestep_seconds 1
+
+entity Ace
+type satellite
+coe
+a_km 42166.3
+e 0
+i_deg 0
+raan_deg 0
+argp_deg 0
+ta_deg 0
+
+entity Rocket
+type rocket
+launch_lat 28.5
+launch_lon -80.6
+launch_az_deg 90
+stages
+stage 1 thrust 7600000 isp 263 fuel 395000 dry 25600
+stage 2 thrust 934000 isp 421 fuel 92670 dry 4000
+stage 3 thrust 934000 isp 450 fuel 15000 dry 3500
