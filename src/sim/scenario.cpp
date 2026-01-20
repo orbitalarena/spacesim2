@@ -1,49 +1,45 @@
 #include "sim/scenario.hpp"
 #include "physics/orbit.hpp"
 #include <fstream>
-#include <string>
-#include <vector>
+#include <sstream>
 #include <cmath>
 
-static constexpr double DEG=M_PI/180.0;
 
-struct NamedCOE { std::string name; COE c; };
+struct Ent { std::string name; COE c{}; };
 
-ScenarioCfg load_scenario(const std::string& p, PhysicsEngine& e){
-    std::ifstream f(p);
-    std::string tok;
+ScenarioCfg load_scenario(const std::string& path,PhysicsEngine& e){
     ScenarioCfg cfg{};
+    std::ifstream in(path);
+    std::string line;
 
-    std::vector<NamedCOE> ents;
-    NamedCOE* cur=nullptr;
+    std::vector<Ent> ents;
+    Ent cur{};
+    bool in_coe=false;
 
-    while(f>>tok){
-        if(tok=="duration_seconds"){ f>>cfg.t_end; continue; }
-        if(tok=="timestep_seconds"){ f>>cfg.dt; continue; }
-
-        if(tok=="entity"){
-            std::string name; f>>name;
-            NamedCOE n{};
-            n.name=name;
-            n.c.a=42166.3; n.c.e=0; n.c.i=0; n.c.raan=0; n.c.argp=0; n.c.ta=0;
-            ents.push_back(n);
-            cur=&ents.back();
-            continue;
+    while(std::getline(in,line)){
+        if(line.empty()) continue;
+        std::istringstream ss(line);
+        std::string k; ss>>k;
+        if(k=="duration_seconds"){ ss>>cfg.t_end; }
+        else if(k=="timestep_seconds"){ ss>>cfg.dt; }
+        else if(k=="entity"){
+            if(!cur.name.empty()) ents.push_back(cur);
+            cur=Ent{}; ss>>cur.name;
+            in_coe=false;
+        }else if(k=="coe"){ in_coe=true; }
+        else if(in_coe){
+            if(k=="a_km") ss>>cur.c.a;
+            else if(k=="e") ss>>cur.c.e;
+            else if(k=="i_deg"){ ss>>cur.c.i; cur.c.i*=M_PI/180.0; }
+            else if(k=="raan_deg"){ ss>>cur.c.raan; cur.c.raan*=M_PI/180.0; }
+            else if(k=="argp_deg"){ ss>>cur.c.argp; cur.c.argp*=M_PI/180.0; }
+            else if(k=="ta_deg"){ ss>>cur.c.ta; cur.c.ta*=M_PI/180.0; }
         }
-
-        if(!cur) continue;
-
-        if(tok=="a_km"){ f>>cur->c.a; }
-        else if(tok=="e"){ f>>cur->c.e; }
-        else if(tok=="i_deg"){ f>>cur->c.i; cur->c.i*=DEG; }
-        else if(tok=="raan_deg"){ f>>cur->c.raan; cur->c.raan*=DEG; }
-        else if(tok=="argp_deg"){ f>>cur->c.argp; cur->c.argp*=DEG; }
-        else if(tok=="ta_deg"){ f>>cur->c.ta; cur->c.ta*=DEG; }
     }
+    if(!cur.name.empty()) ents.push_back(cur);
 
-    for(size_t i=0;i<ents.size();++i){
-        e.add(coe_to_body_eci(ents[i].c));
-        cfg.body_index[ents[i].name]=i;
+    for(auto& en:ents){
+        e.add(coe_to_body_eci(en.c),en.name);
     }
     return cfg;
 }

@@ -1,31 +1,45 @@
 #include "physics/engine.hpp"
 #include <cmath>
+#include <atomic>
+#include <thread>
+#include <algorithm>
 
-static constexpr double MU=398600.4418; // km^3/s^2
+static constexpr double MU_E=398600.4418e9;
 
-void PhysicsEngine::add(const Body& b){ bodies.push_back(b); }
+void PhysicsEngine::add(const Body& b,const std::string& name){
+    bodies.push_back(b);
+    names.push_back(name);
+}
 
 void PhysicsEngine::step(double dt){
-    size_t n=bodies.size();
+    const size_t n=bodies.size();
     if(n==0) return;
 
-    std::vector<double> ax(n),ay(n),az(n);
+    std::vector<double> ax(n,0.0), ay(n,0.0), az(n,0.0);
 
     std::atomic<size_t> idx{0};
     auto worker_acc=[&](){
         for(;;){
             size_t i=idx.fetch_add(1);
             if(i>=n) break;
-            auto& b=bodies[i];
-            double r2=b.x*b.x+b.y*b.y+b.z*b.z;
-            double r=std::sqrt(r2);
-            double invr3=1.0/(r2*r);
-            double k=-MU*invr3;
-            ax[i]=k*b.x;
-            ay[i]=k*b.y;
-            az[i]=k*b.z;
+            double axi=0,ayi=0,azi=0;
+            for(size_t j=0;j<n;++j){
+                if(i==j) continue;
+                const double dx=bodies[j].x-bodies[i].x;
+                const double dy=bodies[j].y-bodies[i].y;
+                const double dz=bodies[j].z-bodies[i].z;
+                const double r2=dx*dx+dy*dy+dz*dz+1e-9;
+                const double r=std::sqrt(r2);
+                const double mu = (j==0) ? MU_E : 0.0;
+                const double s = mu/(r2*r);
+                axi += dx*s;
+                ayi += dy*s;
+                azi += dz*s;
+            }
+            ax[i]=axi; ay[i]=ayi; az[i]=azi;
         }
     };
+
     unsigned t=std::max(1u,std::thread::hardware_concurrency());
     std::vector<std::thread> pool;
     pool.reserve(t);
@@ -37,15 +51,15 @@ void PhysicsEngine::step(double dt){
         for(;;){
             size_t i=jdx.fetch_add(1);
             if(i>=n) break;
-            auto& b=bodies[i];
-            b.vx+=ax[i]*dt;
-            b.vy+=ay[i]*dt;
-            b.vz+=az[i]*dt;
-            b.x+=b.vx*dt;
-            b.y+=b.vy*dt;
-            b.z+=b.vz*dt;
+            bodies[i].vx += ax[i]*dt;
+            bodies[i].vy += ay[i]*dt;
+            bodies[i].vz += az[i]*dt;
+            bodies[i].x  += bodies[i].vx*dt;
+            bodies[i].y  += bodies[i].vy*dt;
+            bodies[i].z  += bodies[i].vz*dt;
         }
     };
+
     pool.clear();
     for(unsigned i=0;i<t;i++) pool.emplace_back(worker_step);
     for(auto& th:pool) th.join();

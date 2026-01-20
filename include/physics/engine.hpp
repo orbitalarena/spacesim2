@@ -1,17 +1,18 @@
 #pragma once
 #include <vector>
-#include <thread>
-#include <atomic>
+#include <string>
 
-struct Body {
-    double x,y,z;
-    double vx,vy,vz;
-    double mass;
+struct Body{
+    double x=0,y=0,z=0;
+    double vx=0,vy=0,vz=0;
+    double mass=0;
 };
 
-class PhysicsEngine {
+class PhysicsEngine{
 public:
-    void step(double dt);
-    void add(const Body& b);
     std::vector<Body> bodies;
+    std::vector<std::string> names;
+
+    void add(const Body& b,const std::string& name);
+    void step(double dt);
 };
