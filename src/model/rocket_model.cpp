@@ -45,8 +45,6 @@ static double stumpS(double z){
     }
 }
 
-// Propagate (r0,v0) under 2-body for dt using universal variable formulation.
-// Returns r,v at dt.
 static void propagate_2body_universal(
     const std::array<double,3>& r0,
     const std::array<double,3>& v0,
@@ -58,9 +56,8 @@ static void propagate_2body_universal(
     double v0mag2 = dot3(v0,v0);
     double vr0 = dot3(r0,v0) / r0mag;
 
-    double alpha = 2.0/r0mag - v0mag2/MU_E_KM3_S2; // 1/a
+    double alpha = 2.0/r0mag - v0mag2/MU_E_KM3_S2;
 
-    // Initial guess for chi
     double chi = 0.0;
     if(std::fabs(alpha) > 1e-10){
         chi = std::sqrt(MU_E_KM3_S2) * std::fabs(alpha) * dt;
@@ -69,7 +66,6 @@ static void propagate_2body_universal(
     }
     chi = std::clamp(chi, 1e-6, 1e6);
 
-    // Newton iterations
     for(int it=0; it<30; ++it){
         double chi2 = chi*chi;
         double z = alpha*chi2;
@@ -114,7 +110,6 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
     auto& aceB = e.bodies[0];
     auto& rb   = e.bodies[1];
 
-    // snapshot Ace initial state for clean 2-body prediction
     const std::array<double,3> ace_r0{aceB.x, aceB.y, aceB.z};
     const std::array<double,3> ace_v0{aceB.vx, aceB.vy, aceB.vz};
 
@@ -132,40 +127,44 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
     r.set_state(s0);
 
     double prev_range = -1.0;
+
     double best_range = 1e300;
     double best_t = 0.0;
+    double after_best_timer = 0.0;
 
     for(double t=0; t<=t_end; t+=dt){
-        // Predict Ace at current time t under 2-body (no manual linear drift)
         std::array<double,3> ace_r, ace_v;
         propagate_2body_universal(ace_r0, ace_v0, t, ace_r, ace_v);
 
-        // Current rocket state
         auto rs = r.state();
         std::array<double,3> pR{rs.x, rs.y, rs.z};
         std::array<double,3> vR{rs.vx, rs.vy, rs.vz};
 
-        // Relative now
         auto relp = sub3(ace_r, pR);
         auto relv = sub3(ace_v, vR);
+
         double range_km = mag3(relp);
+        double rr_vec = 0.0;
+        if(range_km > 1e-9) rr_vec = dot3(relp, relv) / range_km;
 
-        // Lead time = time-to-closest-approach under linear relative motion
-        double relv2 = dot3(relv, relv);
+        double relv_mag = mag3(relv);
+
+        // Lead time: never allow 0; use closing-based tau if closing, else use kinematic time based on rel speed.
         double tau = 0.0;
-        if(relv2 > 1e-12){
-            tau = -dot3(relp, relv) / relv2;
+        if(rr_vec < -1e-6){
+            tau = range_km / (-rr_vec);
+        }else{
+            tau = range_km / std::max(1.0, relv_mag);
         }
-        tau = std::clamp(tau, 0.0, 6.0*3600.0); // up to 6h lead
+        tau = std::clamp(tau, 60.0, 6.0*3600.0);
 
-        // Predict Ace at t+tau (target point)
         std::array<double,3> ace_rt, ace_vt;
         propagate_2body_universal(ace_r0, ace_v0, t+tau, ace_rt, ace_vt);
 
         double target_xyz[3] = {ace_rt[0], ace_rt[1], ace_rt[2]};
         r.step(dt, MU_E_KM3_S2, target_xyz);
 
-        // Write back into engine for CSV output
+        // write back for output CSV
         rs = r.state();
         rb.x=rs.x; rb.y=rs.y; rb.z=rs.z;
         rb.vx=rs.vx; rb.vy=rs.vy; rb.vz=rs.vz;
@@ -176,27 +175,27 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
 
         if(ow && ow->enabled()) ow->tick(t, e);
 
-        // Reporting (per-minute)
-        double rmag = std::sqrt(rs.x*rs.x + rs.y*rs.y + rs.z*rs.z);
-        double alt_km = rmag - R_E_KM;
-
-        // Recompute range/rr to current Ace for reporting
+        // recompute for reporting with current-step states
         pR = {rs.x, rs.y, rs.z};
         vR = {rs.vx, rs.vy, rs.vz};
         relp = sub3(ace_r, pR);
         relv = sub3(ace_v, vR);
         range_km = mag3(relp);
-
-        double rr_vec = 0.0;
         if(range_km > 1e-9) rr_vec = dot3(relp, relv) / range_km;
 
         double rr_num = 0.0;
         if(prev_range >= 0.0) rr_num = (range_km - prev_range) / dt;
         prev_range = range_km;
 
+        double rmag = std::sqrt(rs.x*rs.x + rs.y*rs.y + rs.z*rs.z);
+        double alt_km = rmag - R_E_KM;
+
         if(range_km < best_range){
             best_range = range_km;
             best_t = t;
+            after_best_timer = 0.0;
+        }else if(t > best_t){
+            after_best_timer += dt;
         }
 
         if(std::fmod(t,60.0)==0.0){
@@ -225,7 +224,11 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
             std::cout<<"IMPACT t "<<t<<" rocket_alt_km "<<alt_km<<"\n";
             break;
         }
-    }
 
-    std::cout<<"CLOSEST_APPROACH t "<<best_t<<" range_km "<<best_range<<"\n";
+        // Stop once we've clearly passed closest approach (avoid 6h of "flying away")
+        if(after_best_timer >= 600.0 && range_km > best_range + 50.0){
+            std::cout<<"CLOSEST_APPROACH t "<<best_t<<" range_km "<<best_range<<"\n";
+            break;
+        }
+    }
 }
