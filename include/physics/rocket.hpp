@@ -1,23 +1,28 @@
 #pragma once
 #include <vector>
-struct Stage{
+
+struct Stage {
     double thrust;
     double isp;
-    double fuel;
-    double dry;
+    double fuel_mass;
+    double dry_mass;
 };
-struct RocketState{
-    double m,x,y,z,vx,vy,vz;
+
+struct RocketState {
+    double x,y,z;
+    double vx,vy,vz;
 };
-class Rocket{
+
+class Rocket {
 public:
-    Rocket(const std::vector<Stage>&);
-    bool step(double dt,double mu);
+    explicit Rocket(const std::vector<Stage>& stages);
+    void step(double dt,double mu);
     RocketState state() const;
     bool stage_sep() const;
 private:
     std::vector<Stage> stages;
-    size_t cur;
+    size_t active_stage;
+    double mass;
     RocketState s;
-    bool sep;
+    bool sep_flag;
 };
