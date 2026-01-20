@@ -1,0 +1,7 @@
+diff --git a/scenarios/ace_plus_leo.scenario b/scenarios/ace_plus_leo.scenario
+index 0000000..0000001 100644
+--- a/scenarios/ace_plus_leo.scenario
++++ b/scenarios/ace_plus_leo.scenario
+@@
+-entity chat
++entity chatgpt
