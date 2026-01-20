@@ -1,11 +1,33 @@
 #include "model/rocket_model.hpp"
+#include "physics/rocket.hpp"
 #include "core/vector.hpp"
 #include <iostream>
 #include <cmath>
+#include <limits>
 
-static constexpr double MU_E=398600.4418e9;
+static constexpr double MU_E = 398600.4418e9; // m^3/s^2
 
-void run_rocket_model(PhysicsEngine& e,double dt,double t_end){
+static int find_idx(const PhysicsEngine& e,const std::string& name){
+    for(size_t i=0;i<e.names.size();++i) if(e.names[i]==name) return (int)i;
+    return -1;
+}
+
+static std::array<double,3> unit_to(const Body& from,const Body& to){
+    double dx=to.x-from.x, dy=to.y-from.y, dz=to.z-from.z;
+    double m=std::sqrt(dx*dx+dy*dy+dz*dz);
+    if(m<1e-9) return {1,0,0};
+    return {dx/m,dy/m,dz/m};
+}
+
+void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
+    int ace_i = find_idx(e,"Ace");
+    int rok_i = find_idx(e,"Rocket");
+    if(ace_i<0 || rok_i<0){
+        std::cout<<"rocket_model_missing_entities\n";
+        return;
+    }
+
+    // stages from scenario defaults (kept here for now)
     std::vector<Stage> stages{
         {7.6e6,263,395000,25600},
         {9.34e5,421,92670,4000},
@@ -13,45 +35,80 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end){
     };
 
     Rocket r(stages);
-    auto& ace=e.bodies[0];
 
-    double prev_range=-1.0;
+    // initialize rocket state from scenario-loaded Rocket body
+    {
+        const auto& b = e.bodies[rok_i];
+        RocketState s{};
+        s.x=b.x; s.y=b.y; s.z=b.z;
+        s.vx=b.vx; s.vy=b.vy; s.vz=b.vz;
+        // if scenario left mass 0, infer from stages
+        double m0 = stages[0].fuel_kg + stages[0].dry_kg;
+        s.mass = (b.mass>1.0) ? b.mass : m0;
+        r.set_state(s);
+        e.bodies[rok_i].mass = s.mass;
+    }
+
+    double prev_range = std::numeric_limits<double>::quiet_NaN();
 
     for(double t=0;t<=t_end;t+=dt){
-        r.step(dt,MU_E);
-        auto s=r.state();
+        // propagate other entities (Ace)
+        e.step(dt);
 
-        double alt=std::sqrt(s.x*s.x+s.y*s.y+s.z*s.z)-6371000.0;
+        const auto& ace = e.bodies[ace_i];
+        Body& rok = e.bodies[rok_i];
 
+        // guidance: point thrust directly toward Ace
+        auto dir = unit_to(rok, ace);
+
+        // rocket step
+        r.step(dt, MU_E, dir);
+        auto s = r.state();
+
+        // write back into engine state so --output captures rocket too
+        rok.x=s.x; rok.y=s.y; rok.z=s.z;
+        rok.vx=s.vx; rok.vy=s.vy; rok.vz=s.vz;
+        rok.mass=s.mass;
+
+        if(ow && ow->enabled()) ow->tick(t,e);
+
+        double alt = std::sqrt(s.x*s.x+s.y*s.y+s.z*s.z) - 6371000.0;
+        if(std::fmod(t,60.0)==0.0){
+            std::cout<<"t "<<t<<" rocket_alt_m "<<alt<<"\n";
+        }
+
+        if(r.stage_sep()){
+            std::cout<<"t "<<t<<" rocket_stage_sep\n";
+        }
+
+        // range + range-rate to Ace
         std::array<double,3> pR{s.x,s.y,s.z};
         std::array<double,3> vR{s.vx,s.vy,s.vz};
         std::array<double,3> pA{ace.x,ace.y,ace.z};
         std::array<double,3> vA{ace.vx,ace.vy,ace.vz};
 
         auto rel_p = vec_between(pR,pA);
+        auto rel_v = vec_between(vR,vA);
         double range = vec_mag(rel_p);
 
-        auto rel_v = vec_between(vR,vA);
-        double rr_vec = (range>0) ? (rel_p[0]*rel_v[0]+rel_p[1]*rel_v[1]+rel_p[2]*rel_v[2])/range : 0.0;
-        double rr_num = (prev_range<0) ? 0.0 : (range-prev_range)/dt;
-        prev_range=range;
-
         if(std::fmod(t,60.0)==0.0){
-            std::cout<<"t "<<t<<" rocket_alt_m "<<alt
-                     <<" ace_range_m "<<range
-                     <<" ace_rr_vec "<<rr_vec
-                     <<" ace_rr_num "<<rr_num
-                     <<"\n";
+            double rr_vec = (rel_p[0]*rel_v[0] + rel_p[1]*rel_v[1] + rel_p[2]*rel_v[2]) / std::max(1e-9,range);
+            double rr_num = std::isnan(prev_range) ? rr_vec : (range - prev_range)/dt;
+            std::cout<<"t "<<t<<" rocket_to_ace_range_m "<<range<<" rr_vec "<<rr_vec<<" rr_num "<<rr_num<<"\n";
+            prev_range = range;
         }
 
-        if(r.stage_sep())
-            std::cout<<"t "<<t<<" rocket_stage_sep\n";
+        if(range < 1000.0){
+            double rr_vec = (rel_p[0]*rel_v[0] + rel_p[1]*rel_v[1] + rel_p[2]*rel_v[2]) / std::max(1e-9,range);
+            double rr_num = std::isnan(prev_range) ? rr_vec : (range - prev_range)/dt;
+            std::cout<<"ARRIVAL t "<<t<<" range_m "<<range<<" rr_vec "<<rr_vec<<" rr_num "<<rr_num<<"\n";
+            break;
+        }
 
-        if(range<1000.0){
-            std::cout<<"ARRIVAL t "<<t<<" range_m "<<range
-                     <<" ace_rr_vec "<<rr_vec
-                     <<" ace_rr_num "<<rr_num
-                     <<"\n";
+        if(!r.alive()){
+            std::cout<<"ROCKET_DEAD t "<<t<<"\n";
+            // keep running e (for output) but rocket no longer thrusts; stop reporting spam
+            // just end the rocket model run
             break;
         }
     }

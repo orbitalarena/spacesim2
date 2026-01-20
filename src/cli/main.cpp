@@ -26,27 +26,29 @@ int main(int argc,char**argv){
     load_global_cities();
 
     PhysicsEngine e;
-    auto cfg=load_scenario(argv[2],e);
+    auto cfg = load_scenario(argv[2],e);
 
     OutputWriter ow;
     if(out_path && out_rate) ow.open(out_path,std::atof(out_rate));
 
-    std::string mode=argv[1];
+    std::string mode = argv[1];
 
     if(mode=="--model"){
-        std::string scen=argv[2];
-        if(scen.find("rocket")!=std::string::npos){
-            run_rocket_model(e,cfg.dt,cfg.t_end);
+        std::string path = argv[2];
+        if(path.find("rocket") != std::string::npos){
+            run_rocket_model(e,cfg.dt,cfg.t_end,(out_path?&ow:nullptr));
         }else{
-            run_model(e,cfg.dt,cfg.t_end);
+            run_model(e,cfg.dt,cfg.t_end,(out_path?&ow:nullptr));
         }
         return 0;
     }
 
     if(mode=="--sim"){
-        run_sim(e,cfg,1.0,"models/sim.simulation",(out_path&&out_rate)?&ow:nullptr);
+        const char* sp = arg_after(argc,argv,"--speed");
+        double speed = sp ? std::atof(sp) : 1.0;
+        run_sim(e,cfg,speed,nullptr,(out_path?&ow:nullptr));
         return 0;
     }
 
-    return 0;
+    return 1;
 }
