@@ -1,28 +1,28 @@
-t 0 sun_angle 79.8743
-t 3600 sun_angle 94.5235
-t 7200 sun_angle 107.434
-t 10800 sun_angle 117.871
-t 14400 sun_angle 125.969
-t 18000 sun_angle 132.199
-t 21600 sun_angle 137.028
-t 25200 sun_angle 140.827
-t 28800 sun_angle 143.866
-t 32400 sun_angle 146.337
-t 36000 sun_angle 148.376
-t 39600 sun_angle 150.081
-t 43200 sun_angle 151.524
-t 46800 sun_angle 152.758
-t 50400 sun_angle 153.824
-t 54000 sun_angle 154.752
-t 57600 sun_angle 155.565
-t 61200 sun_angle 156.283
-t 64800 sun_angle 156.92
-t 68400 sun_angle 157.489
-t 72000 sun_angle 157.999
-t 75600 sun_angle 158.458
-t 79200 sun_angle 158.873
-t 82800 sun_angle 159.249
-t 86400 sun_angle 159.591
-final_pos 42166.3 265828 0
-final_vel -0 3.07458 0
-final_coe 269152 0 0 0 0 1.41348
+t 0 sun_zenith_angle_deg 79.8729 sun_nadir_angle_deg 100.127
+t 3600 sun_zenith_angle_deg 93.6699 sun_nadir_angle_deg 86.3301
+t 7200 sun_zenith_angle_deg 107.442 sun_nadir_angle_deg 72.5583
+t 10800 sun_zenith_angle_deg 121.01 sun_nadir_angle_deg 58.9902
+t 14400 sun_zenith_angle_deg 134.067 sun_nadir_angle_deg 45.9325
+t 18000 sun_zenith_angle_deg 145.916 sun_nadir_angle_deg 34.0839
+t 21600 sun_zenith_angle_deg 154.705 sun_nadir_angle_deg 25.2947
+t 25200 sun_zenith_angle_deg 156.63 sun_nadir_angle_deg 23.3695
+t 28800 sun_zenith_angle_deg 150.322 sun_nadir_angle_deg 29.6779
+t 32400 sun_zenith_angle_deg 139.478 sun_nadir_angle_deg 40.5224
+t 36000 sun_zenith_angle_deg 126.837 sun_nadir_angle_deg 53.1635
+t 39600 sun_zenith_angle_deg 113.459 sun_nadir_angle_deg 66.5407
+t 43200 sun_zenith_angle_deg 99.7714 sun_nadir_angle_deg 80.2286
+t 46800 sun_zenith_angle_deg 85.9873 sun_nadir_angle_deg 94.0127
+t 50400 sun_zenith_angle_deg 72.2605 sun_nadir_angle_deg 107.74
+t 54000 sun_zenith_angle_deg 58.7647 sun_nadir_angle_deg 121.235
+t 57600 sun_zenith_angle_deg 45.7984 sun_nadir_angle_deg 134.202
+t 61200 sun_zenith_angle_deg 34.0436 sun_nadir_angle_deg 145.956
+t 64800 sun_zenith_angle_deg 25.3058 sun_nadir_angle_deg 154.694
+t 68400 sun_zenith_angle_deg 23.3056 sun_nadir_angle_deg 156.694
+t 72000 sun_zenith_angle_deg 29.4583 sun_nadir_angle_deg 150.542
+t 75600 sun_zenith_angle_deg 40.1741 sun_nadir_angle_deg 139.826
+t 79200 sun_zenith_angle_deg 52.7274 sun_nadir_angle_deg 127.273
+t 82800 sun_zenith_angle_deg 66.0545 sun_nadir_angle_deg 113.946
+t 86400 sun_zenith_angle_deg 79.7288 sun_nadir_angle_deg 100.271
+final_pos_km 42155 886.066 0
+final_vel_kmps -0.0646116 3.07405 0
+final_coe a_km 42166.3 e 4.60397e-05 i_rad 0 raan_rad 0 argp_rad 0 ta_rad 0.0170848
