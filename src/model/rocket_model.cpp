@@ -54,15 +54,15 @@ static void propagate_2body_universal(
 ){
     double r0mag = mag3(r0);
     double v0mag2 = dot3(v0,v0);
-    double vr0 = dot3(r0,v0) / r0mag;
+    double vr0 = dot3(r0,v0) / std::max(1e-12, r0mag);
 
-    double alpha = 2.0/r0mag - v0mag2/MU_E_KM3_S2;
+    double alpha = 2.0/std::max(1e-12, r0mag) - v0mag2/MU_E_KM3_S2;
 
     double chi = 0.0;
     if(std::fabs(alpha) > 1e-10){
         chi = std::sqrt(MU_E_KM3_S2) * std::fabs(alpha) * dt;
     }else{
-        chi = std::sqrt(MU_E_KM3_S2) * dt / r0mag;
+        chi = std::sqrt(MU_E_KM3_S2) * dt / std::max(1e-12, r0mag);
     }
     chi = std::clamp(chi, 1e-6, 1e6);
 
@@ -92,14 +92,14 @@ static void propagate_2body_universal(
     double C = stumpC(z);
     double S = stumpS(z);
 
-    double f = 1.0 - (chi2/r0mag)*C;
+    double f = 1.0 - (chi2/std::max(1e-12, r0mag))*C;
     double g = dt - (chi*chi2/std::sqrt(MU_E_KM3_S2))*S;
 
     r = add3(mul3(r0,f), mul3(v0,g));
     double rmag = mag3(r);
 
-    double fdot = (std::sqrt(MU_E_KM3_S2)/(rmag*r0mag)) * (z*S - 1.0) * chi;
-    double gdot = 1.0 - (chi2/rmag)*C;
+    double fdot = (std::sqrt(MU_E_KM3_S2)/(std::max(1e-12, rmag)*std::max(1e-12, r0mag))) * (z*S - 1.0) * chi;
+    double gdot = 1.0 - (chi2/std::max(1e-12, rmag))*C;
 
     v = add3(mul3(r0,fdot), mul3(v0,gdot));
 }
@@ -148,13 +148,19 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
         double rr_vec = 0.0;
         if(range_km > 1e-9) rr_vec = dot3(relp, relv) / range_km;
 
-        double relv_mag = mag3(relv);
+        // ---- improved lead time estimate ----
+        double v2 = dot3(relv, relv);
+        double tau = 0.0;
+        if(v2 > 1e-6){
+            // linear time-to-closest-approach
+            tau = -dot3(relp, relv) / v2;
+        }else{
+            tau = range_km / std::max(0.1, mag3(relv));
+        }
+        // clamp to workable guidance horizon
+        tau = std::clamp(tau, 0.0, 6000.0);
 
-        // Lead time: range / |v_rel| (robust). Clamp to keep it in the "GEO moved 10 deg" regime.
-        double tau = range_km / std::max(0.1, relv_mag);   // seconds
-        tau = std::clamp(tau, 0.0, 4000.0);
-
-        // Simple linear lead target: rA(t+tau) ~= rA(t) + vA(t)*tau
+        // linear lead target: rA(t+tau) ~= rA(t) + vA(t)*tau
         std::array<double,3> ace_rt = add3(ace_r, mul3(ace_v, tau));
         double target_xyz[3] = {ace_rt[0], ace_rt[1], ace_rt[2]};
 
