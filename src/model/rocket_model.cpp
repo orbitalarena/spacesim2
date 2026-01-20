@@ -1,34 +1,22 @@
 #include "model/rocket_model.hpp"
 #include "physics/rocket.hpp"
-#include "core/vector.hpp"
 #include <iostream>
 #include <cmath>
-#include <limits>
+#include <array>
 
-static constexpr double MU_E_KM3_S2 = 398600.4418; // km^3/s^2
+static constexpr double MU_E_KM3_S2 = 398600.4418;
 static constexpr double R_E_KM      = 6371.0;
 
-static int find_idx(const PhysicsEngine& e,const std::string& name){
-    for(size_t i=0;i<e.names.size();++i) if(e.names[i]==name) return (int)i;
-    return -1;
-}
-
-static std::array<double,3> unit_to(const Body& from,const Body& to){
-    double dx=to.x-from.x, dy=to.y-from.y, dz=to.z-from.z;
-    double m=std::sqrt(dx*dx+dy*dy+dz*dz);
-    if(m<1e-12) return {1,0,0};
-    return {dx/m,dy/m,dz/m};
+static double mag3(const std::array<double,3>& v){
+    return std::sqrt(v[0]*v[0]+v[1]*v[1]+v[2]*v[2]);
 }
 
 void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
-    int ace_i = find_idx(e,"Ace");
-    int rok_i = find_idx(e,"Rocket");
-    if(ace_i<0 || rok_i<0){
-        std::cout<<"rocket_model_missing_entities\n";
-        return;
-    }
+    if(e.bodies.size() < 2) return;
 
-    // keep stage params (thrust N, isp s, masses kg)
+    auto& ace = e.bodies[0];
+    auto& rb  = e.bodies[1];
+
     std::vector<Stage> stages{
         {7.6e6,263,395000,25600},
         {9.34e5,421,92670,4000},
@@ -37,76 +25,67 @@ void run_rocket_model(PhysicsEngine& e,double dt,double t_end,OutputWriter* ow){
 
     Rocket r(stages);
 
-    // init rocket from scenario body (km, km/s)
-    {
-        auto& b = e.bodies[rok_i];
-        RocketState s{};
-        s.x=b.x; s.y=b.y; s.z=b.z;
-        s.vx=b.vx; s.vy=b.vy; s.vz=b.vz;
-        double m0 = stages[0].fuel_kg + stages[0].dry_kg;
-        s.mass = (b.mass>1.0)? b.mass : m0;
-        r.set_state(s);
-        b.mass = s.mass;
-    }
+    RocketState s0{};
+    s0.x = rb.x; s0.y = rb.y; s0.z = rb.z;
+    s0.vx = rb.vx; s0.vy = rb.vy; s0.vz = rb.vz;
+    s0.mass = stages[0].fuel_kg + stages[0].dry_kg;
+    r.set_state(s0);
 
-    double prev_range = std::numeric_limits<double>::quiet_NaN();
+    double prev_range = -1.0;
 
     for(double t=0;t<=t_end;t+=dt){
-        // propagate other entities (Ace)
-        e.step(dt);
+        // propagate Ace (current simple model style)
+        ace.x += ace.vx*dt;
+        ace.y += ace.vy*dt;
+        ace.z += ace.vz*dt;
 
-        const auto& ace = e.bodies[ace_i];
-        auto& rok = e.bodies[rok_i];
+        double target_xyz[3] = { ace.x, ace.y, ace.z };
+        r.step(dt, MU_E_KM3_S2, target_xyz);
 
-        auto dir = unit_to(rok,ace);
-
-        r.step(dt, MU_E_KM3_S2, dir);
-        auto s = r.state();
-
-        // write back so --output sees rocket
-        rok.x=s.x; rok.y=s.y; rok.z=s.z;
-        rok.vx=s.vx; rok.vy=s.vy; rok.vz=s.vz;
-        rok.mass=s.mass;
+        auto rs = r.state();
+        rb.x=rs.x; rb.y=rs.y; rb.z=rs.z;
+        rb.vx=rs.vx; rb.vy=rs.vy; rb.vz=rs.vz;
+        rb.mass=rs.mass;
 
         if(ow && ow->enabled()) ow->tick(t,e);
 
-        double rmag = std::sqrt(s.x*s.x+s.y*s.y+s.z*s.z);
-        double alt_km = rmag - R_E_KM;
+        double rr = std::sqrt(rs.x*rs.x+rs.y*rs.y+rs.z*rs.z);
+        double alt_km = rr - R_E_KM;
+
+        std::array<double,3> relp{ ace.x-rs.x, ace.y-rs.y, ace.z-rs.z };
+        std::array<double,3> relv{ ace.vx-rs.vx, ace.vy-rs.vy, ace.vz-rs.vz };
+        double range_km = mag3(relp);
+
+        double rr_vec = 0.0;
+        if(range_km > 1e-9){
+            rr_vec = (relp[0]*relv[0] + relp[1]*relv[1] + relp[2]*relv[2]) / range_km;
+        }
+
+        double rr_num = 0.0;
+        if(prev_range >= 0.0) rr_num = (range_km - prev_range) / dt;
+        prev_range = range_km;
 
         if(std::fmod(t,60.0)==0.0){
             std::cout<<"t "<<t<<" rocket_alt_km "<<alt_km<<"\n";
+            std::cout<<"t "<<t<<" rocket_to_ace_range_km "<<range_km
+                     <<" rr_vec_km_s "<<rr_vec
+                     <<" rr_num_km_s "<<rr_num<<"\n";
         }
 
         if(r.stage_sep()){
             std::cout<<"t "<<t<<" rocket_stage_sep\n";
         }
 
-        // range + range-rate to Ace (km, km/s)
-        std::array<double,3> pR{s.x,s.y,s.z};
-        std::array<double,3> vR{s.vx,s.vy,s.vz};
-        std::array<double,3> pA{ace.x,ace.y,ace.z};
-        std::array<double,3> vA{ace.vx,ace.vy,ace.vz};
-
-        auto rel_p = vec_between(pR,pA);
-        auto rel_v = vec_between(vR,vA);
-        double range_km = vec_mag(rel_p);
-
-        if(std::fmod(t,60.0)==0.0){
-            double rr_vec = (rel_p[0]*rel_v[0] + rel_p[1]*rel_v[1] + rel_p[2]*rel_v[2]) / std::max(1e-12,range_km);
-            double rr_num = std::isnan(prev_range) ? rr_vec : (range_km - prev_range)/dt;
-            std::cout<<"t "<<t<<" rocket_to_ace_range_km "<<range_km<<" rr_vec_km_s "<<rr_vec<<" rr_num_km_s "<<rr_num<<"\n";
-            prev_range = range_km;
-        }
-
-        if(range_km < 1.0){
-            double rr_vec = (rel_p[0]*rel_v[0] + rel_p[1]*rel_v[1] + rel_p[2]*rel_v[2]) / std::max(1e-12,range_km);
-            double rr_num = std::isnan(prev_range) ? rr_vec : (range_km - prev_range)/dt;
-            std::cout<<"ARRIVAL t "<<t<<" range_km "<<range_km<<" rr_vec_km_s "<<rr_vec<<" rr_num_km_s "<<rr_num<<"\n";
+        if(alt_km <= 0.0 && t > 10.0){
+            std::cout<<"IMPACT t "<<t<<" rocket_alt_km "<<alt_km<<"\n";
             break;
         }
 
-        if(!r.alive()){
-            std::cout<<"ROCKET_DEAD t "<<t<<"\n";
+        if(range_km < 1.0){
+            std::cout<<"ARRIVAL t "<<t
+                     <<" range_km "<<range_km
+                     <<" rr_vec_km_s "<<rr_vec
+                     <<" rr_num_km_s "<<rr_num<<"\n";
             break;
         }
     }

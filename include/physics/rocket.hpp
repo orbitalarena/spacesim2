@@ -1,44 +1,47 @@
 #pragma once
 #include <vector>
-#include <array>
 
 struct Stage{
-    double thrust_n;      // N
-    double isp_s;         // s
-    double fuel_kg;
-    double dry_kg;
+    double thrust_n=0.0;
+    double isp_s=0.0;
+    double fuel_kg=0.0;
+    double dry_kg=0.0;
 };
 
 struct RocketState{
-    double x,y,z;
-    double vx,vy,vz;
-    double mass;
+    double x=0,y=0,z=0;     // km
+    double vx=0,vy=0,vz=0;  // km/s
+    double mass=0;          // kg
 };
 
 class Rocket{
 public:
-    explicit Rocket(const std::vector<Stage>& stages);
+    Rocket()=default;
+    Rocket(const std::vector<Stage>& stages);
 
     void set_state(const RocketState& s);
     RocketState state() const;
 
-    // mu is in m^3/s^2, dir_eci is desired thrust direction (will be normalized)
-    void step(double dt,double mu_m3_s2,const std::array<double,3>& dir_eci);
+    // km-space propagation; target_xyz_km may be nullptr to fly "straight up" profile only
+    void step(double dt_s, double mu_km3_s2, const double* target_xyz_km=nullptr);
 
-    bool stage_sep();       // true on the tick a stage is dropped
-    bool alive() const;     // has mass and stages
+    bool stage_sep() const { return sep; }
+    int  stage_index() const { return (int)cur; }
+    bool has_thrust() const { return powered; }
 
 private:
+    double mdot() const;
+
     std::vector<Stage> st;
     size_t cur=0;
-    bool sep=false;
 
     double x=0,y=0,z=0;
     double vx=0,vy=0,vz=0;
 
-    double fuel=0;
-    double dry=0;
-    double mass=0;
+    double fuel=0.0;
+    double dry=0.0;
+    double mass=1.0;
 
-    double mdot() const; // kg/s
+    bool sep=false;
+    bool powered=false;
 };
