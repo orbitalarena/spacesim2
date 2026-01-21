@@ -1,6 +1,7 @@
 #include "model/rocket_model.hpp"
 #include "physics/rocket.hpp"
 #include <iostream>
+#include <stdexcept>
 #include <cmath>
 #include <limits>
 #include <algorithm>
@@ -43,8 +44,23 @@ static double simulate_coarse_cost(const PhysicsEngine& e0,
 
     Rocket r(stages);
 
-    Body ace = e0.bodies[0];
-    const Body r0 = e0.bodies[1];
+    auto find_idx = [&](const char* n)->int { for(size_t i=0;i<e0.names.size();++i){ if(e0.names[i]==n) return (int)i; } return -1; };
+
+    const int ace_idx = find_idx("Ace");
+
+    const int rocket_idx = find_idx("Rocket");
+
+    if(ace_idx < 0 || rocket_idx < 0){
+
+        throw std::runtime_error("run_rocket_model requires entities named Ace and Rocket in the scenario");
+
+    }
+
+
+
+    Body ace = e0.bodies[(size_t)ace_idx];
+
+    const Body r0 = e0.bodies[(size_t)rocket_idx];
 
     RocketState rs{};
     rs.x=r0.x; rs.y=r0.y; rs.z=r0.z;

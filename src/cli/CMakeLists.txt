@@ -5,5 +5,8 @@ target_include_directories(spacesim2 PRIVATE
 )
 
 target_link_libraries(spacesim2 PRIVATE
+    spacesim2_sim
     spacesim2_model
+    spacesim2_physics
+    spacesim2_core
 )

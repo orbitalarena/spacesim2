@@ -2,9 +2,10 @@ add_library(spacesim2_model STATIC)
 
 target_sources(spacesim2_model PRIVATE
     model.cpp
-    tle_spawn.cpp
-    tle_report.cpp
     rocket_model.cpp
+    tle_report.cpp
+    tle_spawn.cpp
+    lambert_demo.cpp
 )
 
 target_include_directories(spacesim2_model PUBLIC
@@ -12,7 +13,6 @@ target_include_directories(spacesim2_model PUBLIC
 )
 
 target_link_libraries(spacesim2_model PUBLIC
-    spacesim2_sim
-    spacesim2_physics
     spacesim2_core
+    spacesim2_physics
 )

@@ -7,6 +7,7 @@ target_sources(spacesim2_core PRIVATE
     vector.cpp
     tle.cpp
     tle_to_coe.cpp
+    orbit/lambert.cpp
 )
 
 target_include_directories(spacesim2_core PUBLIC

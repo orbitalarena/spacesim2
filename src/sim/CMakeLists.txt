@@ -1,6 +1,4 @@
-add_library(spacesim2_sim STATIC)
-
-target_sources(spacesim2_sim PRIVATE
+add_library(spacesim2_sim STATIC
     scenario.cpp
     sim.cpp
     expand_scenario.cpp

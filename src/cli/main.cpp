@@ -5,6 +5,7 @@
 #include "model/rocket_model.hpp"
 #include "model/tle_report.hpp"
 #include "core/output.hpp"
+#include "model/lambert_demo.hpp"
 #include <iostream>
 #include <string>
 
@@ -61,6 +62,12 @@ int main(int argc, char** argv){
     PhysicsEngine e;
     ScenarioCfg cfg = load_scenario(scenario_path, e);
 
+
+    // Lambert demo
+    if(scenario_path.find("lambert_demo") != std::string::npos){
+        run_lambert_demo(e);
+        return 0;
+    }
     OutputWriter ow;
     OutputWriter* ow_ptr = nullptr;
     if(!out_file.empty() && out_rate > 0.0){

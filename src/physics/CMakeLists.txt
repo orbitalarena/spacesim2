@@ -11,7 +11,6 @@ target_include_directories(spacesim2_physics PUBLIC
     ${CMAKE_SOURCE_DIR}/include
 )
 
-# physics uses core types/headers; keep it explicit
 target_link_libraries(spacesim2_physics PUBLIC
     spacesim2_core
 )
